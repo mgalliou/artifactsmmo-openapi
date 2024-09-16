@@ -266,7 +266,7 @@ pub enum GetMyCharactersMyCharactersGetError {
 
 
 /// Accepting a new task.
-pub async fn action_accept_new_task_my_name_action_task_new_post(configuration: &configuration::Configuration, name: &str) -> Result<models::TaskResponseSchema, Error<ActionAcceptNewTaskMyNameActionTaskNewPostError>> {
+pub fn action_accept_new_task_my_name_action_task_new_post(configuration: &configuration::Configuration, name: &str) -> Result<models::TaskResponseSchema, Error<ActionAcceptNewTaskMyNameActionTaskNewPostError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -282,10 +282,10 @@ pub async fn action_accept_new_task_my_name_action_task_new_post(configuration: 
     };
 
     let local_var_req = local_var_req_builder.build()?;
-    let local_var_resp = local_var_client.execute(local_var_req).await?;
+    let local_var_resp = local_var_client.execute(local_var_req)?;
 
     let local_var_status = local_var_resp.status();
-    let local_var_content = local_var_resp.text().await?;
+    let local_var_content = local_var_resp.text()?;
 
     if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
         serde_json::from_str(&local_var_content).map_err(Error::from)
@@ -297,7 +297,7 @@ pub async fn action_accept_new_task_my_name_action_task_new_post(configuration: 
 }
 
 /// Complete a task.
-pub async fn action_complete_task_my_name_action_task_complete_post(configuration: &configuration::Configuration, name: &str) -> Result<models::TaskRewardResponseSchema, Error<ActionCompleteTaskMyNameActionTaskCompletePostError>> {
+pub fn action_complete_task_my_name_action_task_complete_post(configuration: &configuration::Configuration, name: &str) -> Result<models::TaskRewardResponseSchema, Error<ActionCompleteTaskMyNameActionTaskCompletePostError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -313,10 +313,10 @@ pub async fn action_complete_task_my_name_action_task_complete_post(configuratio
     };
 
     let local_var_req = local_var_req_builder.build()?;
-    let local_var_resp = local_var_client.execute(local_var_req).await?;
+    let local_var_resp = local_var_client.execute(local_var_req)?;
 
     let local_var_status = local_var_resp.status();
-    let local_var_content = local_var_resp.text().await?;
+    let local_var_content = local_var_resp.text()?;
 
     if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
         serde_json::from_str(&local_var_content).map_err(Error::from)
@@ -328,7 +328,7 @@ pub async fn action_complete_task_my_name_action_task_complete_post(configuratio
 }
 
 /// Crafting an item. The character must be on a map with a workshop.
-pub async fn action_crafting_my_name_action_crafting_post(configuration: &configuration::Configuration, name: &str, crafting_schema: models::CraftingSchema) -> Result<models::SkillResponseSchema, Error<ActionCraftingMyNameActionCraftingPostError>> {
+pub fn action_crafting_my_name_action_crafting_post(configuration: &configuration::Configuration, name: &str, crafting_schema: models::CraftingSchema) -> Result<models::SkillResponseSchema, Error<ActionCraftingMyNameActionCraftingPostError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -345,10 +345,10 @@ pub async fn action_crafting_my_name_action_crafting_post(configuration: &config
     local_var_req_builder = local_var_req_builder.json(&crafting_schema);
 
     let local_var_req = local_var_req_builder.build()?;
-    let local_var_resp = local_var_client.execute(local_var_req).await?;
+    let local_var_resp = local_var_client.execute(local_var_req)?;
 
     let local_var_status = local_var_resp.status();
-    let local_var_content = local_var_resp.text().await?;
+    let local_var_content = local_var_resp.text()?;
 
     if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
         serde_json::from_str(&local_var_content).map_err(Error::from)
@@ -360,7 +360,7 @@ pub async fn action_crafting_my_name_action_crafting_post(configuration: &config
 }
 
 /// Delete an item from your character's inventory.
-pub async fn action_delete_item_my_name_action_delete_post(configuration: &configuration::Configuration, name: &str, simple_item_schema: models::SimpleItemSchema) -> Result<models::DeleteItemResponseSchema, Error<ActionDeleteItemMyNameActionDeletePostError>> {
+pub fn action_delete_item_my_name_action_delete_post(configuration: &configuration::Configuration, name: &str, simple_item_schema: models::SimpleItemSchema) -> Result<models::DeleteItemResponseSchema, Error<ActionDeleteItemMyNameActionDeletePostError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -377,10 +377,10 @@ pub async fn action_delete_item_my_name_action_delete_post(configuration: &confi
     local_var_req_builder = local_var_req_builder.json(&simple_item_schema);
 
     let local_var_req = local_var_req_builder.build()?;
-    let local_var_resp = local_var_client.execute(local_var_req).await?;
+    let local_var_resp = local_var_client.execute(local_var_req)?;
 
     let local_var_status = local_var_resp.status();
-    let local_var_content = local_var_resp.text().await?;
+    let local_var_content = local_var_resp.text()?;
 
     if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
         serde_json::from_str(&local_var_content).map_err(Error::from)
@@ -392,7 +392,7 @@ pub async fn action_delete_item_my_name_action_delete_post(configuration: &confi
 }
 
 /// Deposit golds in a bank on the character's map.
-pub async fn action_deposit_bank_gold_my_name_action_bank_deposit_gold_post(configuration: &configuration::Configuration, name: &str, deposit_withdraw_gold_schema: models::DepositWithdrawGoldSchema) -> Result<models::GoldResponseSchema, Error<ActionDepositBankGoldMyNameActionBankDepositGoldPostError>> {
+pub fn action_deposit_bank_gold_my_name_action_bank_deposit_gold_post(configuration: &configuration::Configuration, name: &str, deposit_withdraw_gold_schema: models::DepositWithdrawGoldSchema) -> Result<models::GoldResponseSchema, Error<ActionDepositBankGoldMyNameActionBankDepositGoldPostError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -409,10 +409,10 @@ pub async fn action_deposit_bank_gold_my_name_action_bank_deposit_gold_post(conf
     local_var_req_builder = local_var_req_builder.json(&deposit_withdraw_gold_schema);
 
     let local_var_req = local_var_req_builder.build()?;
-    let local_var_resp = local_var_client.execute(local_var_req).await?;
+    let local_var_resp = local_var_client.execute(local_var_req)?;
 
     let local_var_status = local_var_resp.status();
-    let local_var_content = local_var_resp.text().await?;
+    let local_var_content = local_var_resp.text()?;
 
     if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
         serde_json::from_str(&local_var_content).map_err(Error::from)
@@ -424,7 +424,7 @@ pub async fn action_deposit_bank_gold_my_name_action_bank_deposit_gold_post(conf
 }
 
 /// Deposit an item in a bank on the character's map.
-pub async fn action_deposit_bank_my_name_action_bank_deposit_post(configuration: &configuration::Configuration, name: &str, simple_item_schema: models::SimpleItemSchema) -> Result<models::ActionItemBankResponseSchema, Error<ActionDepositBankMyNameActionBankDepositPostError>> {
+pub fn action_deposit_bank_my_name_action_bank_deposit_post(configuration: &configuration::Configuration, name: &str, simple_item_schema: models::SimpleItemSchema) -> Result<models::ActionItemBankResponseSchema, Error<ActionDepositBankMyNameActionBankDepositPostError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -441,10 +441,10 @@ pub async fn action_deposit_bank_my_name_action_bank_deposit_post(configuration:
     local_var_req_builder = local_var_req_builder.json(&simple_item_schema);
 
     let local_var_req = local_var_req_builder.build()?;
-    let local_var_resp = local_var_client.execute(local_var_req).await?;
+    let local_var_resp = local_var_client.execute(local_var_req)?;
 
     let local_var_status = local_var_resp.status();
-    let local_var_content = local_var_resp.text().await?;
+    let local_var_content = local_var_resp.text()?;
 
     if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
         serde_json::from_str(&local_var_content).map_err(Error::from)
@@ -456,7 +456,7 @@ pub async fn action_deposit_bank_my_name_action_bank_deposit_post(configuration:
 }
 
 /// Equip an item on your character.
-pub async fn action_equip_item_my_name_action_equip_post(configuration: &configuration::Configuration, name: &str, equip_schema: models::EquipSchema) -> Result<models::EquipmentResponseSchema, Error<ActionEquipItemMyNameActionEquipPostError>> {
+pub fn action_equip_item_my_name_action_equip_post(configuration: &configuration::Configuration, name: &str, equip_schema: models::EquipSchema) -> Result<models::EquipmentResponseSchema, Error<ActionEquipItemMyNameActionEquipPostError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -473,10 +473,10 @@ pub async fn action_equip_item_my_name_action_equip_post(configuration: &configu
     local_var_req_builder = local_var_req_builder.json(&equip_schema);
 
     let local_var_req = local_var_req_builder.build()?;
-    let local_var_resp = local_var_client.execute(local_var_req).await?;
+    let local_var_resp = local_var_client.execute(local_var_req)?;
 
     let local_var_status = local_var_resp.status();
-    let local_var_content = local_var_resp.text().await?;
+    let local_var_content = local_var_resp.text()?;
 
     if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
         serde_json::from_str(&local_var_content).map_err(Error::from)
@@ -488,7 +488,7 @@ pub async fn action_equip_item_my_name_action_equip_post(configuration: &configu
 }
 
 /// Start a fight against a monster on the character's map.
-pub async fn action_fight_my_name_action_fight_post(configuration: &configuration::Configuration, name: &str) -> Result<models::CharacterFightResponseSchema, Error<ActionFightMyNameActionFightPostError>> {
+pub fn action_fight_my_name_action_fight_post(configuration: &configuration::Configuration, name: &str) -> Result<models::CharacterFightResponseSchema, Error<ActionFightMyNameActionFightPostError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -504,10 +504,10 @@ pub async fn action_fight_my_name_action_fight_post(configuration: &configuratio
     };
 
     let local_var_req = local_var_req_builder.build()?;
-    let local_var_resp = local_var_client.execute(local_var_req).await?;
+    let local_var_resp = local_var_client.execute(local_var_req)?;
 
     let local_var_status = local_var_resp.status();
-    let local_var_content = local_var_resp.text().await?;
+    let local_var_content = local_var_resp.text()?;
 
     if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
         serde_json::from_str(&local_var_content).map_err(Error::from)
@@ -519,7 +519,7 @@ pub async fn action_fight_my_name_action_fight_post(configuration: &configuratio
 }
 
 /// Harvest a resource on the character's map.
-pub async fn action_gathering_my_name_action_gathering_post(configuration: &configuration::Configuration, name: &str) -> Result<models::SkillResponseSchema, Error<ActionGatheringMyNameActionGatheringPostError>> {
+pub fn action_gathering_my_name_action_gathering_post(configuration: &configuration::Configuration, name: &str) -> Result<models::SkillResponseSchema, Error<ActionGatheringMyNameActionGatheringPostError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -535,10 +535,10 @@ pub async fn action_gathering_my_name_action_gathering_post(configuration: &conf
     };
 
     let local_var_req = local_var_req_builder.build()?;
-    let local_var_resp = local_var_client.execute(local_var_req).await?;
+    let local_var_resp = local_var_client.execute(local_var_req)?;
 
     let local_var_status = local_var_resp.status();
-    let local_var_content = local_var_resp.text().await?;
+    let local_var_content = local_var_resp.text()?;
 
     if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
         serde_json::from_str(&local_var_content).map_err(Error::from)
@@ -550,7 +550,7 @@ pub async fn action_gathering_my_name_action_gathering_post(configuration: &conf
 }
 
 /// Buy an item at the Grand Exchange on the character's map.
-pub async fn action_ge_buy_item_my_name_action_ge_buy_post(configuration: &configuration::Configuration, name: &str, ge_transaction_item_schema: models::GeTransactionItemSchema) -> Result<models::GeTransactionResponseSchema, Error<ActionGeBuyItemMyNameActionGeBuyPostError>> {
+pub fn action_ge_buy_item_my_name_action_ge_buy_post(configuration: &configuration::Configuration, name: &str, ge_transaction_item_schema: models::GeTransactionItemSchema) -> Result<models::GeTransactionResponseSchema, Error<ActionGeBuyItemMyNameActionGeBuyPostError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -567,10 +567,10 @@ pub async fn action_ge_buy_item_my_name_action_ge_buy_post(configuration: &confi
     local_var_req_builder = local_var_req_builder.json(&ge_transaction_item_schema);
 
     let local_var_req = local_var_req_builder.build()?;
-    let local_var_resp = local_var_client.execute(local_var_req).await?;
+    let local_var_resp = local_var_client.execute(local_var_req)?;
 
     let local_var_status = local_var_resp.status();
-    let local_var_content = local_var_resp.text().await?;
+    let local_var_content = local_var_resp.text()?;
 
     if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
         serde_json::from_str(&local_var_content).map_err(Error::from)
@@ -582,7 +582,7 @@ pub async fn action_ge_buy_item_my_name_action_ge_buy_post(configuration: &confi
 }
 
 /// Sell an item at the Grand Exchange on the character's map.
-pub async fn action_ge_sell_item_my_name_action_ge_sell_post(configuration: &configuration::Configuration, name: &str, ge_transaction_item_schema: models::GeTransactionItemSchema) -> Result<models::GeTransactionResponseSchema, Error<ActionGeSellItemMyNameActionGeSellPostError>> {
+pub fn action_ge_sell_item_my_name_action_ge_sell_post(configuration: &configuration::Configuration, name: &str, ge_transaction_item_schema: models::GeTransactionItemSchema) -> Result<models::GeTransactionResponseSchema, Error<ActionGeSellItemMyNameActionGeSellPostError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -599,10 +599,10 @@ pub async fn action_ge_sell_item_my_name_action_ge_sell_post(configuration: &con
     local_var_req_builder = local_var_req_builder.json(&ge_transaction_item_schema);
 
     let local_var_req = local_var_req_builder.build()?;
-    let local_var_resp = local_var_client.execute(local_var_req).await?;
+    let local_var_resp = local_var_client.execute(local_var_req)?;
 
     let local_var_status = local_var_resp.status();
-    let local_var_content = local_var_resp.text().await?;
+    let local_var_content = local_var_resp.text()?;
 
     if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
         serde_json::from_str(&local_var_content).map_err(Error::from)
@@ -614,7 +614,7 @@ pub async fn action_ge_sell_item_my_name_action_ge_sell_post(configuration: &con
 }
 
 /// Moves a character on the map using the map's X and Y position.
-pub async fn action_move_my_name_action_move_post(configuration: &configuration::Configuration, name: &str, destination_schema: models::DestinationSchema) -> Result<models::CharacterMovementResponseSchema, Error<ActionMoveMyNameActionMovePostError>> {
+pub fn action_move_my_name_action_move_post(configuration: &configuration::Configuration, name: &str, destination_schema: models::DestinationSchema) -> Result<models::CharacterMovementResponseSchema, Error<ActionMoveMyNameActionMovePostError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -631,10 +631,10 @@ pub async fn action_move_my_name_action_move_post(configuration: &configuration:
     local_var_req_builder = local_var_req_builder.json(&destination_schema);
 
     let local_var_req = local_var_req_builder.build()?;
-    let local_var_resp = local_var_client.execute(local_var_req).await?;
+    let local_var_resp = local_var_client.execute(local_var_req)?;
 
     let local_var_status = local_var_resp.status();
-    let local_var_content = local_var_resp.text().await?;
+    let local_var_content = local_var_resp.text()?;
 
     if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
         serde_json::from_str(&local_var_content).map_err(Error::from)
@@ -646,7 +646,7 @@ pub async fn action_move_my_name_action_move_post(configuration: &configuration:
 }
 
 /// Recyling an item. The character must be on a map with a workshop (only for equipments and weapons).
-pub async fn action_recycling_my_name_action_recycling_post(configuration: &configuration::Configuration, name: &str, recycling_schema: models::RecyclingSchema) -> Result<models::RecyclingResponseSchema, Error<ActionRecyclingMyNameActionRecyclingPostError>> {
+pub fn action_recycling_my_name_action_recycling_post(configuration: &configuration::Configuration, name: &str, recycling_schema: models::RecyclingSchema) -> Result<models::RecyclingResponseSchema, Error<ActionRecyclingMyNameActionRecyclingPostError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -663,10 +663,10 @@ pub async fn action_recycling_my_name_action_recycling_post(configuration: &conf
     local_var_req_builder = local_var_req_builder.json(&recycling_schema);
 
     let local_var_req = local_var_req_builder.build()?;
-    let local_var_resp = local_var_client.execute(local_var_req).await?;
+    let local_var_resp = local_var_client.execute(local_var_req)?;
 
     let local_var_status = local_var_resp.status();
-    let local_var_content = local_var_resp.text().await?;
+    let local_var_content = local_var_resp.text()?;
 
     if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
         serde_json::from_str(&local_var_content).map_err(Error::from)
@@ -678,7 +678,7 @@ pub async fn action_recycling_my_name_action_recycling_post(configuration: &conf
 }
 
 /// Exchange 3 tasks coins for a random reward. Rewards are exclusive resources for crafting  items.
-pub async fn action_task_exchange_my_name_action_task_exchange_post(configuration: &configuration::Configuration, name: &str) -> Result<models::TaskRewardResponseSchema, Error<ActionTaskExchangeMyNameActionTaskExchangePostError>> {
+pub fn action_task_exchange_my_name_action_task_exchange_post(configuration: &configuration::Configuration, name: &str) -> Result<models::TaskRewardResponseSchema, Error<ActionTaskExchangeMyNameActionTaskExchangePostError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -694,10 +694,10 @@ pub async fn action_task_exchange_my_name_action_task_exchange_post(configuratio
     };
 
     let local_var_req = local_var_req_builder.build()?;
-    let local_var_resp = local_var_client.execute(local_var_req).await?;
+    let local_var_resp = local_var_client.execute(local_var_req)?;
 
     let local_var_status = local_var_resp.status();
-    let local_var_content = local_var_resp.text().await?;
+    let local_var_content = local_var_resp.text()?;
 
     if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
         serde_json::from_str(&local_var_content).map_err(Error::from)
@@ -709,7 +709,7 @@ pub async fn action_task_exchange_my_name_action_task_exchange_post(configuratio
 }
 
 /// Unequip an item on your character.
-pub async fn action_unequip_item_my_name_action_unequip_post(configuration: &configuration::Configuration, name: &str, unequip_schema: models::UnequipSchema) -> Result<models::EquipmentResponseSchema, Error<ActionUnequipItemMyNameActionUnequipPostError>> {
+pub fn action_unequip_item_my_name_action_unequip_post(configuration: &configuration::Configuration, name: &str, unequip_schema: models::UnequipSchema) -> Result<models::EquipmentResponseSchema, Error<ActionUnequipItemMyNameActionUnequipPostError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -726,10 +726,10 @@ pub async fn action_unequip_item_my_name_action_unequip_post(configuration: &con
     local_var_req_builder = local_var_req_builder.json(&unequip_schema);
 
     let local_var_req = local_var_req_builder.build()?;
-    let local_var_resp = local_var_client.execute(local_var_req).await?;
+    let local_var_resp = local_var_client.execute(local_var_req)?;
 
     let local_var_status = local_var_resp.status();
-    let local_var_content = local_var_resp.text().await?;
+    let local_var_content = local_var_resp.text()?;
 
     if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
         serde_json::from_str(&local_var_content).map_err(Error::from)
@@ -741,7 +741,7 @@ pub async fn action_unequip_item_my_name_action_unequip_post(configuration: &con
 }
 
 /// Withdraw gold from your bank.
-pub async fn action_withdraw_bank_gold_my_name_action_bank_withdraw_gold_post(configuration: &configuration::Configuration, name: &str, deposit_withdraw_gold_schema: models::DepositWithdrawGoldSchema) -> Result<models::GoldResponseSchema, Error<ActionWithdrawBankGoldMyNameActionBankWithdrawGoldPostError>> {
+pub fn action_withdraw_bank_gold_my_name_action_bank_withdraw_gold_post(configuration: &configuration::Configuration, name: &str, deposit_withdraw_gold_schema: models::DepositWithdrawGoldSchema) -> Result<models::GoldResponseSchema, Error<ActionWithdrawBankGoldMyNameActionBankWithdrawGoldPostError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -758,10 +758,10 @@ pub async fn action_withdraw_bank_gold_my_name_action_bank_withdraw_gold_post(co
     local_var_req_builder = local_var_req_builder.json(&deposit_withdraw_gold_schema);
 
     let local_var_req = local_var_req_builder.build()?;
-    let local_var_resp = local_var_client.execute(local_var_req).await?;
+    let local_var_resp = local_var_client.execute(local_var_req)?;
 
     let local_var_status = local_var_resp.status();
-    let local_var_content = local_var_resp.text().await?;
+    let local_var_content = local_var_resp.text()?;
 
     if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
         serde_json::from_str(&local_var_content).map_err(Error::from)
@@ -773,7 +773,7 @@ pub async fn action_withdraw_bank_gold_my_name_action_bank_withdraw_gold_post(co
 }
 
 /// Take an item from your bank and put it in the character's inventory.
-pub async fn action_withdraw_bank_my_name_action_bank_withdraw_post(configuration: &configuration::Configuration, name: &str, simple_item_schema: models::SimpleItemSchema) -> Result<models::ActionItemBankResponseSchema, Error<ActionWithdrawBankMyNameActionBankWithdrawPostError>> {
+pub fn action_withdraw_bank_my_name_action_bank_withdraw_post(configuration: &configuration::Configuration, name: &str, simple_item_schema: models::SimpleItemSchema) -> Result<models::ActionItemBankResponseSchema, Error<ActionWithdrawBankMyNameActionBankWithdrawPostError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -790,10 +790,10 @@ pub async fn action_withdraw_bank_my_name_action_bank_withdraw_post(configuratio
     local_var_req_builder = local_var_req_builder.json(&simple_item_schema);
 
     let local_var_req = local_var_req_builder.build()?;
-    let local_var_resp = local_var_client.execute(local_var_req).await?;
+    let local_var_resp = local_var_client.execute(local_var_req)?;
 
     let local_var_status = local_var_resp.status();
-    let local_var_content = local_var_resp.text().await?;
+    let local_var_content = local_var_resp.text()?;
 
     if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
         serde_json::from_str(&local_var_content).map_err(Error::from)
@@ -805,7 +805,7 @@ pub async fn action_withdraw_bank_my_name_action_bank_withdraw_post(configuratio
 }
 
 /// History of the last 100 actions of all your characters.
-pub async fn get_all_characters_logs_my_logs_get(configuration: &configuration::Configuration, page: Option<i32>, size: Option<i32>) -> Result<models::DataPageLogSchema, Error<GetAllCharactersLogsMyLogsGetError>> {
+pub fn get_all_characters_logs_my_logs_get(configuration: &configuration::Configuration, page: Option<i32>, size: Option<i32>) -> Result<models::DataPageLogSchema, Error<GetAllCharactersLogsMyLogsGetError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -827,10 +827,10 @@ pub async fn get_all_characters_logs_my_logs_get(configuration: &configuration::
     };
 
     let local_var_req = local_var_req_builder.build()?;
-    let local_var_resp = local_var_client.execute(local_var_req).await?;
+    let local_var_resp = local_var_client.execute(local_var_req)?;
 
     let local_var_status = local_var_resp.status();
-    let local_var_content = local_var_resp.text().await?;
+    let local_var_content = local_var_resp.text()?;
 
     if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
         serde_json::from_str(&local_var_content).map_err(Error::from)
@@ -842,7 +842,7 @@ pub async fn get_all_characters_logs_my_logs_get(configuration: &configuration::
 }
 
 /// List of your characters.
-pub async fn get_my_characters_my_characters_get(configuration: &configuration::Configuration, ) -> Result<models::MyCharactersListSchema, Error<GetMyCharactersMyCharactersGetError>> {
+pub fn get_my_characters_my_characters_get(configuration: &configuration::Configuration, ) -> Result<models::MyCharactersListSchema, Error<GetMyCharactersMyCharactersGetError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -858,10 +858,10 @@ pub async fn get_my_characters_my_characters_get(configuration: &configuration::
     };
 
     let local_var_req = local_var_req_builder.build()?;
-    let local_var_resp = local_var_client.execute(local_var_req).await?;
+    let local_var_resp = local_var_client.execute(local_var_req)?;
 
     let local_var_status = local_var_resp.status();
-    let local_var_content = local_var_resp.text().await?;
+    let local_var_content = local_var_resp.text()?;
 
     if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
         serde_json::from_str(&local_var_content).map_err(Error::from)

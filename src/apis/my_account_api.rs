@@ -40,7 +40,7 @@ pub enum GetBankItemsMyBankItemsGetError {
 
 
 /// Change your account password. Changing the password reset the account token.
-pub async fn change_password_my_change_password_post(configuration: &configuration::Configuration, change_password: models::ChangePassword) -> Result<models::ResponseSchema, Error<ChangePasswordMyChangePasswordPostError>> {
+pub fn change_password_my_change_password_post(configuration: &configuration::Configuration, change_password: models::ChangePassword) -> Result<models::ResponseSchema, Error<ChangePasswordMyChangePasswordPostError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -57,10 +57,10 @@ pub async fn change_password_my_change_password_post(configuration: &configurati
     local_var_req_builder = local_var_req_builder.json(&change_password);
 
     let local_var_req = local_var_req_builder.build()?;
-    let local_var_resp = local_var_client.execute(local_var_req).await?;
+    let local_var_resp = local_var_client.execute(local_var_req)?;
 
     let local_var_status = local_var_resp.status();
-    let local_var_content = local_var_resp.text().await?;
+    let local_var_content = local_var_resp.text()?;
 
     if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
         serde_json::from_str(&local_var_content).map_err(Error::from)
@@ -72,7 +72,7 @@ pub async fn change_password_my_change_password_post(configuration: &configurati
 }
 
 /// Fetch golds in your bank.
-pub async fn get_bank_golds_my_bank_gold_get(configuration: &configuration::Configuration, ) -> Result<models::GoldBankResponseSchema, Error<GetBankGoldsMyBankGoldGetError>> {
+pub fn get_bank_golds_my_bank_gold_get(configuration: &configuration::Configuration, ) -> Result<models::GoldBankResponseSchema, Error<GetBankGoldsMyBankGoldGetError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -88,10 +88,10 @@ pub async fn get_bank_golds_my_bank_gold_get(configuration: &configuration::Conf
     };
 
     let local_var_req = local_var_req_builder.build()?;
-    let local_var_resp = local_var_client.execute(local_var_req).await?;
+    let local_var_resp = local_var_client.execute(local_var_req)?;
 
     let local_var_status = local_var_resp.status();
-    let local_var_content = local_var_resp.text().await?;
+    let local_var_content = local_var_resp.text()?;
 
     if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
         serde_json::from_str(&local_var_content).map_err(Error::from)
@@ -103,7 +103,7 @@ pub async fn get_bank_golds_my_bank_gold_get(configuration: &configuration::Conf
 }
 
 /// Fetch all items in your bank.
-pub async fn get_bank_items_my_bank_items_get(configuration: &configuration::Configuration, item_code: Option<&str>, page: Option<i32>, size: Option<i32>) -> Result<models::DataPageSimpleItemSchema, Error<GetBankItemsMyBankItemsGetError>> {
+pub fn get_bank_items_my_bank_items_get(configuration: &configuration::Configuration, item_code: Option<&str>, page: Option<i32>, size: Option<i32>) -> Result<models::DataPageSimpleItemSchema, Error<GetBankItemsMyBankItemsGetError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -128,10 +128,10 @@ pub async fn get_bank_items_my_bank_items_get(configuration: &configuration::Con
     };
 
     let local_var_req = local_var_req_builder.build()?;
-    let local_var_resp = local_var_client.execute(local_var_req).await?;
+    let local_var_resp = local_var_client.execute(local_var_req)?;
 
     let local_var_status = local_var_resp.status();
-    let local_var_content = local_var_resp.text().await?;
+    let local_var_content = local_var_resp.text()?;
 
     if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
         serde_json::from_str(&local_var_content).map_err(Error::from)

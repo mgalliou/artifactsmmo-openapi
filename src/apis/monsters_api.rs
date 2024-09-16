@@ -33,7 +33,7 @@ pub enum GetMonsterMonstersCodeGetError {
 
 
 /// Fetch monsters details.
-pub async fn get_all_monsters_monsters_get(configuration: &configuration::Configuration, min_level: Option<i32>, max_level: Option<i32>, drop: Option<&str>, page: Option<i32>, size: Option<i32>) -> Result<models::DataPageMonsterSchema, Error<GetAllMonstersMonstersGetError>> {
+pub fn get_all_monsters_monsters_get(configuration: &configuration::Configuration, min_level: Option<i32>, max_level: Option<i32>, drop: Option<&str>, page: Option<i32>, size: Option<i32>) -> Result<models::DataPageMonsterSchema, Error<GetAllMonstersMonstersGetError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -61,10 +61,10 @@ pub async fn get_all_monsters_monsters_get(configuration: &configuration::Config
     }
 
     let local_var_req = local_var_req_builder.build()?;
-    let local_var_resp = local_var_client.execute(local_var_req).await?;
+    let local_var_resp = local_var_client.execute(local_var_req)?;
 
     let local_var_status = local_var_resp.status();
-    let local_var_content = local_var_resp.text().await?;
+    let local_var_content = local_var_resp.text()?;
 
     if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
         serde_json::from_str(&local_var_content).map_err(Error::from)
@@ -76,7 +76,7 @@ pub async fn get_all_monsters_monsters_get(configuration: &configuration::Config
 }
 
 /// Retrieve the details of a monster.
-pub async fn get_monster_monsters_code_get(configuration: &configuration::Configuration, code: &str) -> Result<models::MonsterResponseSchema, Error<GetMonsterMonstersCodeGetError>> {
+pub fn get_monster_monsters_code_get(configuration: &configuration::Configuration, code: &str) -> Result<models::MonsterResponseSchema, Error<GetMonsterMonstersCodeGetError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -89,10 +89,10 @@ pub async fn get_monster_monsters_code_get(configuration: &configuration::Config
     }
 
     let local_var_req = local_var_req_builder.build()?;
-    let local_var_resp = local_var_client.execute(local_var_req).await?;
+    let local_var_resp = local_var_client.execute(local_var_req)?;
 
     let local_var_status = local_var_resp.status();
-    let local_var_content = local_var_resp.text().await?;
+    let local_var_content = local_var_resp.text()?;
 
     if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
         serde_json::from_str(&local_var_content).map_err(Error::from)

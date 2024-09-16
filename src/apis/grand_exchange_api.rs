@@ -33,7 +33,7 @@ pub enum GetGeItemGeCodeGetError {
 
 
 /// Fetch Grand Exchange items details.
-pub async fn get_all_ge_items_ge_get(configuration: &configuration::Configuration, page: Option<i32>, size: Option<i32>) -> Result<models::DataPageGeItemSchema, Error<GetAllGeItemsGeGetError>> {
+pub fn get_all_ge_items_ge_get(configuration: &configuration::Configuration, page: Option<i32>, size: Option<i32>) -> Result<models::DataPageGeItemSchema, Error<GetAllGeItemsGeGetError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -52,10 +52,10 @@ pub async fn get_all_ge_items_ge_get(configuration: &configuration::Configuratio
     }
 
     let local_var_req = local_var_req_builder.build()?;
-    let local_var_resp = local_var_client.execute(local_var_req).await?;
+    let local_var_resp = local_var_client.execute(local_var_req)?;
 
     let local_var_status = local_var_resp.status();
-    let local_var_content = local_var_resp.text().await?;
+    let local_var_content = local_var_resp.text()?;
 
     if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
         serde_json::from_str(&local_var_content).map_err(Error::from)
@@ -67,7 +67,7 @@ pub async fn get_all_ge_items_ge_get(configuration: &configuration::Configuratio
 }
 
 /// Retrieve the details of a Grand Exchange item.
-pub async fn get_ge_item_ge_code_get(configuration: &configuration::Configuration, code: &str) -> Result<models::GeItemResponseSchema, Error<GetGeItemGeCodeGetError>> {
+pub fn get_ge_item_ge_code_get(configuration: &configuration::Configuration, code: &str) -> Result<models::GeItemResponseSchema, Error<GetGeItemGeCodeGetError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -80,10 +80,10 @@ pub async fn get_ge_item_ge_code_get(configuration: &configuration::Configuratio
     }
 
     let local_var_req = local_var_req_builder.build()?;
-    let local_var_resp = local_var_client.execute(local_var_req).await?;
+    let local_var_resp = local_var_client.execute(local_var_req)?;
 
     let local_var_status = local_var_resp.status();
-    let local_var_content = local_var_resp.text().await?;
+    let local_var_content = local_var_resp.text()?;
 
     if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
         serde_json::from_str(&local_var_content).map_err(Error::from)

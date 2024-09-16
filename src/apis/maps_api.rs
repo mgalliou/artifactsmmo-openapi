@@ -33,7 +33,7 @@ pub enum GetMapMapsXyGetError {
 
 
 /// Fetch maps details.
-pub async fn get_all_maps_maps_get(configuration: &configuration::Configuration, content_type: Option<&str>, content_code: Option<&str>, page: Option<i32>, size: Option<i32>) -> Result<models::DataPageMapSchema, Error<GetAllMapsMapsGetError>> {
+pub fn get_all_maps_maps_get(configuration: &configuration::Configuration, content_type: Option<&str>, content_code: Option<&str>, page: Option<i32>, size: Option<i32>) -> Result<models::DataPageMapSchema, Error<GetAllMapsMapsGetError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -58,10 +58,10 @@ pub async fn get_all_maps_maps_get(configuration: &configuration::Configuration,
     }
 
     let local_var_req = local_var_req_builder.build()?;
-    let local_var_resp = local_var_client.execute(local_var_req).await?;
+    let local_var_resp = local_var_client.execute(local_var_req)?;
 
     let local_var_status = local_var_resp.status();
-    let local_var_content = local_var_resp.text().await?;
+    let local_var_content = local_var_resp.text()?;
 
     if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
         serde_json::from_str(&local_var_content).map_err(Error::from)
@@ -73,7 +73,7 @@ pub async fn get_all_maps_maps_get(configuration: &configuration::Configuration,
 }
 
 /// Retrieve the details of a map.
-pub async fn get_map_maps_xy_get(configuration: &configuration::Configuration, x: i32, y: i32) -> Result<models::MapResponseSchema, Error<GetMapMapsXyGetError>> {
+pub fn get_map_maps_xy_get(configuration: &configuration::Configuration, x: i32, y: i32) -> Result<models::MapResponseSchema, Error<GetMapMapsXyGetError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -86,10 +86,10 @@ pub async fn get_map_maps_xy_get(configuration: &configuration::Configuration, x
     }
 
     let local_var_req = local_var_req_builder.build()?;
-    let local_var_resp = local_var_client.execute(local_var_req).await?;
+    let local_var_resp = local_var_client.execute(local_var_req)?;
 
     let local_var_status = local_var_resp.status();
-    let local_var_content = local_var_resp.text().await?;
+    let local_var_content = local_var_resp.text()?;
 
     if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
         serde_json::from_str(&local_var_content).map_err(Error::from)

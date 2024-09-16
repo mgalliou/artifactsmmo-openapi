@@ -50,7 +50,7 @@ pub enum GetCharacterCharactersNameGetError {
 
 
 /// Create new character on your account. You can create up to 5 characters.
-pub async fn create_character_characters_create_post(configuration: &configuration::Configuration, add_character_schema: models::AddCharacterSchema) -> Result<models::CharacterResponseSchema, Error<CreateCharacterCharactersCreatePostError>> {
+pub fn create_character_characters_create_post(configuration: &configuration::Configuration, add_character_schema: models::AddCharacterSchema) -> Result<models::CharacterResponseSchema, Error<CreateCharacterCharactersCreatePostError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -67,10 +67,10 @@ pub async fn create_character_characters_create_post(configuration: &configurati
     local_var_req_builder = local_var_req_builder.json(&add_character_schema);
 
     let local_var_req = local_var_req_builder.build()?;
-    let local_var_resp = local_var_client.execute(local_var_req).await?;
+    let local_var_resp = local_var_client.execute(local_var_req)?;
 
     let local_var_status = local_var_resp.status();
-    let local_var_content = local_var_resp.text().await?;
+    let local_var_content = local_var_resp.text()?;
 
     if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
         serde_json::from_str(&local_var_content).map_err(Error::from)
@@ -82,7 +82,7 @@ pub async fn create_character_characters_create_post(configuration: &configurati
 }
 
 /// Delete character on your account.
-pub async fn delete_character_characters_delete_post(configuration: &configuration::Configuration, delete_character_schema: models::DeleteCharacterSchema) -> Result<models::CharacterResponseSchema, Error<DeleteCharacterCharactersDeletePostError>> {
+pub fn delete_character_characters_delete_post(configuration: &configuration::Configuration, delete_character_schema: models::DeleteCharacterSchema) -> Result<models::CharacterResponseSchema, Error<DeleteCharacterCharactersDeletePostError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -99,10 +99,10 @@ pub async fn delete_character_characters_delete_post(configuration: &configurati
     local_var_req_builder = local_var_req_builder.json(&delete_character_schema);
 
     let local_var_req = local_var_req_builder.build()?;
-    let local_var_resp = local_var_client.execute(local_var_req).await?;
+    let local_var_resp = local_var_client.execute(local_var_req)?;
 
     let local_var_status = local_var_resp.status();
-    let local_var_content = local_var_resp.text().await?;
+    let local_var_content = local_var_resp.text()?;
 
     if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
         serde_json::from_str(&local_var_content).map_err(Error::from)
@@ -114,7 +114,7 @@ pub async fn delete_character_characters_delete_post(configuration: &configurati
 }
 
 /// Fetch characters details.
-pub async fn get_all_characters_characters_get(configuration: &configuration::Configuration, sort: Option<&str>, page: Option<i32>, size: Option<i32>) -> Result<models::DataPageCharacterSchema, Error<GetAllCharactersCharactersGetError>> {
+pub fn get_all_characters_characters_get(configuration: &configuration::Configuration, sort: Option<&str>, page: Option<i32>, size: Option<i32>) -> Result<models::DataPageCharacterSchema, Error<GetAllCharactersCharactersGetError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -136,10 +136,10 @@ pub async fn get_all_characters_characters_get(configuration: &configuration::Co
     }
 
     let local_var_req = local_var_req_builder.build()?;
-    let local_var_resp = local_var_client.execute(local_var_req).await?;
+    let local_var_resp = local_var_client.execute(local_var_req)?;
 
     let local_var_status = local_var_resp.status();
-    let local_var_content = local_var_resp.text().await?;
+    let local_var_content = local_var_resp.text()?;
 
     if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
         serde_json::from_str(&local_var_content).map_err(Error::from)
@@ -151,7 +151,7 @@ pub async fn get_all_characters_characters_get(configuration: &configuration::Co
 }
 
 /// Retrieve the details of a character.
-pub async fn get_character_characters_name_get(configuration: &configuration::Configuration, name: &str) -> Result<models::CharacterResponseSchema, Error<GetCharacterCharactersNameGetError>> {
+pub fn get_character_characters_name_get(configuration: &configuration::Configuration, name: &str) -> Result<models::CharacterResponseSchema, Error<GetCharacterCharactersNameGetError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -164,10 +164,10 @@ pub async fn get_character_characters_name_get(configuration: &configuration::Co
     }
 
     let local_var_req = local_var_req_builder.build()?;
-    let local_var_resp = local_var_client.execute(local_var_req).await?;
+    let local_var_resp = local_var_client.execute(local_var_req)?;
 
     let local_var_status = local_var_resp.status();
-    let local_var_content = local_var_resp.text().await?;
+    let local_var_content = local_var_resp.text()?;
 
     if !local_var_status.is_client_error() && !local_var_status.is_server_error() {
         serde_json::from_str(&local_var_content).map_err(Error::from)
