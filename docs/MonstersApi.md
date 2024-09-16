@@ -4,7 +4,7 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**get_all_monsters_monsters_get**](MonstersApi.md#get_all_monsters_monsters_get) | **GET** /monsters/ | Get All Monsters
+[**get_all_monsters_monsters_get**](MonstersApi.md#get_all_monsters_monsters_get) | **GET** /monsters | Get All Monsters
 [**get_monster_monsters_code_get**](MonstersApi.md#get_monster_monsters_code_get) | **GET** /monsters/{code} | Get Monster
 
 

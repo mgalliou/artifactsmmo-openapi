@@ -4,7 +4,7 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**get_all_items_items_get**](ItemsApi.md#get_all_items_items_get) | **GET** /items/ | Get All Items
+[**get_all_items_items_get**](ItemsApi.md#get_all_items_items_get) | **GET** /items | Get All Items
 [**get_item_items_code_get**](ItemsApi.md#get_item_items_code_get) | **GET** /items/{code} | Get Item
 
 

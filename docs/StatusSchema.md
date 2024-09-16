@@ -6,9 +6,10 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **status** | **String** | Server status | 
 **version** | Option<**String**> |  | [optional]
-**characters_online** | Option<**i32**> |  | [optional]
-**server_time** | Option<**String**> |  | [optional]
-**announcements** | Option<[**Vec<models::AnnouncementSchema>**](AnnouncementSchema.md)> |  | [optional]
+**max_level** | **i32** | Maximum level. | 
+**characters_online** | **i32** | Characters online. | 
+**server_time** | **String** | Server time. | 
+**announcements** | [**Vec<models::AnnouncementSchema>**](AnnouncementSchema.md) | Server announcements. | 
 **last_wipe** | **String** | Last server wipe. | 
 **next_wipe** | **String** | Next server wipe. | 
 

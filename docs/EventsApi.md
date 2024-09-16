@@ -4,7 +4,7 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**get_all_events_events_get**](EventsApi.md#get_all_events_events_get) | **GET** /events/ | Get All Events
+[**get_all_events_events_get**](EventsApi.md#get_all_events_events_get) | **GET** /events | Get All Events
 
 
 

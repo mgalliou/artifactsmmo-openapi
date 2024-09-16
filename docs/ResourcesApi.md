@@ -4,7 +4,7 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**get_all_resources_resources_get**](ResourcesApi.md#get_all_resources_resources_get) | **GET** /resources/ | Get All Resources
+[**get_all_resources_resources_get**](ResourcesApi.md#get_all_resources_resources_get) | **GET** /resources | Get All Resources
 [**get_resource_resources_code_get**](ResourcesApi.md#get_resource_resources_code_get) | **GET** /resources/{code} | Get Resource
 
 

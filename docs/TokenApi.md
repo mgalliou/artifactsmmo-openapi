@@ -4,7 +4,7 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**generate_token_token_post**](TokenApi.md#generate_token_token_post) | **POST** /token/ | Generate Token
+[**generate_token_token_post**](TokenApi.md#generate_token_token_post) | **POST** /token | Generate Token
 
 
 

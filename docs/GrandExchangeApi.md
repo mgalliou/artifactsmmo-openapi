@@ -4,7 +4,7 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**get_all_ge_items_ge_get**](GrandExchangeApi.md#get_all_ge_items_ge_get) | **GET** /ge/ | Get All Ge Items
+[**get_all_ge_items_ge_get**](GrandExchangeApi.md#get_all_ge_items_ge_get) | **GET** /ge | Get All Ge Items
 [**get_ge_item_ge_code_get**](GrandExchangeApi.md#get_ge_item_ge_code_get) | **GET** /ge/{code} | Get Ge Item
 
 

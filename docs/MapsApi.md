@@ -4,7 +4,7 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**get_all_maps_maps_get**](MapsApi.md#get_all_maps_maps_get) | **GET** /maps/ | Get All Maps
+[**get_all_maps_maps_get**](MapsApi.md#get_all_maps_maps_get) | **GET** /maps | Get All Maps
 [**get_map_maps_xy_get**](MapsApi.md#get_map_maps_xy_get) | **GET** /maps/{x}/{y} | Get Map
 
 

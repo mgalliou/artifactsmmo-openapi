@@ -5,7 +5,7 @@ All URIs are relative to *http://localhost*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**change_password_my_change_password_post**](MyAccountApi.md#change_password_my_change_password_post) | **POST** /my/change_password | Change Password
-[**get_bank_golds_my_bank_gold_get**](MyAccountApi.md#get_bank_golds_my_bank_gold_get) | **GET** /my/bank/gold | Get Bank Golds
+[**get_bank_details_my_bank_get**](MyAccountApi.md#get_bank_details_my_bank_get) | **GET** /my/bank | Get Bank Details
 [**get_bank_items_my_bank_items_get**](MyAccountApi.md#get_bank_items_my_bank_items_get) | **GET** /my/bank/items | Get Bank Items
 
 
@@ -40,12 +40,12 @@ Name | Type | Description  | Required | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## get_bank_golds_my_bank_gold_get
+## get_bank_details_my_bank_get
 
-> models::GoldBankResponseSchema get_bank_golds_my_bank_gold_get()
-Get Bank Golds
+> models::BankResponseSchema get_bank_details_my_bank_get()
+Get Bank Details
 
-Fetch golds in your bank.
+Fetch bank details.
 
 ### Parameters
 
@@ -53,7 +53,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**models::GoldBankResponseSchema**](GoldBankResponseSchema.md)
+[**models::BankResponseSchema**](BankResponseSchema.md)
 
 ### Authorization
 

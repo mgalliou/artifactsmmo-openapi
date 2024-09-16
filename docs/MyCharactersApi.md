@@ -5,6 +5,7 @@ All URIs are relative to *http://localhost*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**action_accept_new_task_my_name_action_task_new_post**](MyCharactersApi.md#action_accept_new_task_my_name_action_task_new_post) | **POST** /my/{name}/action/task/new | Action Accept New Task
+[**action_buy_bank_expansion_my_name_action_bank_buy_expansion_post**](MyCharactersApi.md#action_buy_bank_expansion_my_name_action_bank_buy_expansion_post) | **POST** /my/{name}/action/bank/buy_expansion | Action Buy Bank Expansion
 [**action_complete_task_my_name_action_task_complete_post**](MyCharactersApi.md#action_complete_task_my_name_action_task_complete_post) | **POST** /my/{name}/action/task/complete | Action Complete Task
 [**action_crafting_my_name_action_crafting_post**](MyCharactersApi.md#action_crafting_my_name_action_crafting_post) | **POST** /my/{name}/action/crafting | Action Crafting
 [**action_delete_item_my_name_action_delete_post**](MyCharactersApi.md#action_delete_item_my_name_action_delete_post) | **POST** /my/{name}/action/delete | Action Delete Item
@@ -17,6 +18,7 @@ Method | HTTP request | Description
 [**action_ge_sell_item_my_name_action_ge_sell_post**](MyCharactersApi.md#action_ge_sell_item_my_name_action_ge_sell_post) | **POST** /my/{name}/action/ge/sell | Action Ge Sell Item
 [**action_move_my_name_action_move_post**](MyCharactersApi.md#action_move_my_name_action_move_post) | **POST** /my/{name}/action/move | Action Move
 [**action_recycling_my_name_action_recycling_post**](MyCharactersApi.md#action_recycling_my_name_action_recycling_post) | **POST** /my/{name}/action/recycling | Action Recycling
+[**action_task_cancel_my_name_action_task_cancel_post**](MyCharactersApi.md#action_task_cancel_my_name_action_task_cancel_post) | **POST** /my/{name}/action/task/cancel | Action Task Cancel
 [**action_task_exchange_my_name_action_task_exchange_post**](MyCharactersApi.md#action_task_exchange_my_name_action_task_exchange_post) | **POST** /my/{name}/action/task/exchange | Action Task Exchange
 [**action_unequip_item_my_name_action_unequip_post**](MyCharactersApi.md#action_unequip_item_my_name_action_unequip_post) | **POST** /my/{name}/action/unequip | Action Unequip Item
 [**action_withdraw_bank_gold_my_name_action_bank_withdraw_gold_post**](MyCharactersApi.md#action_withdraw_bank_gold_my_name_action_bank_withdraw_gold_post) | **POST** /my/{name}/action/bank/withdraw/gold | Action Withdraw Bank Gold
@@ -43,6 +45,36 @@ Name | Type | Description  | Required | Notes
 ### Return type
 
 [**models::TaskResponseSchema**](TaskResponseSchema.md)
+
+### Authorization
+
+[JWTBearer](../README.md#JWTBearer)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## action_buy_bank_expansion_my_name_action_bank_buy_expansion_post
+
+> models::BankExtensionTransactionResponseSchema action_buy_bank_expansion_my_name_action_bank_buy_expansion_post(name)
+Action Buy Bank Expansion
+
+Buy a 20 slots bank expansion.
+
+### Parameters
+
+
+Name | Type | Description  | Required | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+**name** | **String** | Name of your character. | [required] |
+
+### Return type
+
+[**models::BankExtensionTransactionResponseSchema**](BankExtensionTransactionResponseSchema.md)
 
 ### Authorization
 
@@ -150,7 +182,7 @@ Name | Type | Description  | Required | Notes
 
 ## action_deposit_bank_gold_my_name_action_bank_deposit_gold_post
 
-> models::GoldResponseSchema action_deposit_bank_gold_my_name_action_bank_deposit_gold_post(name, deposit_withdraw_gold_schema)
+> models::BankGoldTransactionResponseSchema action_deposit_bank_gold_my_name_action_bank_deposit_gold_post(name, deposit_withdraw_gold_schema)
 Action Deposit Bank Gold
 
 Deposit golds in a bank on the character's map.
@@ -165,7 +197,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**models::GoldResponseSchema**](GoldResponseSchema.md)
+[**models::BankGoldTransactionResponseSchema**](BankGoldTransactionResponseSchema.md)
 
 ### Authorization
 
@@ -181,7 +213,7 @@ Name | Type | Description  | Required | Notes
 
 ## action_deposit_bank_my_name_action_bank_deposit_post
 
-> models::ActionItemBankResponseSchema action_deposit_bank_my_name_action_bank_deposit_post(name, simple_item_schema)
+> models::BankItemTransactionResponseSchema action_deposit_bank_my_name_action_bank_deposit_post(name, simple_item_schema)
 Action Deposit Bank
 
 Deposit an item in a bank on the character's map.
@@ -196,7 +228,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**models::ActionItemBankResponseSchema**](ActionItemBankResponseSchema.md)
+[**models::BankItemTransactionResponseSchema**](BankItemTransactionResponseSchema.md)
 
 ### Authorization
 
@@ -425,6 +457,36 @@ Name | Type | Description  | Required | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
+## action_task_cancel_my_name_action_task_cancel_post
+
+> models::TaskCancelledResponseSchema action_task_cancel_my_name_action_task_cancel_post(name)
+Action Task Cancel
+
+Cancel a task for 1 tasks coin.
+
+### Parameters
+
+
+Name | Type | Description  | Required | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+**name** | **String** | Name of your character. | [required] |
+
+### Return type
+
+[**models::TaskCancelledResponseSchema**](TaskCancelledResponseSchema.md)
+
+### Authorization
+
+[JWTBearer](../README.md#JWTBearer)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
 ## action_task_exchange_my_name_action_task_exchange_post
 
 > models::TaskRewardResponseSchema action_task_exchange_my_name_action_task_exchange_post(name)
@@ -488,7 +550,7 @@ Name | Type | Description  | Required | Notes
 
 ## action_withdraw_bank_gold_my_name_action_bank_withdraw_gold_post
 
-> models::GoldResponseSchema action_withdraw_bank_gold_my_name_action_bank_withdraw_gold_post(name, deposit_withdraw_gold_schema)
+> models::BankGoldTransactionResponseSchema action_withdraw_bank_gold_my_name_action_bank_withdraw_gold_post(name, deposit_withdraw_gold_schema)
 Action Withdraw Bank Gold
 
 Withdraw gold from your bank.
@@ -503,7 +565,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**models::GoldResponseSchema**](GoldResponseSchema.md)
+[**models::BankGoldTransactionResponseSchema**](BankGoldTransactionResponseSchema.md)
 
 ### Authorization
 
@@ -519,7 +581,7 @@ Name | Type | Description  | Required | Notes
 
 ## action_withdraw_bank_my_name_action_bank_withdraw_post
 
-> models::ActionItemBankResponseSchema action_withdraw_bank_my_name_action_bank_withdraw_post(name, simple_item_schema)
+> models::BankItemTransactionResponseSchema action_withdraw_bank_my_name_action_bank_withdraw_post(name, simple_item_schema)
 Action Withdraw Bank
 
 Take an item from your bank and put it in the character's inventory.
@@ -534,7 +596,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**models::ActionItemBankResponseSchema**](ActionItemBankResponseSchema.md)
+[**models::BankItemTransactionResponseSchema**](BankItemTransactionResponseSchema.md)
 
 ### Authorization
 

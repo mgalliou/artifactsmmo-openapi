@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **level** | **i32** | Combat level. | 
 **xp** | **i32** | The current xp level of the combat level. | 
 **max_xp** | **i32** | XP required to level up the character. | 
-**total_xp** | **i32** | Total XP of your character. | 
+**achievements_points** | **i32** | achievements points. | 
 **gold** | **i32** | The numbers of golds on this character. | 
 **speed** | **i32** | *Not available, on the roadmap. Character movement speed. | 
 **mining_level** | **i32** | Mining level. | 
