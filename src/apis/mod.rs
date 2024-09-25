@@ -103,6 +103,7 @@ pub mod monsters_api;
 pub mod my_account_api;
 pub mod my_characters_api;
 pub mod resources_api;
+pub mod tasks_api;
 pub mod token_api;
 
 pub mod configuration;

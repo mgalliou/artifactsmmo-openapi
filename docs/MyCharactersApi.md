@@ -20,6 +20,7 @@ Method | HTTP request | Description
 [**action_recycling_my_name_action_recycling_post**](MyCharactersApi.md#action_recycling_my_name_action_recycling_post) | **POST** /my/{name}/action/recycling | Action Recycling
 [**action_task_cancel_my_name_action_task_cancel_post**](MyCharactersApi.md#action_task_cancel_my_name_action_task_cancel_post) | **POST** /my/{name}/action/task/cancel | Action Task Cancel
 [**action_task_exchange_my_name_action_task_exchange_post**](MyCharactersApi.md#action_task_exchange_my_name_action_task_exchange_post) | **POST** /my/{name}/action/task/exchange | Action Task Exchange
+[**action_task_trade_my_name_action_task_trade_post**](MyCharactersApi.md#action_task_trade_my_name_action_task_trade_post) | **POST** /my/{name}/action/task/trade | Action Task Trade
 [**action_unequip_item_my_name_action_unequip_post**](MyCharactersApi.md#action_unequip_item_my_name_action_unequip_post) | **POST** /my/{name}/action/unequip | Action Unequip Item
 [**action_withdraw_bank_gold_my_name_action_bank_withdraw_gold_post**](MyCharactersApi.md#action_withdraw_bank_gold_my_name_action_bank_withdraw_gold_post) | **POST** /my/{name}/action/bank/withdraw/gold | Action Withdraw Bank Gold
 [**action_withdraw_bank_my_name_action_bank_withdraw_post**](MyCharactersApi.md#action_withdraw_bank_my_name_action_bank_withdraw_post) | **POST** /my/{name}/action/bank/withdraw | Action Withdraw Bank
@@ -90,7 +91,7 @@ Name | Type | Description  | Required | Notes
 
 ## action_complete_task_my_name_action_task_complete_post
 
-> models::TaskRewardResponseSchema action_complete_task_my_name_action_task_complete_post(name)
+> models::TasksRewardResponseSchema action_complete_task_my_name_action_task_complete_post(name)
 Action Complete Task
 
 Complete a task.
@@ -104,7 +105,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**models::TaskRewardResponseSchema**](TaskRewardResponseSchema.md)
+[**models::TasksRewardResponseSchema**](TasksRewardResponseSchema.md)
 
 ### Authorization
 
@@ -489,10 +490,10 @@ Name | Type | Description  | Required | Notes
 
 ## action_task_exchange_my_name_action_task_exchange_post
 
-> models::TaskRewardResponseSchema action_task_exchange_my_name_action_task_exchange_post(name)
+> models::TasksRewardResponseSchema action_task_exchange_my_name_action_task_exchange_post(name)
 Action Task Exchange
 
-Exchange 3 tasks coins for a random reward. Rewards are exclusive resources for crafting  items.
+Exchange 6 tasks coins for a random reward. Rewards are exclusive items or resources.
 
 ### Parameters
 
@@ -503,7 +504,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**models::TaskRewardResponseSchema**](TaskRewardResponseSchema.md)
+[**models::TasksRewardResponseSchema**](TasksRewardResponseSchema.md)
 
 ### Authorization
 
@@ -512,6 +513,37 @@ Name | Type | Description  | Required | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## action_task_trade_my_name_action_task_trade_post
+
+> models::TaskTradeResponseSchema action_task_trade_my_name_action_task_trade_post(name, simple_item_schema)
+Action Task Trade
+
+Trading items with a Tasks Master.
+
+### Parameters
+
+
+Name | Type | Description  | Required | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+**name** | **String** | Name of your character. | [required] |
+**simple_item_schema** | [**SimpleItemSchema**](SimpleItemSchema.md) |  | [required] |
+
+### Return type
+
+[**models::TaskTradeResponseSchema**](TaskTradeResponseSchema.md)
+
+### Authorization
+
+[JWTBearer](../README.md#JWTBearer)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
 - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
