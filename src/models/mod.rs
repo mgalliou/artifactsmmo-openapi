@@ -182,6 +182,8 @@ pub mod task_full_schema;
 pub use self::task_full_schema::TaskFullSchema;
 pub mod task_response_schema;
 pub use self::task_response_schema::TaskResponseSchema;
+pub mod task_rewards_schema;
+pub use self::task_rewards_schema::TaskRewardsSchema;
 pub mod task_schema;
 pub use self::task_schema::TaskSchema;
 pub mod task_trade_data_schema;

@@ -107,6 +107,7 @@ docs/TaskDataSchema.md
 docs/TaskFullResponseSchema.md
 docs/TaskFullSchema.md
 docs/TaskResponseSchema.md
+docs/TaskRewardsSchema.md
 docs/TaskSchema.md
 docs/TaskTradeDataSchema.md
 docs/TaskTradeResponseSchema.md
@@ -234,6 +235,7 @@ src/models/task_data_schema.rs
 src/models/task_full_response_schema.rs
 src/models/task_full_schema.rs
 src/models/task_response_schema.rs
+src/models/task_rewards_schema.rs
 src/models/task_schema.rs
 src/models/task_trade_data_schema.rs
 src/models/task_trade_response_schema.rs
