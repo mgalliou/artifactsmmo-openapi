@@ -32,7 +32,7 @@ pub enum GetResourceResourcesCodeGetError {
 
 
 /// Fetch resources details.
-pub fn get_all_resources_resources_get(configuration: &configuration::Configuration, min_level: Option<i32>, max_level: Option<i32>, skill: Option<models::models::GatheringSkill>, drop: Option<&str>, page: Option<i32>, size: Option<i32>) -> Result<models::DataPageResourceSchema, Error<GetAllResourcesResourcesGetError>> {
+pub fn get_all_resources_resources_get(configuration: &configuration::Configuration, min_level: Option<i32>, max_level: Option<i32>, skill: Option<models::GatheringSkill>, drop: Option<&str>, page: Option<i32>, size: Option<i32>) -> Result<models::DataPageResourceSchema, Error<GetAllResourcesResourcesGetError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;

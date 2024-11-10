@@ -31,7 +31,7 @@ pub enum GetCharactersLeaderboardLeaderboardCharactersGetError {
 
 
 /// Fetch leaderboard details.
-pub fn get_accounts_leaderboard_leaderboard_accounts_get(configuration: &configuration::Configuration, sort: Option<models::String>, page: Option<i32>, size: Option<i32>) -> Result<models::DataPageAccountLeaderboardSchema, Error<GetAccountsLeaderboardLeaderboardAccountsGetError>> {
+pub fn get_accounts_leaderboard_leaderboard_accounts_get(configuration: &configuration::Configuration, sort: Option<String>, page: Option<i32>, size: Option<i32>) -> Result<models::DataPageAccountLeaderboardSchema, Error<GetAccountsLeaderboardLeaderboardAccountsGetError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
@@ -68,7 +68,7 @@ pub fn get_accounts_leaderboard_leaderboard_accounts_get(configuration: &configu
 }
 
 /// Fetch leaderboard details.
-pub fn get_characters_leaderboard_leaderboard_characters_get(configuration: &configuration::Configuration, sort: Option<models::models::CharacterLeaderboardType>, page: Option<i32>, size: Option<i32>) -> Result<models::DataPageCharacterLeaderboardSchema, Error<GetCharactersLeaderboardLeaderboardCharactersGetError>> {
+pub fn get_characters_leaderboard_leaderboard_characters_get(configuration: &configuration::Configuration, sort: Option<models::CharacterLeaderboardType>, page: Option<i32>, size: Option<i32>) -> Result<models::DataPageCharacterLeaderboardSchema, Error<GetCharactersLeaderboardLeaderboardCharactersGetError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;

@@ -32,7 +32,7 @@ pub enum GetItemItemsCodeGetError {
 
 
 /// Fetch items details.
-pub fn get_all_items_items_get(configuration: &configuration::Configuration, min_level: Option<i32>, max_level: Option<i32>, name: Option<&str>, r#type: Option<models::models::ItemType>, craft_skill: Option<models::models::CraftSkill>, craft_material: Option<&str>, page: Option<i32>, size: Option<i32>) -> Result<models::DataPageItemSchema, Error<GetAllItemsItemsGetError>> {
+pub fn get_all_items_items_get(configuration: &configuration::Configuration, min_level: Option<i32>, max_level: Option<i32>, name: Option<&str>, r#type: Option<models::ItemType>, craft_skill: Option<models::CraftSkill>, craft_material: Option<&str>, page: Option<i32>, size: Option<i32>) -> Result<models::DataPageItemSchema, Error<GetAllItemsItemsGetError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
