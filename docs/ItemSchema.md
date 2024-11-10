@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **description** | **String** | Item description. | 
 **effects** | Option<[**Vec<models::ItemEffectSchema>**](ItemEffectSchema.md)> | List of object effects. For equipment, it will include item stats. | [optional]
 **craft** | Option<[**models::CraftSchema**](CraftSchema.md)> |  | [optional]
+**tradeable** | **bool** | Item tradeable status. A non-tradeable item cannot be exchanged or sold. | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **cooldown** | [**models::CooldownSchema**](CooldownSchema.md) | Cooldown details. | 
-**slot** | **String** | Item slot. | 
+**slot** | [**models::ItemSlot**](ItemSlot.md) | Item slot. | 
 **item** | [**models::ItemSchema**](ItemSchema.md) | Item details. | 
 **character** | [**models::CharacterSchema**](CharacterSchema.md) | Player details. | 
 

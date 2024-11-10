@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## get_achievement_achievements_code_get
 
-> models::BaseachievementResponseSchema get_achievement_achievements_code_get(code)
+> models::AchievementResponseSchema get_achievement_achievements_code_get(code)
 Get Achievement
 
 Retrieve the details of a achievement.
@@ -25,7 +25,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**models::BaseachievementResponseSchema**](BaseachievementResponseSchema.md)
+[**models::AchievementResponseSchema**](AchievementResponseSchema.md)
 
 ### Authorization
 
@@ -41,7 +41,7 @@ No authorization required
 
 ## get_all_achievements_achievements_get
 
-> models::DataPageBaseAchievementSchema get_all_achievements_achievements_get(r#type, page, size)
+> models::DataPageAchievementSchema get_all_achievements_achievements_get(r#type, page, size)
 Get All Achievements
 
 List of all achievements.
@@ -51,13 +51,13 @@ List of all achievements.
 
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-**r#type** | Option<**String**> | Type of achievements. |  |
+**r#type** | Option<[**models::AchievementType**](.md)> | Type of achievements. |  |
 **page** | Option<**i32**> | Page number |  |[default to 1]
 **size** | Option<**i32**> | Page size |  |[default to 50]
 
 ### Return type
 
-[**models::DataPageBaseAchievementSchema**](DataPage_BaseAchievementSchema_.md)
+[**models::DataPageAchievementSchema**](DataPage_AchievementSchema_.md)
 
 ### Authorization
 

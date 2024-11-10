@@ -5,12 +5,12 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **name** | **String** | Name of the character. | 
-**skin** | **String** | Character skin code. | 
+**account** | **String** | Account name. | 
+**skin** | [**models::CharacterSkin**](CharacterSkin.md) | Character skin code. | 
 **level** | **i32** | Combat level. | 
 **xp** | **i32** | The current xp level of the combat level. | 
 **max_xp** | **i32** | XP required to level up the character. | 
-**achievements_points** | **i32** | achievements points. | 
-**gold** | **i32** | The numbers of golds on this character. | 
+**gold** | **i32** | The numbers of gold on this character. | 
 **speed** | **i32** | *Not available, on the roadmap. Character movement speed. | 
 **mining_level** | **i32** | Mining level. | 
 **mining_xp** | **i32** | The current xp level of the Mining skill. | 
@@ -33,7 +33,11 @@ Name | Type | Description | Notes
 **cooking_level** | **i32** | The current xp level of the Cooking skill. | 
 **cooking_xp** | **i32** | Cooking XP. | 
 **cooking_max_xp** | **i32** | Cooking XP required to level up the skill. | 
-**hp** | **i32** | Character HP. | 
+**alchemy_level** | **i32** | Alchemy level. | 
+**alchemy_xp** | **i32** | Alchemy XP. | 
+**alchemy_max_xp** | **i32** | Alchemy XP required to level up the skill. | 
+**hp** | **i32** | Character actual HP. | 
+**max_hp** | **i32** | Character max HP. | 
 **haste** | **i32** | *Character Haste. Increase speed attack (reduce fight cooldown) | 
 **critical_strike** | **i32** | *Not available, on the roadmap. Character Critical   Strike. Critical strikes increase the attack's damage. | 
 **stamina** | **i32** | *Not available, on the roadmap. Regenerates life at the start of each turn. | 
@@ -65,10 +69,10 @@ Name | Type | Description | Notes
 **artifact1_slot** | **String** | Artifact 1 slot. | 
 **artifact2_slot** | **String** | Artifact 2 slot. | 
 **artifact3_slot** | **String** | Artifact 3 slot. | 
-**consumable1_slot** | **String** | Consumable 1 slot. | 
-**consumable1_slot_quantity** | **i32** | Consumable 1 quantity. | 
-**consumable2_slot** | **String** | Consumable 2 slot. | 
-**consumable2_slot_quantity** | **i32** | Consumable 2 quantity. | 
+**utility1_slot** | **String** | Utility 1 slot. | 
+**utility1_slot_quantity** | **i32** | Utility 1 quantity. | 
+**utility2_slot** | **String** | Utility 2 slot. | 
+**utility2_slot_quantity** | **i32** | Utility 2 quantity. | 
 **task** | **String** | Task in progress. | 
 **task_type** | **String** | Task type. | 
 **task_progress** | **i32** | Task progression. | 

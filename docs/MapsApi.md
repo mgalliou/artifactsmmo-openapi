@@ -21,7 +21,7 @@ Fetch maps details.
 
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-**content_type** | Option<**String**> | Type of content on the map. |  |
+**content_type** | Option<[**models::MapContentType**](.md)> | Type of content on the map. |  |
 **content_code** | Option<**String**> | Content code on the map. |  |
 **page** | Option<**i32**> | Page number |  |[default to 1]
 **size** | Option<**i32**> | Page size |  |[default to 50]

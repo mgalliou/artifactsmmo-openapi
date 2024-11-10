@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **status** | **String** | Server status | 
-**version** | Option<**String**> |  | [optional]
+**version** | **String** | Game version. | 
 **max_level** | **i32** | Maximum level. | 
 **characters_online** | **i32** | Characters online. | 
 **server_time** | **String** | Server time. | 

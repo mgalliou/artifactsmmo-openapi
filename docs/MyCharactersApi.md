@@ -14,14 +14,17 @@ Method | HTTP request | Description
 [**action_equip_item_my_name_action_equip_post**](MyCharactersApi.md#action_equip_item_my_name_action_equip_post) | **POST** /my/{name}/action/equip | Action Equip Item
 [**action_fight_my_name_action_fight_post**](MyCharactersApi.md#action_fight_my_name_action_fight_post) | **POST** /my/{name}/action/fight | Action Fight
 [**action_gathering_my_name_action_gathering_post**](MyCharactersApi.md#action_gathering_my_name_action_gathering_post) | **POST** /my/{name}/action/gathering | Action Gathering
-[**action_ge_buy_item_my_name_action_ge_buy_post**](MyCharactersApi.md#action_ge_buy_item_my_name_action_ge_buy_post) | **POST** /my/{name}/action/ge/buy | Action Ge Buy Item
-[**action_ge_sell_item_my_name_action_ge_sell_post**](MyCharactersApi.md#action_ge_sell_item_my_name_action_ge_sell_post) | **POST** /my/{name}/action/ge/sell | Action Ge Sell Item
+[**action_ge_buy_item_my_name_action_grandexchange_buy_post**](MyCharactersApi.md#action_ge_buy_item_my_name_action_grandexchange_buy_post) | **POST** /my/{name}/action/grandexchange/buy | Action Ge Buy Item
+[**action_ge_cancel_sell_order_my_name_action_grandexchange_cancel_post**](MyCharactersApi.md#action_ge_cancel_sell_order_my_name_action_grandexchange_cancel_post) | **POST** /my/{name}/action/grandexchange/cancel | Action Ge Cancel Sell Order
+[**action_ge_create_sell_order_my_name_action_grandexchange_sell_post**](MyCharactersApi.md#action_ge_create_sell_order_my_name_action_grandexchange_sell_post) | **POST** /my/{name}/action/grandexchange/sell | Action Ge Create Sell Order
 [**action_move_my_name_action_move_post**](MyCharactersApi.md#action_move_my_name_action_move_post) | **POST** /my/{name}/action/move | Action Move
 [**action_recycling_my_name_action_recycling_post**](MyCharactersApi.md#action_recycling_my_name_action_recycling_post) | **POST** /my/{name}/action/recycling | Action Recycling
+[**action_rest_my_name_action_rest_post**](MyCharactersApi.md#action_rest_my_name_action_rest_post) | **POST** /my/{name}/action/rest | Action Rest
 [**action_task_cancel_my_name_action_task_cancel_post**](MyCharactersApi.md#action_task_cancel_my_name_action_task_cancel_post) | **POST** /my/{name}/action/task/cancel | Action Task Cancel
 [**action_task_exchange_my_name_action_task_exchange_post**](MyCharactersApi.md#action_task_exchange_my_name_action_task_exchange_post) | **POST** /my/{name}/action/task/exchange | Action Task Exchange
 [**action_task_trade_my_name_action_task_trade_post**](MyCharactersApi.md#action_task_trade_my_name_action_task_trade_post) | **POST** /my/{name}/action/task/trade | Action Task Trade
 [**action_unequip_item_my_name_action_unequip_post**](MyCharactersApi.md#action_unequip_item_my_name_action_unequip_post) | **POST** /my/{name}/action/unequip | Action Unequip Item
+[**action_use_item_my_name_action_use_post**](MyCharactersApi.md#action_use_item_my_name_action_use_post) | **POST** /my/{name}/action/use | Action Use Item
 [**action_withdraw_bank_gold_my_name_action_bank_withdraw_gold_post**](MyCharactersApi.md#action_withdraw_bank_gold_my_name_action_bank_withdraw_gold_post) | **POST** /my/{name}/action/bank/withdraw/gold | Action Withdraw Bank Gold
 [**action_withdraw_bank_my_name_action_bank_withdraw_post**](MyCharactersApi.md#action_withdraw_bank_my_name_action_bank_withdraw_post) | **POST** /my/{name}/action/bank/withdraw | Action Withdraw Bank
 [**get_all_characters_logs_my_logs_get**](MyCharactersApi.md#get_all_characters_logs_my_logs_get) | **GET** /my/logs | Get All Characters Logs
@@ -91,7 +94,7 @@ Name | Type | Description  | Required | Notes
 
 ## action_complete_task_my_name_action_task_complete_post
 
-> models::TasksRewardResponseSchema action_complete_task_my_name_action_task_complete_post(name)
+> models::TasksRewardDataResponseSchema action_complete_task_my_name_action_task_complete_post(name)
 Action Complete Task
 
 Complete a task.
@@ -105,7 +108,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**models::TasksRewardResponseSchema**](TasksRewardResponseSchema.md)
+[**models::TasksRewardDataResponseSchema**](TasksRewardDataResponseSchema.md)
 
 ### Authorization
 
@@ -186,7 +189,7 @@ Name | Type | Description  | Required | Notes
 > models::BankGoldTransactionResponseSchema action_deposit_bank_gold_my_name_action_bank_deposit_gold_post(name, deposit_withdraw_gold_schema)
 Action Deposit Bank Gold
 
-Deposit golds in a bank on the character's map.
+Deposit gold in a bank on the character's map.
 
 ### Parameters
 
@@ -334,9 +337,9 @@ Name | Type | Description  | Required | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## action_ge_buy_item_my_name_action_ge_buy_post
+## action_ge_buy_item_my_name_action_grandexchange_buy_post
 
-> models::GeTransactionResponseSchema action_ge_buy_item_my_name_action_ge_buy_post(name, ge_transaction_item_schema)
+> models::GeTransactionResponseSchema action_ge_buy_item_my_name_action_grandexchange_buy_post(name, ge_buy_order_schema)
 Action Ge Buy Item
 
 Buy an item at the Grand Exchange on the character's map.
@@ -347,7 +350,7 @@ Buy an item at the Grand Exchange on the character's map.
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
 **name** | **String** | Name of your character. | [required] |
-**ge_transaction_item_schema** | [**GeTransactionItemSchema**](GeTransactionItemSchema.md) |  | [required] |
+**ge_buy_order_schema** | [**GeBuyOrderSchema**](GeBuyOrderSchema.md) |  | [required] |
 
 ### Return type
 
@@ -365,12 +368,12 @@ Name | Type | Description  | Required | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## action_ge_sell_item_my_name_action_ge_sell_post
+## action_ge_cancel_sell_order_my_name_action_grandexchange_cancel_post
 
-> models::GeTransactionResponseSchema action_ge_sell_item_my_name_action_ge_sell_post(name, ge_transaction_item_schema)
-Action Ge Sell Item
+> models::GeTransactionResponseSchema action_ge_cancel_sell_order_my_name_action_grandexchange_cancel_post(name, ge_cancel_order_schema)
+Action Ge Cancel Sell Order
 
-Sell an item at the Grand Exchange on the character's map.
+Cancel a sell order at the Grand Exchange on the character's map.
 
 ### Parameters
 
@@ -378,11 +381,42 @@ Sell an item at the Grand Exchange on the character's map.
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
 **name** | **String** | Name of your character. | [required] |
-**ge_transaction_item_schema** | [**GeTransactionItemSchema**](GeTransactionItemSchema.md) |  | [required] |
+**ge_cancel_order_schema** | [**GeCancelOrderSchema**](GeCancelOrderSchema.md) |  | [required] |
 
 ### Return type
 
 [**models::GeTransactionResponseSchema**](GETransactionResponseSchema.md)
+
+### Authorization
+
+[JWTBearer](../README.md#JWTBearer)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## action_ge_create_sell_order_my_name_action_grandexchange_sell_post
+
+> models::GeCreateOrderTransactionResponseSchema action_ge_create_sell_order_my_name_action_grandexchange_sell_post(name, ge_order_creationr_schema)
+Action Ge Create Sell Order
+
+Create a sell order at the Grand Exchange on the character's map. Please note that a 5% sales tax is charged.
+
+### Parameters
+
+
+Name | Type | Description  | Required | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+**name** | **String** | Name of your character. | [required] |
+**ge_order_creationr_schema** | [**GeOrderCreationrSchema**](GeOrderCreationrSchema.md) |  | [required] |
+
+### Return type
+
+[**models::GeCreateOrderTransactionResponseSchema**](GECreateOrderTransactionResponseSchema.md)
 
 ### Authorization
 
@@ -432,7 +466,7 @@ Name | Type | Description  | Required | Notes
 > models::RecyclingResponseSchema action_recycling_my_name_action_recycling_post(name, recycling_schema)
 Action Recycling
 
-Recyling an item. The character must be on a map with a workshop (only for equipments and weapons).
+Recycling an item. The character must be on a map with a workshop (only for equipments and weapons).
 
 ### Parameters
 
@@ -453,6 +487,36 @@ Name | Type | Description  | Required | Notes
 ### HTTP request headers
 
 - **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## action_rest_my_name_action_rest_post
+
+> models::CharacterRestResponseSchema action_rest_my_name_action_rest_post(name)
+Action Rest
+
+Recovers hit points by resting. (1 second per 5 HP, minimum 3 seconds)
+
+### Parameters
+
+
+Name | Type | Description  | Required | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+**name** | **String** | Name of your character. | [required] |
+
+### Return type
+
+[**models::CharacterRestResponseSchema**](CharacterRestResponseSchema.md)
+
+### Authorization
+
+[JWTBearer](../README.md#JWTBearer)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
 - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -490,7 +554,7 @@ Name | Type | Description  | Required | Notes
 
 ## action_task_exchange_my_name_action_task_exchange_post
 
-> models::TasksRewardResponseSchema action_task_exchange_my_name_action_task_exchange_post(name)
+> models::TasksRewardDataResponseSchema action_task_exchange_my_name_action_task_exchange_post(name)
 Action Task Exchange
 
 Exchange 6 tasks coins for a random reward. Rewards are exclusive items or resources.
@@ -504,7 +568,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**models::TasksRewardResponseSchema**](TasksRewardResponseSchema.md)
+[**models::TasksRewardDataResponseSchema**](TasksRewardDataResponseSchema.md)
 
 ### Authorization
 
@@ -567,6 +631,37 @@ Name | Type | Description  | Required | Notes
 ### Return type
 
 [**models::EquipmentResponseSchema**](EquipmentResponseSchema.md)
+
+### Authorization
+
+[JWTBearer](../README.md#JWTBearer)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## action_use_item_my_name_action_use_post
+
+> models::UseItemResponseSchema action_use_item_my_name_action_use_post(name, simple_item_schema)
+Action Use Item
+
+Use an item as a consumable.
+
+### Parameters
+
+
+Name | Type | Description  | Required | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+**name** | **String** | Name of your character. | [required] |
+**simple_item_schema** | [**SimpleItemSchema**](SimpleItemSchema.md) |  | [required] |
+
+### Return type
+
+[**models::UseItemResponseSchema**](UseItemResponseSchema.md)
 
 ### Authorization
 

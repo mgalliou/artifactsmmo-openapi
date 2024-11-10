@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **code** | **String** | Task objective. | 
 **level** | **i32** | Task level. | 
-**r#type** | **String** | The type of task. | 
+**r#type** | [**models::TaskType**](TaskType.md) | The type of task. | 
 **min_quantity** | **i32** | Minimum amount of task. | 
 **max_quantity** | **i32** | Maximum amount of task. | 
 **skill** | Option<**String**> |  | 

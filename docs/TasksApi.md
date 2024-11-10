@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 ## get_all_tasks_rewards_tasks_rewards_get
 
-> models::DataPageTasksRewardFullSchema get_all_tasks_rewards_tasks_rewards_get(page, size)
+> models::DataPageDropRateSchema get_all_tasks_rewards_tasks_rewards_get(page, size)
 Get All Tasks Rewards
 
 Fetch the list of all tasks rewards. To obtain these rewards, you must exchange 6 task coins with a tasks master.
@@ -28,7 +28,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**models::DataPageTasksRewardFullSchema**](DataPage_TasksRewardFullSchema_.md)
+[**models::DataPageDropRateSchema**](DataPage_DropRateSchema_.md)
 
 ### Authorization
 
@@ -56,8 +56,8 @@ Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
 **min_level** | Option<**i32**> | Minimum level. |  |
 **max_level** | Option<**i32**> | Maximum level. |  |
-**skill** | Option<**String**> | The code of the skill. |  |
-**r#type** | Option<**String**> | The type of tasks. |  |
+**skill** | Option<[**models::Skill**](.md)> | The code of the skill. |  |
+**r#type** | Option<[**models::TaskType**](.md)> | The type of tasks. |  |
 **page** | Option<**i32**> | Page number |  |[default to 1]
 **size** | Option<**i32**> | Page size |  |[default to 50]
 
@@ -109,7 +109,7 @@ No authorization required
 
 ## get_tasks_reward_tasks_rewards_code_get
 
-> models::TasksRewardFullResponseSchema get_tasks_reward_tasks_rewards_code_get(code)
+> models::TasksRewardResponseSchema get_tasks_reward_tasks_rewards_code_get(code)
 Get Tasks Reward
 
 Retrieve the details of a tasks reward.
@@ -123,7 +123,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**models::TasksRewardFullResponseSchema**](TasksRewardFullResponseSchema.md)
+[**models::TasksRewardResponseSchema**](TasksRewardResponseSchema.md)
 
 ### Authorization
 

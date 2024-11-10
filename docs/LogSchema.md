@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **character** | **String** | Character name. | 
 **account** | **String** | Account character. | 
-**r#type** | **String** | Type of action. | 
+**r#type** | [**models::LogType**](LogType.md) | Type of action. | 
 **description** | **String** | Description of action. | 
 **content** | Option<[**serde_json::Value**](.md)> |  | 
 **cooldown** | **i32** | Cooldown in seconds. | 

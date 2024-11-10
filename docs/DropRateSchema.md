@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **code** | **String** | Item code. | 
-**rate** | **i32** | Chance rate. | 
+**rate** | **i32** | Chance rate. (1/rate) | 
 **min_quantity** | **i32** | Minimum quantity. | 
 **max_quantity** | **i32** | Maximum quantity. | 
 

@@ -4,6 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**id** | **String** | Order id. | 
 **code** | **String** | Item code. | 
 **quantity** | **i32** | Item quantity. | 
 **price** | **i32** | Item price. | 

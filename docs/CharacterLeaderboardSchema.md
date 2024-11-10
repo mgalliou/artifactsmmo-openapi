@@ -4,9 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**position** | **i32** | Position in the leaderboard. | 
 **name** | **String** | Character name. | 
+**account** | **String** | Account name. | 
 **skin** | **String** | Character skin code. | 
-**achievements_points** | **i32** | Achievements points. | 
 **level** | **i32** | Combat level. | 
 **total_xp** | **i32** | Total XP of your character. | 
 **mining_level** | **i32** | Mining level. | 
@@ -23,7 +24,9 @@ Name | Type | Description | Notes
 **jewelrycrafting_total_xp** | **i32** | Jewelrycrafting total xp. | 
 **cooking_level** | **i32** | Cooking level. | 
 **cooking_total_xp** | **i32** | Cooking total xp. | 
-**gold** | **i32** | The numbers of golds on this character. | 
+**alchemy_level** | **i32** | Alchemy level. | 
+**alchemy_total_xp** | **i32** | Alchemy total xp. | 
+**gold** | **i32** | The numbers of gold on this character. | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

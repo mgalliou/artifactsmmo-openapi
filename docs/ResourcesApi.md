@@ -23,7 +23,7 @@ Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
 **min_level** | Option<**i32**> | Skill minimum level. |  |
 **max_level** | Option<**i32**> | Skill maximum level. |  |
-**skill** | Option<**String**> | The code of the skill. |  |
+**skill** | Option<[**models::GatheringSkill**](.md)> | The code of the skill. |  |
 **drop** | Option<**String**> | Item code of the drop. |  |
 **page** | Option<**i32**> | Page number |  |[default to 1]
 **size** | Option<**i32**> | Page size |  |[default to 50]
