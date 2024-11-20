@@ -32,7 +32,7 @@ pub enum GetMapMapsXyGetError {
 
 
 /// Fetch maps details.
-pub fn get_all_maps_maps_get(configuration: &configuration::Configuration, content_type: Option<models::models::MapContentType>, content_code: Option<&str>, page: Option<i32>, size: Option<i32>) -> Result<models::DataPageMapSchema, Error<GetAllMapsMapsGetError>> {
+pub fn get_all_maps_maps_get(configuration: &configuration::Configuration, content_type: Option<models::MapContentType>, content_code: Option<&str>, page: Option<i32>, size: Option<i32>) -> Result<models::DataPageMapSchema, Error<GetAllMapsMapsGetError>> {
     let local_var_configuration = configuration;
 
     let local_var_client = &local_var_configuration.client;
