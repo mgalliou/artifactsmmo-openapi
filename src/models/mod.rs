@@ -6,6 +6,8 @@ pub mod account_details_schema;
 pub use self::account_details_schema::AccountDetailsSchema;
 pub mod account_leaderboard_schema;
 pub use self::account_leaderboard_schema::AccountLeaderboardSchema;
+pub mod account_leaderboard_type;
+pub use self::account_leaderboard_type::AccountLeaderboardType;
 pub mod account_status;
 pub use self::account_status::AccountStatus;
 pub mod achievement_response_schema;

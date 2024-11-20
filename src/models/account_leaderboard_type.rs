@@ -13,26 +13,23 @@ use serde::{Deserialize, Serialize};
 
 /// 
 #[derive(Clone, Copy, Debug, Eq, PartialEq, Ord, PartialOrd, Hash, Serialize, Deserialize)]
-pub enum FightResult {
-    #[serde(rename = "win")]
-    Win,
-    #[serde(rename = "loss")]
-    Loss,
+pub enum AccountLeaderboardType {
+    #[serde(rename = "achievements_points")]
+    AchievementsPoints,
 
 }
 
-impl std::fmt::Display for FightResult {
+impl std::fmt::Display for AccountLeaderboardType {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         match self {
-            Self::Win => write!(f, "win"),
-            Self::Loss => write!(f, "loss"),
+            Self::AchievementsPoints => write!(f, "achievements_points"),
         }
     }
 }
 
-impl Default for FightResult {
-    fn default() -> FightResult {
-        Self::Win
+impl Default for AccountLeaderboardType {
+    fn default() -> AccountLeaderboardType {
+        Self::AchievementsPoints
     }
 }
 

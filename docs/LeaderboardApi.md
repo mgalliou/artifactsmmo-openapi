@@ -21,7 +21,7 @@ Fetch leaderboard details.
 
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-**sort** | Option<[**String**](.md)> | Default sort by achievements points. |  |
+**sort** | Option<[**models::AccountLeaderboardType**](.md)> | Default sort by achievements points. |  |
 **page** | Option<**i32**> | Page number |  |[default to 1]
 **size** | Option<**i32**> | Page size |  |[default to 50]
 

@@ -6,6 +6,7 @@ docs/AccountAchievementSchema.md
 docs/AccountDetails.md
 docs/AccountDetailsSchema.md
 docs/AccountLeaderboardSchema.md
+docs/AccountLeaderboardType.md
 docs/AccountStatus.md
 docs/AccountsApi.md
 docs/AchievementResponseSchema.md
@@ -178,6 +179,7 @@ src/models/account_achievement_schema.rs
 src/models/account_details.rs
 src/models/account_details_schema.rs
 src/models/account_leaderboard_schema.rs
+src/models/account_leaderboard_type.rs
 src/models/account_status.rs
 src/models/achievement_response_schema.rs
 src/models/achievement_rewards_schema.rs
