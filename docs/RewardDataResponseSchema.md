@@ -1,10 +1,10 @@
-# TasksRewardDataResponseSchema
+# RewardDataResponseSchema
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**data** | [**models::TasksRewardDataSchema**](TasksRewardDataSchema.md) |  | 
+**data** | [**models::RewardDataSchema**](RewardDataSchema.md) |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

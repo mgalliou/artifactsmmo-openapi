@@ -19,6 +19,7 @@
 | Equip | equip |
 | Unequip | unequip |
 | Task | task |
+| ChristmasExchange | christmas_exchange |
 | Recycling | recycling |
 | Rest | rest |
 | Use | use |

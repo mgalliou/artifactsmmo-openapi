@@ -6,6 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**action_accept_new_task_my_name_action_task_new_post**](MyCharactersApi.md#action_accept_new_task_my_name_action_task_new_post) | **POST** /my/{name}/action/task/new | Action Accept New Task
 [**action_buy_bank_expansion_my_name_action_bank_buy_expansion_post**](MyCharactersApi.md#action_buy_bank_expansion_my_name_action_bank_buy_expansion_post) | **POST** /my/{name}/action/bank/buy_expansion | Action Buy Bank Expansion
+[**action_christmas_exchange_my_name_action_christmas_exchange_post**](MyCharactersApi.md#action_christmas_exchange_my_name_action_christmas_exchange_post) | **POST** /my/{name}/action/christmas/exchange | Action Christmas Exchange
 [**action_complete_task_my_name_action_task_complete_post**](MyCharactersApi.md#action_complete_task_my_name_action_task_complete_post) | **POST** /my/{name}/action/task/complete | Action Complete Task
 [**action_crafting_my_name_action_crafting_post**](MyCharactersApi.md#action_crafting_my_name_action_crafting_post) | **POST** /my/{name}/action/crafting | Action Crafting
 [**action_delete_item_my_name_action_delete_post**](MyCharactersApi.md#action_delete_item_my_name_action_delete_post) | **POST** /my/{name}/action/delete | Action Delete Item
@@ -92,9 +93,39 @@ Name | Type | Description  | Required | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
+## action_christmas_exchange_my_name_action_christmas_exchange_post
+
+> models::RewardDataResponseSchema action_christmas_exchange_my_name_action_christmas_exchange_post(name)
+Action Christmas Exchange
+
+Exchange 1 gift for a random reward.
+
+### Parameters
+
+
+Name | Type | Description  | Required | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+**name** | **String** | Name of your character. | [required] |
+
+### Return type
+
+[**models::RewardDataResponseSchema**](RewardDataResponseSchema.md)
+
+### Authorization
+
+[JWTBearer](../README.md#JWTBearer)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
 ## action_complete_task_my_name_action_task_complete_post
 
-> models::TasksRewardDataResponseSchema action_complete_task_my_name_action_task_complete_post(name)
+> models::RewardDataResponseSchema action_complete_task_my_name_action_task_complete_post(name)
 Action Complete Task
 
 Complete a task.
@@ -108,7 +139,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**models::TasksRewardDataResponseSchema**](TasksRewardDataResponseSchema.md)
+[**models::RewardDataResponseSchema**](RewardDataResponseSchema.md)
 
 ### Authorization
 
@@ -554,7 +585,7 @@ Name | Type | Description  | Required | Notes
 
 ## action_task_exchange_my_name_action_task_exchange_post
 
-> models::TasksRewardDataResponseSchema action_task_exchange_my_name_action_task_exchange_post(name)
+> models::RewardDataResponseSchema action_task_exchange_my_name_action_task_exchange_post(name)
 Action Task Exchange
 
 Exchange 6 tasks coins for a random reward. Rewards are exclusive items or resources.
@@ -568,7 +599,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**models::TasksRewardDataResponseSchema**](TasksRewardDataResponseSchema.md)
+[**models::RewardDataResponseSchema**](RewardDataResponseSchema.md)
 
 ### Authorization
 

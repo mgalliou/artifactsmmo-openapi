@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **email** | **String** | Email. | 
 **subscribed** | **bool** | Subscribed for the current season. | 
 **status** | [**models::AccountStatus**](AccountStatus.md) | Member status. | 
-**badges** | Option<[**Vec<serde_json::Value>**](serde_json::Value.md)> |  | [optional]
+**badges** | Option<[**Vec<serde_json::Value>**](serde_json::Value.md)> | Account badges. | [optional]
 **gems** | **i32** | Gems. | 
 **achievements_points** | **i32** | Achievement points. | 
 **banned** | **bool** | Banned. | 

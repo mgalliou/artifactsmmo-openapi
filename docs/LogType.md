@@ -24,6 +24,7 @@
 | TaskCancelled | task_cancelled |
 | TaskCompleted | task_completed |
 | TaskTrade | task_trade |
+| ChristmasExchange | christmas_exchange |
 | Recycling | recycling |
 | Rest | rest |
 | Use | use |

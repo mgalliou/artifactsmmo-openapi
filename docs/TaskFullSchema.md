@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **min_quantity** | **i32** | Minimum amount of task. | 
 **max_quantity** | **i32** | Maximum amount of task. | 
 **skill** | Option<**String**> |  | 
-**rewards** | [**models::TaskRewardsSchema**](TaskRewardsSchema.md) | Rewards. | 
+**rewards** | [**models::RewardsSchema**](RewardsSchema.md) | Rewards. | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

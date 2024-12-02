@@ -109,7 +109,7 @@ No authorization required
 
 ## get_tasks_reward_tasks_rewards_code_get
 
-> models::TasksRewardResponseSchema get_tasks_reward_tasks_rewards_code_get(code)
+> models::RewardResponseSchema get_tasks_reward_tasks_rewards_code_get(code)
 Get Tasks Reward
 
 Retrieve the details of a tasks reward.
@@ -123,7 +123,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**models::TasksRewardResponseSchema**](TasksRewardResponseSchema.md)
+[**models::RewardResponseSchema**](RewardResponseSchema.md)
 
 ### Authorization
 
