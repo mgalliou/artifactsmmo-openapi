@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **name** | **String** | Name of the event. | 
-**code** | **String** | Code of the event. This is the event's unique identifier (ID). | 
+**code** | **String** | Code of the event. | 
 **maps** | [**Vec<models::EventMapSchema>**](EventMapSchema.md) | Map list of the event. | 
 **skin** | **String** | Map skin of the event. | 
 **duration** | **i32** | Duration in minutes. | 

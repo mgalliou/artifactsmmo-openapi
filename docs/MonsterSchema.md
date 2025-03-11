@@ -16,6 +16,8 @@ Name | Type | Description | Notes
 **res_earth** | **i32** | Monster % earth resistance. | 
 **res_water** | **i32** | Monster % water resistance. | 
 **res_air** | **i32** | Monster % air resistance. | 
+**critical_strike** | **i32** | Monster % critical strike. | 
+**effects** | Option<[**Vec<models::SimpleEffectSchema>**](SimpleEffectSchema.md)> | List of effects. | [optional]
 **min_gold** | **i32** | Monster minimum gold drop.  | 
 **max_gold** | **i32** | Monster maximum gold drop.  | 
 **drops** | [**Vec<models::DropRateSchema>**](DropRateSchema.md) | Monster drops. This is a list of items that the monster drops after killing the monster.  | 

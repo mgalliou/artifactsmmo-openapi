@@ -57,6 +57,7 @@ docs/DataPageActiveEventSchema.md
 docs/DataPageBadgeSchema.md
 docs/DataPageCharacterLeaderboardSchema.md
 docs/DataPageDropRateSchema.md
+docs/DataPageEffectSchema.md
 docs/DataPageEventSchema.md
 docs/DataPageGeOrderHistorySchema.md
 docs/DataPageGeOrderSchema.md
@@ -64,6 +65,8 @@ docs/DataPageItemSchema.md
 docs/DataPageLogSchema.md
 docs/DataPageMapSchema.md
 docs/DataPageMonsterSchema.md
+docs/DataPageNpcItem.md
+docs/DataPageNpcSchema.md
 docs/DataPageResourceSchema.md
 docs/DataPageSimpleItemSchema.md
 docs/DataPageTaskFullSchema.md
@@ -75,6 +78,11 @@ docs/DepositWithdrawGoldSchema.md
 docs/DestinationSchema.md
 docs/DropRateSchema.md
 docs/DropSchema.md
+docs/EffectResponseSchema.md
+docs/EffectSchema.md
+docs/EffectSubtype.md
+docs/EffectType.md
+docs/EffectsApi.md
 docs/EquipRequestSchema.md
 docs/EquipSchema.md
 docs/EquipmentResponseSchema.md
@@ -101,7 +109,6 @@ docs/GoldSchema.md
 docs/GrandExchangeApi.md
 docs/HttpValidationError.md
 docs/InventorySlot.md
-docs/ItemEffectSchema.md
 docs/ItemResponseSchema.md
 docs/ItemSchema.md
 docs/ItemSlot.md
@@ -123,6 +130,15 @@ docs/MyAccountDetails.md
 docs/MyAccountDetailsSchema.md
 docs/MyCharactersApi.md
 docs/MyCharactersListSchema.md
+docs/NpcItem.md
+docs/NpcItemTransactionSchema.md
+docs/NpcMerchantBuySchema.md
+docs/NpcMerchantTransactionResponseSchema.md
+docs/NpcMerchantTransactionSchema.md
+docs/NpcResponseSchema.md
+docs/NpcSchema.md
+docs/NpcType.md
+docs/NpcsApi.md
 docs/RecyclingDataSchema.md
 docs/RecyclingItemsSchema.md
 docs/RecyclingResponseSchema.md
@@ -135,6 +151,7 @@ docs/RewardDataResponseSchema.md
 docs/RewardDataSchema.md
 docs/RewardResponseSchema.md
 docs/RewardsSchema.md
+docs/SimpleEffectSchema.md
 docs/SimpleItemSchema.md
 docs/Skill.md
 docs/SkillDataSchema.md
@@ -168,6 +185,7 @@ src/apis/badges_api.rs
 src/apis/characters_api.rs
 src/apis/configuration.rs
 src/apis/default_api.rs
+src/apis/effects_api.rs
 src/apis/events_api.rs
 src/apis/grand_exchange_api.rs
 src/apis/items_api.rs
@@ -177,6 +195,7 @@ src/apis/mod.rs
 src/apis/monsters_api.rs
 src/apis/my_account_api.rs
 src/apis/my_characters_api.rs
+src/apis/npcs_api.rs
 src/apis/resources_api.rs
 src/apis/tasks_api.rs
 src/apis/token_api.rs
@@ -232,6 +251,7 @@ src/models/data_page_active_event_schema_.rs
 src/models/data_page_badge_schema_.rs
 src/models/data_page_character_leaderboard_schema_.rs
 src/models/data_page_drop_rate_schema_.rs
+src/models/data_page_effect_schema_.rs
 src/models/data_page_event_schema_.rs
 src/models/data_page_ge_order_history_schema_.rs
 src/models/data_page_ge_order_schema_.rs
@@ -239,6 +259,8 @@ src/models/data_page_item_schema_.rs
 src/models/data_page_log_schema_.rs
 src/models/data_page_map_schema_.rs
 src/models/data_page_monster_schema_.rs
+src/models/data_page_npc_item_.rs
+src/models/data_page_npc_schema_.rs
 src/models/data_page_resource_schema_.rs
 src/models/data_page_simple_item_schema_.rs
 src/models/data_page_task_full_schema_.rs
@@ -249,6 +271,10 @@ src/models/deposit_withdraw_gold_schema.rs
 src/models/destination_schema.rs
 src/models/drop_rate_schema.rs
 src/models/drop_schema.rs
+src/models/effect_response_schema.rs
+src/models/effect_schema.rs
+src/models/effect_subtype.rs
+src/models/effect_type.rs
 src/models/equip_request_schema.rs
 src/models/equip_schema.rs
 src/models/equipment_response_schema.rs
@@ -273,7 +299,6 @@ src/models/ge_transaction_schema.rs
 src/models/gold_schema.rs
 src/models/http_validation_error.rs
 src/models/inventory_slot.rs
-src/models/item_effect_schema.rs
 src/models/item_response_schema.rs
 src/models/item_schema.rs
 src/models/item_slot.rs
@@ -290,6 +315,14 @@ src/models/monster_schema.rs
 src/models/my_account_details.rs
 src/models/my_account_details_schema.rs
 src/models/my_characters_list_schema.rs
+src/models/npc_item.rs
+src/models/npc_item_transaction_schema.rs
+src/models/npc_merchant_buy_schema.rs
+src/models/npc_merchant_transaction_response_schema.rs
+src/models/npc_merchant_transaction_schema.rs
+src/models/npc_response_schema.rs
+src/models/npc_schema.rs
+src/models/npc_type.rs
 src/models/recycling_data_schema.rs
 src/models/recycling_items_schema.rs
 src/models/recycling_response_schema.rs
@@ -301,6 +334,7 @@ src/models/reward_data_response_schema.rs
 src/models/reward_data_schema.rs
 src/models/reward_response_schema.rs
 src/models/rewards_schema.rs
+src/models/simple_effect_schema.rs
 src/models/simple_item_schema.rs
 src/models/skill.rs
 src/models/skill_data_schema.rs

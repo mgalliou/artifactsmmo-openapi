@@ -10,6 +10,8 @@
 | Gathering | gathering |
 | BuyGe | buy_ge |
 | SellGe | sell_ge |
+| BuyNpc | buy_npc |
+| SellNpc | sell_npc |
 | CancelGe | cancel_ge |
 | DeleteItem | delete_item |
 | Deposit | deposit |

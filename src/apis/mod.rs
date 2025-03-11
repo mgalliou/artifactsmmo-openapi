@@ -90,11 +90,33 @@ pub fn parse_deep_object(prefix: &str, value: &serde_json::Value) -> Vec<(String
     unimplemented!("Only objects are supported with style=deepObject")
 }
 
+/// Internal use only
+/// A content type supported by this client.
+#[allow(dead_code)]
+enum ContentType {
+    Json,
+    Text,
+    Unsupported(String)
+}
+
+impl From<&str> for ContentType {
+    fn from(content_type: &str) -> Self {
+        if content_type.starts_with("application") && content_type.contains("json") {
+            return Self::Json;
+        } else if content_type.starts_with("text/plain") {
+            return Self::Text;
+        } else {
+            return Self::Unsupported(content_type.to_string());
+        }
+    }
+}
+
 pub mod accounts_api;
 pub mod achievements_api;
 pub mod badges_api;
 pub mod characters_api;
 pub mod default_api;
+pub mod effects_api;
 pub mod events_api;
 pub mod grand_exchange_api;
 pub mod items_api;
@@ -103,6 +125,7 @@ pub mod maps_api;
 pub mod monsters_api;
 pub mod my_account_api;
 pub mod my_characters_api;
+pub mod npcs_api;
 pub mod resources_api;
 pub mod tasks_api;
 pub mod token_api;

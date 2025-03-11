@@ -6,7 +6,6 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**action_accept_new_task_my_name_action_task_new_post**](MyCharactersApi.md#action_accept_new_task_my_name_action_task_new_post) | **POST** /my/{name}/action/task/new | Action Accept New Task
 [**action_buy_bank_expansion_my_name_action_bank_buy_expansion_post**](MyCharactersApi.md#action_buy_bank_expansion_my_name_action_bank_buy_expansion_post) | **POST** /my/{name}/action/bank/buy_expansion | Action Buy Bank Expansion
-[**action_christmas_exchange_my_name_action_christmas_exchange_post**](MyCharactersApi.md#action_christmas_exchange_my_name_action_christmas_exchange_post) | **POST** /my/{name}/action/christmas/exchange | Action Christmas Exchange
 [**action_complete_task_my_name_action_task_complete_post**](MyCharactersApi.md#action_complete_task_my_name_action_task_complete_post) | **POST** /my/{name}/action/task/complete | Action Complete Task
 [**action_crafting_my_name_action_crafting_post**](MyCharactersApi.md#action_crafting_my_name_action_crafting_post) | **POST** /my/{name}/action/crafting | Action Crafting
 [**action_delete_item_my_name_action_delete_post**](MyCharactersApi.md#action_delete_item_my_name_action_delete_post) | **POST** /my/{name}/action/delete | Action Delete Item
@@ -19,6 +18,8 @@ Method | HTTP request | Description
 [**action_ge_cancel_sell_order_my_name_action_grandexchange_cancel_post**](MyCharactersApi.md#action_ge_cancel_sell_order_my_name_action_grandexchange_cancel_post) | **POST** /my/{name}/action/grandexchange/cancel | Action Ge Cancel Sell Order
 [**action_ge_create_sell_order_my_name_action_grandexchange_sell_post**](MyCharactersApi.md#action_ge_create_sell_order_my_name_action_grandexchange_sell_post) | **POST** /my/{name}/action/grandexchange/sell | Action Ge Create Sell Order
 [**action_move_my_name_action_move_post**](MyCharactersApi.md#action_move_my_name_action_move_post) | **POST** /my/{name}/action/move | Action Move
+[**action_npc_buy_item_my_name_action_npc_buy_post**](MyCharactersApi.md#action_npc_buy_item_my_name_action_npc_buy_post) | **POST** /my/{name}/action/npc/buy | Action Npc Buy Item
+[**action_npc_sell_item_my_name_action_npc_sell_post**](MyCharactersApi.md#action_npc_sell_item_my_name_action_npc_sell_post) | **POST** /my/{name}/action/npc/sell | Action Npc Sell Item
 [**action_recycling_my_name_action_recycling_post**](MyCharactersApi.md#action_recycling_my_name_action_recycling_post) | **POST** /my/{name}/action/recycling | Action Recycling
 [**action_rest_my_name_action_rest_post**](MyCharactersApi.md#action_rest_my_name_action_rest_post) | **POST** /my/{name}/action/rest | Action Rest
 [**action_task_cancel_my_name_action_task_cancel_post**](MyCharactersApi.md#action_task_cancel_my_name_action_task_cancel_post) | **POST** /my/{name}/action/task/cancel | Action Task Cancel
@@ -80,36 +81,6 @@ Name | Type | Description  | Required | Notes
 ### Return type
 
 [**models::BankExtensionTransactionResponseSchema**](BankExtensionTransactionResponseSchema.md)
-
-### Authorization
-
-[JWTBearer](../README.md#JWTBearer)
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-
-## action_christmas_exchange_my_name_action_christmas_exchange_post
-
-> models::RewardDataResponseSchema action_christmas_exchange_my_name_action_christmas_exchange_post(name)
-Action Christmas Exchange
-
-Exchange 1 gift for a random reward.
-
-### Parameters
-
-
-Name | Type | Description  | Required | Notes
-------------- | ------------- | ------------- | ------------- | -------------
-**name** | **String** | Name of your character. | [required] |
-
-### Return type
-
-[**models::RewardDataResponseSchema**](RewardDataResponseSchema.md)
 
 ### Authorization
 
@@ -479,6 +450,68 @@ Name | Type | Description  | Required | Notes
 ### Return type
 
 [**models::CharacterMovementResponseSchema**](CharacterMovementResponseSchema.md)
+
+### Authorization
+
+[JWTBearer](../README.md#JWTBearer)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## action_npc_buy_item_my_name_action_npc_buy_post
+
+> models::NpcMerchantTransactionResponseSchema action_npc_buy_item_my_name_action_npc_buy_post(name, npc_merchant_buy_schema)
+Action Npc Buy Item
+
+Buy an item from an NPC on the character's map.
+
+### Parameters
+
+
+Name | Type | Description  | Required | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+**name** | **String** | Name of your character. | [required] |
+**npc_merchant_buy_schema** | [**NpcMerchantBuySchema**](NpcMerchantBuySchema.md) |  | [required] |
+
+### Return type
+
+[**models::NpcMerchantTransactionResponseSchema**](NpcMerchantTransactionResponseSchema.md)
+
+### Authorization
+
+[JWTBearer](../README.md#JWTBearer)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## action_npc_sell_item_my_name_action_npc_sell_post
+
+> models::NpcMerchantTransactionResponseSchema action_npc_sell_item_my_name_action_npc_sell_post(name, npc_merchant_buy_schema)
+Action Npc Sell Item
+
+Sell an item to an NPC on the character's map.
+
+### Parameters
+
+
+Name | Type | Description  | Required | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+**name** | **String** | Name of your character. | [required] |
+**npc_merchant_buy_schema** | [**NpcMerchantBuySchema**](NpcMerchantBuySchema.md) |  | [required] |
+
+### Return type
+
+[**models::NpcMerchantTransactionResponseSchema**](NpcMerchantTransactionResponseSchema.md)
 
 ### Authorization
 

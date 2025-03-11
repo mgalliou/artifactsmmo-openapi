@@ -81,7 +81,7 @@ Retrieve the achievements of a account.
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
 **account** | **String** | The character name. | [required] |
-**r#type** | Option<[**models::AchievementType**](.md)> | Type of achievements. |  |
+**r#type** | Option<**String**> | Type of achievements. |  |
 **completed** | Option<**bool**> | Filter by completed achievements. |  |
 **page** | Option<**i32**> | Page number |  |[default to 1]
 **size** | Option<**i32**> | Page size |  |[default to 50]

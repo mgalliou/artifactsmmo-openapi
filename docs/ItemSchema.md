@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **r#type** | **String** | Item type. | 
 **subtype** | **String** | Item subtype. | 
 **description** | **String** | Item description. | 
-**effects** | Option<[**Vec<models::ItemEffectSchema>**](ItemEffectSchema.md)> | List of object effects. For equipment, it will include item stats. | [optional]
+**effects** | Option<[**Vec<models::SimpleEffectSchema>**](SimpleEffectSchema.md)> | List of object effects. For equipment, it will include item stats. | [optional]
 **craft** | Option<[**models::CraftSchema**](CraftSchema.md)> |  | [optional]
 **tradeable** | **bool** | Item tradeable status. A non-tradeable item cannot be exchanged or sold. | 
 
