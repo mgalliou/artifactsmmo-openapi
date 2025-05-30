@@ -42,7 +42,7 @@ No authorization required
 
 ## get_all_events_events_get
 
-> models::DataPageEventSchema get_all_events_events_get(page, size)
+> models::DataPageEventSchema get_all_events_events_get(r#type, page, size)
 Get All Events
 
 Fetch events details.
@@ -52,6 +52,7 @@ Fetch events details.
 
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
+**r#type** | Option<[**models::MapContentType**](.md)> | Type of event. |  |
 **page** | Option<**i32**> | Page number |  |[default to 1]
 **size** | Option<**i32**> | Page size |  |[default to 50]
 

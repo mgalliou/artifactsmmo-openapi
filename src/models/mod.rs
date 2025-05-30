@@ -78,6 +78,8 @@ pub mod character_schema;
 pub use self::character_schema::CharacterSchema;
 pub mod character_skin;
 pub use self::character_skin::CharacterSkin;
+pub mod characters_list_schema;
+pub use self::characters_list_schema::CharactersListSchema;
 pub mod cooldown_schema;
 pub use self::cooldown_schema::CooldownSchema;
 pub mod craft_schema;

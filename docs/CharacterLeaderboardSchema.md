@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **position** | **i32** | Position in the leaderboard. | 
 **name** | **String** | Character name. | 
 **account** | **String** | Account name. | 
+**status** | [**models::AccountStatus**](AccountStatus.md) | Member status. | 
 **skin** | **String** | Character skin code. | 
 **level** | **i32** | Combat level. | 
 **total_xp** | **i32** | Total XP of your character. | 

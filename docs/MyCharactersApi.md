@@ -30,6 +30,7 @@ Method | HTTP request | Description
 [**action_withdraw_bank_gold_my_name_action_bank_withdraw_gold_post**](MyCharactersApi.md#action_withdraw_bank_gold_my_name_action_bank_withdraw_gold_post) | **POST** /my/{name}/action/bank/withdraw/gold | Action Withdraw Bank Gold
 [**action_withdraw_bank_my_name_action_bank_withdraw_post**](MyCharactersApi.md#action_withdraw_bank_my_name_action_bank_withdraw_post) | **POST** /my/{name}/action/bank/withdraw | Action Withdraw Bank
 [**get_all_characters_logs_my_logs_get**](MyCharactersApi.md#get_all_characters_logs_my_logs_get) | **GET** /my/logs | Get All Characters Logs
+[**get_character_logs_my_logs_name_get**](MyCharactersApi.md#get_character_logs_my_logs_name_get) | **GET** /my/logs/{name} | Get Character Logs
 [**get_my_characters_my_characters_get**](MyCharactersApi.md#get_my_characters_my_characters_get) | **GET** /my/characters | Get My Characters
 
 
@@ -406,7 +407,7 @@ Name | Type | Description  | Required | Notes
 > models::GeCreateOrderTransactionResponseSchema action_ge_create_sell_order_my_name_action_grandexchange_sell_post(name, ge_order_creationr_schema)
 Action Ge Create Sell Order
 
-Create a sell order at the Grand Exchange on the character's map. Please note that a 5% sales tax is charged.
+Create a sell order at the Grand Exchange on the character's map. Please note there is a 3% listing tax, charged at the time of posting, on the total price.
 
 ### Parameters
 
@@ -806,7 +807,7 @@ Name | Type | Description  | Required | Notes
 > models::DataPageLogSchema get_all_characters_logs_my_logs_get(page, size)
 Get All Characters Logs
 
-History of the last 100 actions of all your characters.
+History of the last 250 actions of all your characters.
 
 ### Parameters
 
@@ -832,12 +833,44 @@ Name | Type | Description  | Required | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
+## get_character_logs_my_logs_name_get
+
+> models::DataPageLogSchema get_character_logs_my_logs_name_get(name, page, size)
+Get Character Logs
+
+History of the last actions of your character.
+
+### Parameters
+
+
+Name | Type | Description  | Required | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+**name** | **String** | Name of your character. | [required] |
+**page** | Option<**i32**> | Page number |  |[default to 1]
+**size** | Option<**i32**> | Page size |  |[default to 50]
+
+### Return type
+
+[**models::DataPageLogSchema**](DataPage_LogSchema_.md)
+
+### Authorization
+
+[JWTBearer](../README.md#JWTBearer)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
 ## get_my_characters_my_characters_get
 
 > models::MyCharactersListSchema get_my_characters_my_characters_get()
 Get My Characters
 
-List of your characters.
+List of your characters. This endpoint is deprecated and will be removed in a future version. Please use accounts/{account}/characters.
 
 ### Parameters
 

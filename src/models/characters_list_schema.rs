@@ -12,15 +12,16 @@ use crate::models;
 use serde::{Deserialize, Serialize};
 
 #[derive(Clone, Default, Debug, PartialEq, Serialize, Deserialize)]
-pub struct HttpValidationError {
-    #[serde(rename = "detail", skip_serializing_if = "Option::is_none")]
-    pub detail: Option<Vec<models::ValidationError>>,
+pub struct CharactersListSchema {
+    /// List of your characters.
+    #[serde(rename = "data")]
+    pub data: Vec<models::CharacterSchema>,
 }
 
-impl HttpValidationError {
-    pub fn new() -> HttpValidationError {
-        HttpValidationError {
-            detail: None,
+impl CharactersListSchema {
+    pub fn new(data: Vec<models::CharacterSchema>) -> CharactersListSchema {
+        CharactersListSchema {
+            data,
         }
     }
 }

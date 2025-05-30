@@ -46,6 +46,7 @@ docs/CharacterRestResponseSchema.md
 docs/CharacterSchema.md
 docs/CharacterSkin.md
 docs/CharactersApi.md
+docs/CharactersListSchema.md
 docs/CooldownSchema.md
 docs/CraftSchema.md
 docs/CraftSkill.md
@@ -240,6 +241,7 @@ src/models/character_rest_data_schema.rs
 src/models/character_rest_response_schema.rs
 src/models/character_schema.rs
 src/models/character_skin.rs
+src/models/characters_list_schema.rs
 src/models/cooldown_schema.rs
 src/models/craft_schema.rs
 src/models/craft_skill.rs

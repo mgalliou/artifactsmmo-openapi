@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## get_accounts_leaderboard_leaderboard_accounts_get
 
-> models::DataPageAccountLeaderboardSchema get_accounts_leaderboard_leaderboard_accounts_get(sort, page, size)
+> models::DataPageAccountLeaderboardSchema get_accounts_leaderboard_leaderboard_accounts_get(sort, name, page, size)
 Get Accounts Leaderboard
 
 Fetch leaderboard details.
@@ -22,6 +22,7 @@ Fetch leaderboard details.
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
 **sort** | Option<[**models::AccountLeaderboardType**](.md)> | Default sort by achievements points. |  |
+**name** | Option<**String**> | Find a account by name. |  |
 **page** | Option<**i32**> | Page number |  |[default to 1]
 **size** | Option<**i32**> | Page size |  |[default to 50]
 
@@ -43,7 +44,7 @@ No authorization required
 
 ## get_characters_leaderboard_leaderboard_characters_get
 
-> models::DataPageCharacterLeaderboardSchema get_characters_leaderboard_leaderboard_characters_get(sort, page, size)
+> models::DataPageCharacterLeaderboardSchema get_characters_leaderboard_leaderboard_characters_get(sort, name, page, size)
 Get Characters Leaderboard
 
 Fetch leaderboard details.
@@ -54,6 +55,7 @@ Fetch leaderboard details.
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
 **sort** | Option<[**models::CharacterLeaderboardType**](.md)> | Default sort by combat total XP. |  |
+**name** | Option<**String**> | Find a character by name. |  |
 **page** | Option<**i32**> | Page number |  |[default to 1]
 **size** | Option<**i32**> | Page size |  |[default to 50]
 
