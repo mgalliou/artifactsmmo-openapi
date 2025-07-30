@@ -6,17 +6,20 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**action_accept_new_task_my_name_action_task_new_post**](MyCharactersApi.md#action_accept_new_task_my_name_action_task_new_post) | **POST** /my/{name}/action/task/new | Action Accept New Task
 [**action_buy_bank_expansion_my_name_action_bank_buy_expansion_post**](MyCharactersApi.md#action_buy_bank_expansion_my_name_action_bank_buy_expansion_post) | **POST** /my/{name}/action/bank/buy_expansion | Action Buy Bank Expansion
+[**action_change_skin_my_name_action_change_skin_post**](MyCharactersApi.md#action_change_skin_my_name_action_change_skin_post) | **POST** /my/{name}/action/change_skin | Action Change Skin
 [**action_complete_task_my_name_action_task_complete_post**](MyCharactersApi.md#action_complete_task_my_name_action_task_complete_post) | **POST** /my/{name}/action/task/complete | Action Complete Task
 [**action_crafting_my_name_action_crafting_post**](MyCharactersApi.md#action_crafting_my_name_action_crafting_post) | **POST** /my/{name}/action/crafting | Action Crafting
 [**action_delete_item_my_name_action_delete_post**](MyCharactersApi.md#action_delete_item_my_name_action_delete_post) | **POST** /my/{name}/action/delete | Action Delete Item
 [**action_deposit_bank_gold_my_name_action_bank_deposit_gold_post**](MyCharactersApi.md#action_deposit_bank_gold_my_name_action_bank_deposit_gold_post) | **POST** /my/{name}/action/bank/deposit/gold | Action Deposit Bank Gold
-[**action_deposit_bank_my_name_action_bank_deposit_post**](MyCharactersApi.md#action_deposit_bank_my_name_action_bank_deposit_post) | **POST** /my/{name}/action/bank/deposit | Action Deposit Bank
+[**action_deposit_bank_item_my_name_action_bank_deposit_item_post**](MyCharactersApi.md#action_deposit_bank_item_my_name_action_bank_deposit_item_post) | **POST** /my/{name}/action/bank/deposit/item | Action Deposit Bank Item
 [**action_equip_item_my_name_action_equip_post**](MyCharactersApi.md#action_equip_item_my_name_action_equip_post) | **POST** /my/{name}/action/equip | Action Equip Item
 [**action_fight_my_name_action_fight_post**](MyCharactersApi.md#action_fight_my_name_action_fight_post) | **POST** /my/{name}/action/fight | Action Fight
 [**action_gathering_my_name_action_gathering_post**](MyCharactersApi.md#action_gathering_my_name_action_gathering_post) | **POST** /my/{name}/action/gathering | Action Gathering
 [**action_ge_buy_item_my_name_action_grandexchange_buy_post**](MyCharactersApi.md#action_ge_buy_item_my_name_action_grandexchange_buy_post) | **POST** /my/{name}/action/grandexchange/buy | Action Ge Buy Item
 [**action_ge_cancel_sell_order_my_name_action_grandexchange_cancel_post**](MyCharactersApi.md#action_ge_cancel_sell_order_my_name_action_grandexchange_cancel_post) | **POST** /my/{name}/action/grandexchange/cancel | Action Ge Cancel Sell Order
 [**action_ge_create_sell_order_my_name_action_grandexchange_sell_post**](MyCharactersApi.md#action_ge_create_sell_order_my_name_action_grandexchange_sell_post) | **POST** /my/{name}/action/grandexchange/sell | Action Ge Create Sell Order
+[**action_give_gold_my_name_action_give_gold_post**](MyCharactersApi.md#action_give_gold_my_name_action_give_gold_post) | **POST** /my/{name}/action/give/gold | Action Give Gold
+[**action_give_items_my_name_action_give_item_post**](MyCharactersApi.md#action_give_items_my_name_action_give_item_post) | **POST** /my/{name}/action/give/item | Action Give Items
 [**action_move_my_name_action_move_post**](MyCharactersApi.md#action_move_my_name_action_move_post) | **POST** /my/{name}/action/move | Action Move
 [**action_npc_buy_item_my_name_action_npc_buy_post**](MyCharactersApi.md#action_npc_buy_item_my_name_action_npc_buy_post) | **POST** /my/{name}/action/npc/buy | Action Npc Buy Item
 [**action_npc_sell_item_my_name_action_npc_sell_post**](MyCharactersApi.md#action_npc_sell_item_my_name_action_npc_sell_post) | **POST** /my/{name}/action/npc/sell | Action Npc Sell Item
@@ -28,7 +31,7 @@ Method | HTTP request | Description
 [**action_unequip_item_my_name_action_unequip_post**](MyCharactersApi.md#action_unequip_item_my_name_action_unequip_post) | **POST** /my/{name}/action/unequip | Action Unequip Item
 [**action_use_item_my_name_action_use_post**](MyCharactersApi.md#action_use_item_my_name_action_use_post) | **POST** /my/{name}/action/use | Action Use Item
 [**action_withdraw_bank_gold_my_name_action_bank_withdraw_gold_post**](MyCharactersApi.md#action_withdraw_bank_gold_my_name_action_bank_withdraw_gold_post) | **POST** /my/{name}/action/bank/withdraw/gold | Action Withdraw Bank Gold
-[**action_withdraw_bank_my_name_action_bank_withdraw_post**](MyCharactersApi.md#action_withdraw_bank_my_name_action_bank_withdraw_post) | **POST** /my/{name}/action/bank/withdraw | Action Withdraw Bank
+[**action_withdraw_bank_item_my_name_action_bank_withdraw_item_post**](MyCharactersApi.md#action_withdraw_bank_item_my_name_action_bank_withdraw_item_post) | **POST** /my/{name}/action/bank/withdraw/item | Action Withdraw Bank Item
 [**get_all_characters_logs_my_logs_get**](MyCharactersApi.md#get_all_characters_logs_my_logs_get) | **GET** /my/logs | Get All Characters Logs
 [**get_character_logs_my_logs_name_get**](MyCharactersApi.md#get_character_logs_my_logs_name_get) | **GET** /my/logs/{name} | Get Character Logs
 [**get_my_characters_my_characters_get**](MyCharactersApi.md#get_my_characters_my_characters_get) | **GET** /my/characters | Get My Characters
@@ -70,7 +73,7 @@ Name | Type | Description  | Required | Notes
 > models::BankExtensionTransactionResponseSchema action_buy_bank_expansion_my_name_action_bank_buy_expansion_post(name)
 Action Buy Bank Expansion
 
-Buy a 20 slots bank expansion.
+Buy a 25 slots bank expansion.
 
 ### Parameters
 
@@ -90,6 +93,37 @@ Name | Type | Description  | Required | Notes
 ### HTTP request headers
 
 - **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## action_change_skin_my_name_action_change_skin_post
+
+> models::ChangeSkinResponseSchema action_change_skin_my_name_action_change_skin_post(name, change_skin_character_schema)
+Action Change Skin
+
+Change the skin of your character.
+
+### Parameters
+
+
+Name | Type | Description  | Required | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+**name** | **String** | Name of your character. | [required] |
+**change_skin_character_schema** | [**ChangeSkinCharacterSchema**](ChangeSkinCharacterSchema.md) |  | [required] |
+
+### Return type
+
+[**models::ChangeSkinResponseSchema**](ChangeSkinResponseSchema.md)
+
+### Authorization
+
+[JWTBearer](../README.md#JWTBearer)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
 - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -218,12 +252,12 @@ Name | Type | Description  | Required | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## action_deposit_bank_my_name_action_bank_deposit_post
+## action_deposit_bank_item_my_name_action_bank_deposit_item_post
 
-> models::BankItemTransactionResponseSchema action_deposit_bank_my_name_action_bank_deposit_post(name, simple_item_schema)
-Action Deposit Bank
+> models::BankItemTransactionResponseSchema action_deposit_bank_item_my_name_action_bank_deposit_item_post(name, simple_item_schema)
+Action Deposit Bank Item
 
-Deposit an item in a bank on the character's map.
+Deposit multiple items in a bank on the character's map. The cooldown will be 3 seconds multiplied by the number of different items withdrawn.
 
 ### Parameters
 
@@ -231,7 +265,7 @@ Deposit an item in a bank on the character's map.
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
 **name** | **String** | Name of your character. | [required] |
-**simple_item_schema** | [**SimpleItemSchema**](SimpleItemSchema.md) |  | [required] |
+**simple_item_schema** | [**Vec<models::SimpleItemSchema>**](SimpleItemSchema.md) |  | [required] |
 
 ### Return type
 
@@ -420,6 +454,68 @@ Name | Type | Description  | Required | Notes
 ### Return type
 
 [**models::GeCreateOrderTransactionResponseSchema**](GECreateOrderTransactionResponseSchema.md)
+
+### Authorization
+
+[JWTBearer](../README.md#JWTBearer)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## action_give_gold_my_name_action_give_gold_post
+
+> models::GiveGoldReponseSchema action_give_gold_my_name_action_give_gold_post(name, give_gold_schema)
+Action Give Gold
+
+Give gold to another character in your account on the same map.
+
+### Parameters
+
+
+Name | Type | Description  | Required | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+**name** | **String** | Name of your character. | [required] |
+**give_gold_schema** | [**GiveGoldSchema**](GiveGoldSchema.md) |  | [required] |
+
+### Return type
+
+[**models::GiveGoldReponseSchema**](GiveGoldReponseSchema.md)
+
+### Authorization
+
+[JWTBearer](../README.md#JWTBearer)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## action_give_items_my_name_action_give_item_post
+
+> models::GiveItemReponseSchema action_give_items_my_name_action_give_item_post(name, give_items_schema)
+Action Give Items
+
+Give items to another character in your account on the same map. The cooldown will be 3 seconds multiplied by the number of different items given.
+
+### Parameters
+
+
+Name | Type | Description  | Required | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+**name** | **String** | Name of your character. | [required] |
+**give_items_schema** | [**GiveItemsSchema**](GiveItemsSchema.md) |  | [required] |
+
+### Return type
+
+[**models::GiveItemReponseSchema**](GiveItemReponseSchema.md)
 
 ### Authorization
 
@@ -771,12 +867,12 @@ Name | Type | Description  | Required | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## action_withdraw_bank_my_name_action_bank_withdraw_post
+## action_withdraw_bank_item_my_name_action_bank_withdraw_item_post
 
-> models::BankItemTransactionResponseSchema action_withdraw_bank_my_name_action_bank_withdraw_post(name, simple_item_schema)
-Action Withdraw Bank
+> models::BankItemTransactionResponseSchema action_withdraw_bank_item_my_name_action_bank_withdraw_item_post(name, simple_item_schema)
+Action Withdraw Bank Item
 
-Take an item from your bank and put it in the character's inventory.
+Take items from your bank and put them in the character's inventory. The cooldown will be 3 seconds multiplied by the number of different items withdrawn.
 
 ### Parameters
 
@@ -784,7 +880,7 @@ Take an item from your bank and put it in the character's inventory.
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
 **name** | **String** | Name of your character. | [required] |
-**simple_item_schema** | [**SimpleItemSchema**](SimpleItemSchema.md) |  | [required] |
+**simple_item_schema** | [**Vec<models::SimpleItemSchema>**](SimpleItemSchema.md) |  | [required] |
 
 ### Return type
 
@@ -870,7 +966,7 @@ Name | Type | Description  | Required | Notes
 > models::MyCharactersListSchema get_my_characters_my_characters_get()
 Get My Characters
 
-List of your characters. This endpoint is deprecated and will be removed in a future version. Please use accounts/{account}/characters.
+List of your characters.
 
 ### Parameters
 

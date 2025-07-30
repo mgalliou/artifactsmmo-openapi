@@ -1,17 +1,17 @@
-# \DefaultApi
+# \ServerDetailsApi
 
 All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**get_status_get**](DefaultApi.md#get_status_get) | **GET** / | Get Status
+[**get_server_details_get**](ServerDetailsApi.md#get_server_details_get) | **GET** / | Get Server Details
 
 
 
-## get_status_get
+## get_server_details_get
 
-> models::StatusResponseSchema get_status_get()
-Get Status
+> models::StatusResponseSchema get_server_details_get()
+Get Server Details
 
 Return the status of the game server.
 

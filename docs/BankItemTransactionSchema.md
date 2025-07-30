@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **cooldown** | [**models::CooldownSchema**](CooldownSchema.md) | Cooldown details. | 
-**item** | [**models::ItemSchema**](ItemSchema.md) | Item details. | 
+**items** | [**Vec<models::SimpleItemSchema>**](SimpleItemSchema.md) | Items details. | 
 **bank** | [**Vec<models::SimpleItemSchema>**](SimpleItemSchema.md) | Items in your banks. | 
 **character** | [**models::CharacterSchema**](CharacterSchema.md) | Player details. | 
 

@@ -115,7 +115,6 @@ pub mod accounts_api;
 pub mod achievements_api;
 pub mod badges_api;
 pub mod characters_api;
-pub mod default_api;
 pub mod effects_api;
 pub mod events_api;
 pub mod grand_exchange_api;
@@ -127,6 +126,7 @@ pub mod my_account_api;
 pub mod my_characters_api;
 pub mod npcs_api;
 pub mod resources_api;
+pub mod server_details_api;
 pub mod tasks_api;
 pub mod token_api;
 

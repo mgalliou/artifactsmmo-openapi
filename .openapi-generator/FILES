@@ -32,8 +32,10 @@ docs/BankItemTransactionResponseSchema.md
 docs/BankItemTransactionSchema.md
 docs/BankResponseSchema.md
 docs/BankSchema.md
-docs/BlockedHitsSchema.md
 docs/ChangePassword.md
+docs/ChangeSkinCharacterDataSchema.md
+docs/ChangeSkinCharacterSchema.md
+docs/ChangeSkinResponseSchema.md
 docs/CharacterFightDataSchema.md
 docs/CharacterFightResponseSchema.md
 docs/CharacterLeaderboardSchema.md
@@ -47,6 +49,8 @@ docs/CharacterSchema.md
 docs/CharacterSkin.md
 docs/CharactersApi.md
 docs/CharactersListSchema.md
+docs/ConditionOperator.md
+docs/ConditionSchema.md
 docs/CooldownSchema.md
 docs/CraftSchema.md
 docs/CraftSkill.md
@@ -71,7 +75,6 @@ docs/DataPageNpcSchema.md
 docs/DataPageResourceSchema.md
 docs/DataPageSimpleItemSchema.md
 docs/DataPageTaskFullSchema.md
-docs/DefaultApi.md
 docs/DeleteCharacterSchema.md
 docs/DeleteItemResponseSchema.md
 docs/DeleteItemSchema.md
@@ -106,6 +109,12 @@ docs/GeOrderTransactionSchema.md
 docs/GeTransactionListSchema.md
 docs/GeTransactionResponseSchema.md
 docs/GeTransactionSchema.md
+docs/GiveGoldDataSchema.md
+docs/GiveGoldReponseSchema.md
+docs/GiveGoldSchema.md
+docs/GiveItemDataSchema.md
+docs/GiveItemReponseSchema.md
+docs/GiveItemsSchema.md
 docs/GoldSchema.md
 docs/GrandExchangeApi.md
 docs/HttpValidationError.md
@@ -140,6 +149,10 @@ docs/NpcResponseSchema.md
 docs/NpcSchema.md
 docs/NpcType.md
 docs/NpcsApi.md
+docs/PasswordResetConfirmSchema.md
+docs/PasswordResetRequestSchema.md
+docs/PasswordResetResponseSchema.md
+docs/RateLimitSchema.md
 docs/RecyclingDataSchema.md
 docs/RecyclingItemsSchema.md
 docs/RecyclingResponseSchema.md
@@ -152,6 +165,10 @@ docs/RewardDataResponseSchema.md
 docs/RewardDataSchema.md
 docs/RewardResponseSchema.md
 docs/RewardsSchema.md
+docs/SeasonBadgeSchema.md
+docs/SeasonSchema.md
+docs/SeasonSkinSchema.md
+docs/ServerDetailsApi.md
 docs/SimpleEffectSchema.md
 docs/SimpleItemSchema.md
 docs/Skill.md
@@ -185,7 +202,6 @@ src/apis/achievements_api.rs
 src/apis/badges_api.rs
 src/apis/characters_api.rs
 src/apis/configuration.rs
-src/apis/default_api.rs
 src/apis/effects_api.rs
 src/apis/events_api.rs
 src/apis/grand_exchange_api.rs
@@ -198,6 +214,7 @@ src/apis/my_account_api.rs
 src/apis/my_characters_api.rs
 src/apis/npcs_api.rs
 src/apis/resources_api.rs
+src/apis/server_details_api.rs
 src/apis/tasks_api.rs
 src/apis/token_api.rs
 src/lib.rs
@@ -228,8 +245,10 @@ src/models/bank_item_transaction_response_schema.rs
 src/models/bank_item_transaction_schema.rs
 src/models/bank_response_schema.rs
 src/models/bank_schema.rs
-src/models/blocked_hits_schema.rs
 src/models/change_password.rs
+src/models/change_skin_character_data_schema.rs
+src/models/change_skin_character_schema.rs
+src/models/change_skin_response_schema.rs
 src/models/character_fight_data_schema.rs
 src/models/character_fight_response_schema.rs
 src/models/character_leaderboard_schema.rs
@@ -242,6 +261,8 @@ src/models/character_rest_response_schema.rs
 src/models/character_schema.rs
 src/models/character_skin.rs
 src/models/characters_list_schema.rs
+src/models/condition_operator.rs
+src/models/condition_schema.rs
 src/models/cooldown_schema.rs
 src/models/craft_schema.rs
 src/models/craft_skill.rs
@@ -298,6 +319,12 @@ src/models/ge_order_transaction_schema.rs
 src/models/ge_transaction_list_schema.rs
 src/models/ge_transaction_response_schema.rs
 src/models/ge_transaction_schema.rs
+src/models/give_gold_data_schema.rs
+src/models/give_gold_reponse_schema.rs
+src/models/give_gold_schema.rs
+src/models/give_item_data_schema.rs
+src/models/give_item_reponse_schema.rs
+src/models/give_items_schema.rs
 src/models/gold_schema.rs
 src/models/http_validation_error.rs
 src/models/inventory_slot.rs
@@ -325,6 +352,10 @@ src/models/npc_merchant_transaction_schema.rs
 src/models/npc_response_schema.rs
 src/models/npc_schema.rs
 src/models/npc_type.rs
+src/models/password_reset_confirm_schema.rs
+src/models/password_reset_request_schema.rs
+src/models/password_reset_response_schema.rs
+src/models/rate_limit_schema.rs
 src/models/recycling_data_schema.rs
 src/models/recycling_items_schema.rs
 src/models/recycling_response_schema.rs
@@ -336,6 +367,9 @@ src/models/reward_data_response_schema.rs
 src/models/reward_data_schema.rs
 src/models/reward_response_schema.rs
 src/models/rewards_schema.rs
+src/models/season_badge_schema.rs
+src/models/season_schema.rs
+src/models/season_skin_schema.rs
 src/models/simple_effect_schema.rs
 src/models/simple_item_schema.rs
 src/models/skill.rs

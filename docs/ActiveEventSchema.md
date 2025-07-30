@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **name** | **String** | Name of the event. | 
 **code** | **String** | Code of the event. | 
 **map** | [**models::MapSchema**](MapSchema.md) | Map of the event. | 
-**previous_skin** | **String** | Previous map skin. | 
+**previous_map** | [**models::MapSchema**](MapSchema.md) | Previous map skin. | 
 **duration** | **i32** | Duration in minutes. | 
 **expiration** | **String** | Expiration datetime. | 
 **created_at** | **String** | Start datetime. | 

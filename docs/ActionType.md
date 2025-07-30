@@ -14,8 +14,8 @@
 | SellNpc | sell_npc |
 | CancelGe | cancel_ge |
 | DeleteItem | delete_item |
-| Deposit | deposit |
-| Withdraw | withdraw |
+| DepositItem | deposit_item |
+| WithdrawItem | withdraw_item |
 | DepositGold | deposit_gold |
 | WithdrawGold | withdraw_gold |
 | Equip | equip |
@@ -26,6 +26,10 @@
 | Rest | rest |
 | Use | use |
 | BuyBankExpansion | buy_bank_expansion |
+| GiveItem | give_item |
+| GiveGold | give_gold |
+| ChangeSkin | change_skin |
+| Rename | rename |
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

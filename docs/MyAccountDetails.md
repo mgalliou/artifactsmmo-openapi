@@ -6,9 +6,11 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **username** | **String** | Username. | 
 **email** | **String** | Email. | 
-**subscribed** | **bool** | Subscribed for the current season. | 
-**status** | [**models::AccountStatus**](AccountStatus.md) | Member status. | 
+**member** | **bool** | Member status. | 
+**member_expiration** | Option<**String**> |  | [optional]
+**status** | [**models::AccountStatus**](AccountStatus.md) | Account status. | 
 **badges** | Option<[**Vec<serde_json::Value>**](serde_json::Value.md)> | Account badges. | [optional]
+**skins** | [**Vec<serde_json::Value>**](serde_json::Value.md) | Skins owned. | 
 **gems** | **i32** | Gems. | 
 **achievements_points** | **i32** | Achievement points. | 
 **banned** | **bool** | Banned. | 

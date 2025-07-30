@@ -4,15 +4,50 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**get_all_npcs_npcs_get**](NpcsApi.md#get_all_npcs_npcs_get) | **GET** /npcs | Get All Npcs
-[**get_npc_items_npcs_code_items_get**](NpcsApi.md#get_npc_items_npcs_code_items_get) | **GET** /npcs/{code}/items | Get Npc Items
-[**get_npc_npcs_code_get**](NpcsApi.md#get_npc_npcs_code_get) | **GET** /npcs/{code} | Get Npc
+[**get_all_npcs_items_npcs_items_get**](NpcsApi.md#get_all_npcs_items_npcs_items_get) | **GET** /npcs/items | Get All Npcs Items
+[**get_all_npcs_npcs_details_get**](NpcsApi.md#get_all_npcs_npcs_details_get) | **GET** /npcs/details | Get All Npcs
+[**get_npc_items_npcs_items_code_get**](NpcsApi.md#get_npc_items_npcs_items_code_get) | **GET** /npcs/items/{code} | Get Npc Items
+[**get_npc_npcs_details_code_get**](NpcsApi.md#get_npc_npcs_details_code_get) | **GET** /npcs/details/{code} | Get Npc
 
 
 
-## get_all_npcs_npcs_get
+## get_all_npcs_items_npcs_items_get
 
-> models::DataPageNpcSchema get_all_npcs_npcs_get(r#type, page, size)
+> models::DataPageNpcItem get_all_npcs_items_npcs_items_get(code, npc, currency, page, size)
+Get All Npcs Items
+
+Retrieve the list of all NPC items.
+
+### Parameters
+
+
+Name | Type | Description  | Required | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+**code** | Option<**String**> | The code of the item. |  |
+**npc** | Option<**String**> | The code of the npc. |  |
+**currency** | Option<**String**> | The code of the currency. |  |
+**page** | Option<**i32**> | Page number |  |[default to 1]
+**size** | Option<**i32**> | Page size |  |[default to 50]
+
+### Return type
+
+[**models::DataPageNpcItem**](DataPage_NPCItem_.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
+## get_all_npcs_npcs_details_get
+
+> models::DataPageNpcSchema get_all_npcs_npcs_details_get(name, r#type, page, size)
 Get All Npcs
 
 Fetch NPCs details.
@@ -22,6 +57,7 @@ Fetch NPCs details.
 
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
+**name** | Option<**String**> | Name of the npc. |  |
 **r#type** | Option<[**models::NpcType**](.md)> | The type of the NPC. |  |
 **page** | Option<**i32**> | Page number |  |[default to 1]
 **size** | Option<**i32**> | Page size |  |[default to 50]
@@ -42,12 +78,12 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## get_npc_items_npcs_code_items_get
+## get_npc_items_npcs_items_code_get
 
-> models::DataPageNpcItem get_npc_items_npcs_code_items_get(code, page, size)
+> models::DataPageNpcItem get_npc_items_npcs_items_code_get(code, page, size)
 Get Npc Items
 
-Retrieve the items list of a NPC. If the NPC has items to buy or sell, they will be displayed.
+Retrieve the items list of a NPC. If the NPC has items to buy, sell or trade, they will be displayed.
 
 ### Parameters
 
@@ -74,9 +110,9 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
-## get_npc_npcs_code_get
+## get_npc_npcs_details_code_get
 
-> models::NpcResponseSchema get_npc_npcs_code_get(code)
+> models::NpcResponseSchema get_npc_npcs_details_code_get(code)
 Get Npc
 
 Retrieve the details of a NPC.

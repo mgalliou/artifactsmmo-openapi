@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 ## get_all_monsters_monsters_get
 
-> models::DataPageMonsterSchema get_all_monsters_monsters_get(min_level, max_level, drop, page, size)
+> models::DataPageMonsterSchema get_all_monsters_monsters_get(name, min_level, max_level, drop, page, size)
 Get All Monsters
 
 Fetch monsters details.
@@ -21,6 +21,7 @@ Fetch monsters details.
 
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
+**name** | Option<**String**> | Name of the monster. |  |
 **min_level** | Option<**i32**> | Monster minimum level. |  |
 **max_level** | Option<**i32**> | Monster maximum level. |  |
 **drop** | Option<**String**> | Item code of the drop. |  |
