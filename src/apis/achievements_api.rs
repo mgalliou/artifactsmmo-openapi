@@ -69,7 +69,7 @@ pub fn get_achievement_achievements_code_get(configuration: &configuration::Conf
 }
 
 /// List of all achievements.
-pub fn get_all_achievements_achievements_get(configuration: &configuration::Configuration, r#type: Option<models::AchievementType>, page: Option<i32>, size: Option<i32>) -> Result<models::DataPageAchievementSchema, Error<GetAllAchievementsAchievementsGetError>> {
+pub fn get_all_achievements_achievements_get(configuration: &configuration::Configuration, r#type: Option<models::AchievementType>, page: Option<u32>, size: Option<u32>) -> Result<models::DataPageAchievementSchema, Error<GetAllAchievementsAchievementsGetError>> {
     // add a prefix to parameters to efficiently prevent name collisions
     let p_type = r#type;
     let p_page = page;

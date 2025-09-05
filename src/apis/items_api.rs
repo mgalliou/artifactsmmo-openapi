@@ -32,7 +32,7 @@ pub enum GetItemItemsCodeGetError {
 
 
 /// Fetch items details.
-pub fn get_all_items_items_get(configuration: &configuration::Configuration, name: Option<&str>, min_level: Option<i32>, max_level: Option<i32>, r#type: Option<models::ItemType>, craft_skill: Option<models::CraftSkill>, craft_material: Option<&str>, page: Option<i32>, size: Option<i32>) -> Result<models::DataPageItemSchema, Error<GetAllItemsItemsGetError>> {
+pub fn get_all_items_items_get(configuration: &configuration::Configuration, name: Option<&str>, min_level: Option<u32>, max_level: Option<u32>, r#type: Option<models::ItemType>, craft_skill: Option<models::CraftSkill>, craft_material: Option<&str>, page: Option<u32>, size: Option<u32>) -> Result<models::DataPageItemSchema, Error<GetAllItemsItemsGetError>> {
     // add a prefix to parameters to efficiently prevent name collisions
     let p_name = name;
     let p_min_level = min_level;

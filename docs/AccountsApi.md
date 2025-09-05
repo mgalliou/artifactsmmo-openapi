@@ -116,8 +116,8 @@ Name | Type | Description  | Required | Notes
 **account** | **String** | The character name. | [required] |
 **r#type** | Option<**String**> | Type of achievements. |  |
 **completed** | Option<**bool**> | Filter by completed achievements. |  |
-**page** | Option<**i32**> | Page number |  |[default to 1]
-**size** | Option<**i32**> | Page size |  |[default to 50]
+**page** | Option<**u32**> | Page number |  |[default to 1]
+**size** | Option<**u32**> | Page size |  |[default to 50]
 
 ### Return type
 

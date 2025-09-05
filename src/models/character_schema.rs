@@ -222,13 +222,13 @@ pub struct CharacterSchema {
     pub utility1_slot: String,
     /// Utility 1 quantity.
     #[serde(rename = "utility1_slot_quantity")]
-    pub utility1_slot_quantity: i32,
+    pub utility1_slot_quantity: u32,
     /// Utility 2 slot.
     #[serde(rename = "utility2_slot")]
     pub utility2_slot: String,
     /// Utility 2 quantity.
     #[serde(rename = "utility2_slot_quantity")]
-    pub utility2_slot_quantity: i32,
+    pub utility2_slot_quantity: u32,
     /// Bag slot.
     #[serde(rename = "bag_slot")]
     pub bag_slot: String,
@@ -253,7 +253,7 @@ pub struct CharacterSchema {
 }
 
 impl CharacterSchema {
-    pub fn new(name: String, account: String, skin: models::CharacterSkin, level: i32, xp: i32, max_xp: i32, gold: i32, speed: i32, mining_level: i32, mining_xp: i32, mining_max_xp: i32, woodcutting_level: i32, woodcutting_xp: i32, woodcutting_max_xp: i32, fishing_level: i32, fishing_xp: i32, fishing_max_xp: i32, weaponcrafting_level: i32, weaponcrafting_xp: i32, weaponcrafting_max_xp: i32, gearcrafting_level: i32, gearcrafting_xp: i32, gearcrafting_max_xp: i32, jewelrycrafting_level: i32, jewelrycrafting_xp: i32, jewelrycrafting_max_xp: i32, cooking_level: i32, cooking_xp: i32, cooking_max_xp: i32, alchemy_level: i32, alchemy_xp: i32, alchemy_max_xp: i32, hp: i32, max_hp: i32, haste: i32, critical_strike: i32, wisdom: i32, prospecting: i32, attack_fire: i32, attack_earth: i32, attack_water: i32, attack_air: i32, dmg: i32, dmg_fire: i32, dmg_earth: i32, dmg_water: i32, dmg_air: i32, res_fire: i32, res_earth: i32, res_water: i32, res_air: i32, x: i32, y: i32, cooldown: i32, weapon_slot: String, rune_slot: String, shield_slot: String, helmet_slot: String, body_armor_slot: String, leg_armor_slot: String, boots_slot: String, ring1_slot: String, ring2_slot: String, amulet_slot: String, artifact1_slot: String, artifact2_slot: String, artifact3_slot: String, utility1_slot: String, utility1_slot_quantity: i32, utility2_slot: String, utility2_slot_quantity: i32, bag_slot: String, task: String, task_type: String, task_progress: i32, task_total: i32, inventory_max_items: i32) -> CharacterSchema {
+    pub fn new(name: String, account: String, skin: models::CharacterSkin, level: i32, xp: i32, max_xp: i32, gold: i32, speed: i32, mining_level: i32, mining_xp: i32, mining_max_xp: i32, woodcutting_level: i32, woodcutting_xp: i32, woodcutting_max_xp: i32, fishing_level: i32, fishing_xp: i32, fishing_max_xp: i32, weaponcrafting_level: i32, weaponcrafting_xp: i32, weaponcrafting_max_xp: i32, gearcrafting_level: i32, gearcrafting_xp: i32, gearcrafting_max_xp: i32, jewelrycrafting_level: i32, jewelrycrafting_xp: i32, jewelrycrafting_max_xp: i32, cooking_level: i32, cooking_xp: i32, cooking_max_xp: i32, alchemy_level: i32, alchemy_xp: i32, alchemy_max_xp: i32, hp: i32, max_hp: i32, haste: i32, critical_strike: i32, wisdom: i32, prospecting: i32, attack_fire: i32, attack_earth: i32, attack_water: i32, attack_air: i32, dmg: i32, dmg_fire: i32, dmg_earth: i32, dmg_water: i32, dmg_air: i32, res_fire: i32, res_earth: i32, res_water: i32, res_air: i32, x: i32, y: i32, cooldown: i32, weapon_slot: String, rune_slot: String, shield_slot: String, helmet_slot: String, body_armor_slot: String, leg_armor_slot: String, boots_slot: String, ring1_slot: String, ring2_slot: String, amulet_slot: String, artifact1_slot: String, artifact2_slot: String, artifact3_slot: String, utility1_slot: String, utility1_slot_quantity: u32, utility2_slot: String, utility2_slot_quantity: u32, bag_slot: String, task: String, task_type: String, task_progress: i32, task_total: i32, inventory_max_items: i32) -> CharacterSchema {
         CharacterSchema {
             name,
             account,

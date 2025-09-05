@@ -32,7 +32,7 @@ pub enum GetBadgeBadgesCodeGetError {
 
 
 /// List of all badges.
-pub fn get_all_badges_badges_get(configuration: &configuration::Configuration, page: Option<i32>, size: Option<i32>) -> Result<models::DataPageBadgeSchema, Error<GetAllBadgesBadgesGetError>> {
+pub fn get_all_badges_badges_get(configuration: &configuration::Configuration, page: Option<u32>, size: Option<u32>) -> Result<models::DataPageBadgeSchema, Error<GetAllBadgesBadgesGetError>> {
     // add a prefix to parameters to efficiently prevent name collisions
     let p_page = page;
     let p_size = size;

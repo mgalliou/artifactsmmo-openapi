@@ -73,9 +73,9 @@ Name | Type | Description | Notes
 **artifact2_slot** | **String** | Artifact 2 slot. | 
 **artifact3_slot** | **String** | Artifact 3 slot. | 
 **utility1_slot** | **String** | Utility 1 slot. | 
-**utility1_slot_quantity** | **i32** | Utility 1 quantity. | 
+**utility1_slot_quantity** | **u32** | Utility 1 quantity. | 
 **utility2_slot** | **String** | Utility 2 slot. | 
-**utility2_slot_quantity** | **i32** | Utility 2 quantity. | 
+**utility2_slot_quantity** | **u32** | Utility 2 quantity. | 
 **bag_slot** | **String** | Bag slot. | 
 **task** | **String** | Task in progress. | 
 **task_type** | **String** | Task type. | 

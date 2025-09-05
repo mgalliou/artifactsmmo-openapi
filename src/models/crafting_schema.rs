@@ -18,7 +18,7 @@ pub struct CraftingSchema {
     pub code: String,
     /// Quantity of items to craft.
     #[serde(rename = "quantity", skip_serializing_if = "Option::is_none")]
-    pub quantity: Option<i32>,
+    pub quantity: Option<u32>,
 }
 
 impl CraftingSchema {

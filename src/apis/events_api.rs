@@ -31,7 +31,7 @@ pub enum GetAllEventsEventsGetError {
 
 
 /// Fetch active events details.
-pub fn get_all_active_events_events_active_get(configuration: &configuration::Configuration, page: Option<i32>, size: Option<i32>) -> Result<models::DataPageActiveEventSchema, Error<GetAllActiveEventsEventsActiveGetError>> {
+pub fn get_all_active_events_events_active_get(configuration: &configuration::Configuration, page: Option<u32>, size: Option<u32>) -> Result<models::DataPageActiveEventSchema, Error<GetAllActiveEventsEventsActiveGetError>> {
     // add a prefix to parameters to efficiently prevent name collisions
     let p_page = page;
     let p_size = size;
@@ -75,7 +75,7 @@ pub fn get_all_active_events_events_active_get(configuration: &configuration::Co
 }
 
 /// Fetch events details.
-pub fn get_all_events_events_get(configuration: &configuration::Configuration, r#type: Option<models::MapContentType>, page: Option<i32>, size: Option<i32>) -> Result<models::DataPageEventSchema, Error<GetAllEventsEventsGetError>> {
+pub fn get_all_events_events_get(configuration: &configuration::Configuration, r#type: Option<models::MapContentType>, page: Option<u32>, size: Option<u32>) -> Result<models::DataPageEventSchema, Error<GetAllEventsEventsGetError>> {
     // add a prefix to parameters to efficiently prevent name collisions
     let p_type = r#type;
     let p_page = page;

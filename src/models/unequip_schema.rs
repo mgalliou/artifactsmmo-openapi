@@ -18,7 +18,7 @@ pub struct UnequipSchema {
     pub slot: models::ItemSlot,
     /// Item quantity. Applicable to utilities only.
     #[serde(rename = "quantity", skip_serializing_if = "Option::is_none")]
-    pub quantity: Option<i32>,
+    pub quantity: Option<u32>,
 }
 
 impl UnequipSchema {

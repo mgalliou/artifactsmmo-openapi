@@ -18,7 +18,7 @@ pub struct GiveGoldDataSchema {
     pub cooldown: Box<models::CooldownSchema>,
     /// Quantity of gold given.
     #[serde(rename = "quantity")]
-    pub quantity: i32,
+    pub quantity: u32,
     /// Character details of the receiving character.
     #[serde(rename = "receiver_character")]
     pub receiver_character: Box<models::CharacterSchema>,
@@ -28,7 +28,7 @@ pub struct GiveGoldDataSchema {
 }
 
 impl GiveGoldDataSchema {
-    pub fn new(cooldown: models::CooldownSchema, quantity: i32, receiver_character: models::CharacterSchema, character: models::CharacterSchema) -> GiveGoldDataSchema {
+    pub fn new(cooldown: models::CooldownSchema, quantity: u32, receiver_character: models::CharacterSchema, character: models::CharacterSchema) -> GiveGoldDataSchema {
         GiveGoldDataSchema {
             cooldown: Box::new(cooldown),
             quantity,

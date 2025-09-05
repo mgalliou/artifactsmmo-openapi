@@ -15,11 +15,11 @@ use serde::{Deserialize, Serialize};
 pub struct GoldSchema {
     /// Quantity of gold.
     #[serde(rename = "quantity")]
-    pub quantity: i32,
+    pub quantity: u32,
 }
 
 impl GoldSchema {
-    pub fn new(quantity: i32) -> GoldSchema {
+    pub fn new(quantity: u32) -> GoldSchema {
         GoldSchema {
             quantity,
         }

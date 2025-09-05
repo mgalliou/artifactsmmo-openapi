@@ -31,7 +31,7 @@ pub enum GetCharactersLeaderboardLeaderboardCharactersGetError {
 
 
 /// Fetch leaderboard details.
-pub fn get_accounts_leaderboard_leaderboard_accounts_get(configuration: &configuration::Configuration, sort: Option<models::AccountLeaderboardType>, name: Option<&str>, page: Option<i32>, size: Option<i32>) -> Result<models::DataPageAccountLeaderboardSchema, Error<GetAccountsLeaderboardLeaderboardAccountsGetError>> {
+pub fn get_accounts_leaderboard_leaderboard_accounts_get(configuration: &configuration::Configuration, sort: Option<models::AccountLeaderboardType>, name: Option<&str>, page: Option<u32>, size: Option<u32>) -> Result<models::DataPageAccountLeaderboardSchema, Error<GetAccountsLeaderboardLeaderboardAccountsGetError>> {
     // add a prefix to parameters to efficiently prevent name collisions
     let p_sort = sort;
     let p_name = name;
@@ -83,7 +83,7 @@ pub fn get_accounts_leaderboard_leaderboard_accounts_get(configuration: &configu
 }
 
 /// Fetch leaderboard details.
-pub fn get_characters_leaderboard_leaderboard_characters_get(configuration: &configuration::Configuration, sort: Option<models::CharacterLeaderboardType>, name: Option<&str>, page: Option<i32>, size: Option<i32>) -> Result<models::DataPageCharacterLeaderboardSchema, Error<GetCharactersLeaderboardLeaderboardCharactersGetError>> {
+pub fn get_characters_leaderboard_leaderboard_characters_get(configuration: &configuration::Configuration, sort: Option<models::CharacterLeaderboardType>, name: Option<&str>, page: Option<u32>, size: Option<u32>) -> Result<models::DataPageCharacterLeaderboardSchema, Error<GetCharactersLeaderboardLeaderboardCharactersGetError>> {
     // add a prefix to parameters to efficiently prevent name collisions
     let p_sort = sort;
     let p_name = name;

@@ -18,11 +18,11 @@ pub struct SimpleItemSchema {
     pub code: String,
     /// Item quantity.
     #[serde(rename = "quantity")]
-    pub quantity: i32,
+    pub quantity: u32,
 }
 
 impl SimpleItemSchema {
-    pub fn new(code: String, quantity: i32) -> SimpleItemSchema {
+    pub fn new(code: String, quantity: u32) -> SimpleItemSchema {
         SimpleItemSchema {
             code,
             quantity,

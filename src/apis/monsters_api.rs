@@ -32,7 +32,7 @@ pub enum GetMonsterMonstersCodeGetError {
 
 
 /// Fetch monsters details.
-pub fn get_all_monsters_monsters_get(configuration: &configuration::Configuration, name: Option<&str>, min_level: Option<i32>, max_level: Option<i32>, drop: Option<&str>, page: Option<i32>, size: Option<i32>) -> Result<models::DataPageMonsterSchema, Error<GetAllMonstersMonstersGetError>> {
+pub fn get_all_monsters_monsters_get(configuration: &configuration::Configuration, name: Option<&str>, min_level: Option<u32>, max_level: Option<u32>, drop: Option<&str>, page: Option<u32>, size: Option<u32>) -> Result<models::DataPageMonsterSchema, Error<GetAllMonstersMonstersGetError>> {
     // add a prefix to parameters to efficiently prevent name collisions
     let p_name = name;
     let p_min_level = min_level;

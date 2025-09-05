@@ -21,8 +21,8 @@ Fetch active events details.
 
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-**page** | Option<**i32**> | Page number |  |[default to 1]
-**size** | Option<**i32**> | Page size |  |[default to 50]
+**page** | Option<**u32**> | Page number |  |[default to 1]
+**size** | Option<**u32**> | Page size |  |[default to 50]
 
 ### Return type
 
@@ -53,8 +53,8 @@ Fetch events details.
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
 **r#type** | Option<[**models::MapContentType**](.md)> | Type of event. |  |
-**page** | Option<**i32**> | Page number |  |[default to 1]
-**size** | Option<**i32**> | Page size |  |[default to 50]
+**page** | Option<**u32**> | Page number |  |[default to 1]
+**size** | Option<**u32**> | Page size |  |[default to 50]
 
 ### Return type
 

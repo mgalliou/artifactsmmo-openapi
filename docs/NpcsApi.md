@@ -26,8 +26,8 @@ Name | Type | Description  | Required | Notes
 **code** | Option<**String**> | The code of the item. |  |
 **npc** | Option<**String**> | The code of the npc. |  |
 **currency** | Option<**String**> | The code of the currency. |  |
-**page** | Option<**i32**> | Page number |  |[default to 1]
-**size** | Option<**i32**> | Page size |  |[default to 50]
+**page** | Option<**u32**> | Page number |  |[default to 1]
+**size** | Option<**u32**> | Page size |  |[default to 50]
 
 ### Return type
 
@@ -59,8 +59,8 @@ Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
 **name** | Option<**String**> | Name of the npc. |  |
 **r#type** | Option<[**models::NpcType**](.md)> | The type of the NPC. |  |
-**page** | Option<**i32**> | Page number |  |[default to 1]
-**size** | Option<**i32**> | Page size |  |[default to 50]
+**page** | Option<**u32**> | Page number |  |[default to 1]
+**size** | Option<**u32**> | Page size |  |[default to 50]
 
 ### Return type
 
@@ -91,8 +91,8 @@ Retrieve the items list of a NPC. If the NPC has items to buy, sell or trade, th
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
 **code** | **String** | The code of the NPC. | [required] |
-**page** | Option<**i32**> | Page number |  |[default to 1]
-**size** | Option<**i32**> | Page size |  |[default to 50]
+**page** | Option<**u32**> | Page number |  |[default to 1]
+**size** | Option<**u32**> | Page size |  |[default to 50]
 
 ### Return type
 

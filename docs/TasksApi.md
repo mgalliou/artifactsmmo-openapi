@@ -23,8 +23,8 @@ Fetch the list of all tasks rewards. To obtain these rewards, you must exchange 
 
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-**page** | Option<**i32**> | Page number |  |[default to 1]
-**size** | Option<**i32**> | Page size |  |[default to 50]
+**page** | Option<**u32**> | Page number |  |[default to 1]
+**size** | Option<**u32**> | Page size |  |[default to 50]
 
 ### Return type
 
@@ -54,12 +54,12 @@ Fetch the list of all tasks.
 
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-**min_level** | Option<**i32**> | Minimum level. |  |
-**max_level** | Option<**i32**> | Maximum level. |  |
+**min_level** | Option<**u32**> | Minimum level. |  |
+**max_level** | Option<**u32**> | Maximum level. |  |
 **skill** | Option<[**models::Skill**](.md)> | The code of the skill. |  |
 **r#type** | Option<[**models::TaskType**](.md)> | The type of tasks. |  |
-**page** | Option<**i32**> | Page number |  |[default to 1]
-**size** | Option<**i32**> | Page size |  |[default to 50]
+**page** | Option<**u32**> | Page number |  |[default to 1]
+**size** | Option<**u32**> | Page size |  |[default to 50]
 
 ### Return type
 

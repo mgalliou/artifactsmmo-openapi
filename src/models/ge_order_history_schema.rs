@@ -27,17 +27,17 @@ pub struct GeOrderHistorySchema {
     pub code: String,
     /// Item quantity.
     #[serde(rename = "quantity")]
-    pub quantity: i32,
+    pub quantity: u32,
     /// Item price per unit.
     #[serde(rename = "price")]
-    pub price: i32,
+    pub price: u32,
     /// Sale datetime.
     #[serde(rename = "sold_at")]
     pub sold_at: String,
 }
 
 impl GeOrderHistorySchema {
-    pub fn new(order_id: String, seller: String, buyer: String, code: String, quantity: i32, price: i32, sold_at: String) -> GeOrderHistorySchema {
+    pub fn new(order_id: String, seller: String, buyer: String, code: String, quantity: u32, price: u32, sold_at: String) -> GeOrderHistorySchema {
         GeOrderHistorySchema {
             order_id,
             seller,

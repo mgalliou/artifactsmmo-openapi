@@ -32,7 +32,7 @@ pub enum GetEffectEffectsCodeGetError {
 
 
 /// List of all effects. Effects are used by equipment, tools, runes, consumables and monsters. An effect is an action that produces an effect on the game.
-pub fn get_all_effects_effects_get(configuration: &configuration::Configuration, page: Option<i32>, size: Option<i32>) -> Result<models::DataPageEffectSchema, Error<GetAllEffectsEffectsGetError>> {
+pub fn get_all_effects_effects_get(configuration: &configuration::Configuration, page: Option<u32>, size: Option<u32>) -> Result<models::DataPageEffectSchema, Error<GetAllEffectsEffectsGetError>> {
     // add a prefix to parameters to efficiently prevent name collisions
     let p_page = page;
     let p_size = size;

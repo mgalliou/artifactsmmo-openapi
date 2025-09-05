@@ -22,13 +22,13 @@ Fetch items details.
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
 **name** | Option<**String**> | Name of the item. |  |
-**min_level** | Option<**i32**> | Minimum level items. |  |
-**max_level** | Option<**i32**> | Maximum level items. |  |
+**min_level** | Option<**u32**> | Minimum level items. |  |
+**max_level** | Option<**u32**> | Maximum level items. |  |
 **r#type** | Option<[**models::ItemType**](.md)> | Type of items. |  |
 **craft_skill** | Option<[**models::CraftSkill**](.md)> | Skill to craft items. |  |
 **craft_material** | Option<**String**> | Item code of items used as material for crafting. |  |
-**page** | Option<**i32**> | Page number |  |[default to 1]
-**size** | Option<**i32**> | Page size |  |[default to 50]
+**page** | Option<**u32**> | Page number |  |[default to 1]
+**size** | Option<**u32**> | Page size |  |[default to 50]
 
 ### Return type
 

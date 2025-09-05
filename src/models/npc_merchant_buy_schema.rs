@@ -18,11 +18,11 @@ pub struct NpcMerchantBuySchema {
     pub code: String,
     /// Item quantity.
     #[serde(rename = "quantity")]
-    pub quantity: i32,
+    pub quantity: u32,
 }
 
 impl NpcMerchantBuySchema {
-    pub fn new(code: String, quantity: i32) -> NpcMerchantBuySchema {
+    pub fn new(code: String, quantity: u32) -> NpcMerchantBuySchema {
         NpcMerchantBuySchema {
             code,
             quantity,

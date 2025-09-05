@@ -24,20 +24,20 @@ pub struct GeOrderCreatedSchema {
     pub code: String,
     /// Item quantity.
     #[serde(rename = "quantity")]
-    pub quantity: i32,
+    pub quantity: u32,
     /// Item price per unit.
     #[serde(rename = "price")]
-    pub price: i32,
+    pub price: u32,
     /// Total price.
     #[serde(rename = "total_price")]
-    pub total_price: i32,
+    pub total_price: u32,
     /// Listing tax (3%, minimum 1)
     #[serde(rename = "tax")]
-    pub tax: i32,
+    pub tax: u32,
 }
 
 impl GeOrderCreatedSchema {
-    pub fn new(id: String, created_at: String, code: String, quantity: i32, price: i32, total_price: i32, tax: i32) -> GeOrderCreatedSchema {
+    pub fn new(id: String, created_at: String, code: String, quantity: u32, price: u32, total_price: u32, tax: u32) -> GeOrderCreatedSchema {
         GeOrderCreatedSchema {
             id,
             created_at,

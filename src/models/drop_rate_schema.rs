@@ -18,17 +18,17 @@ pub struct DropRateSchema {
     pub code: String,
     /// Chance rate. (1/rate)
     #[serde(rename = "rate")]
-    pub rate: i32,
+    pub rate: u32,
     /// Minimum quantity.
     #[serde(rename = "min_quantity")]
-    pub min_quantity: i32,
+    pub min_quantity: u32,
     /// Maximum quantity.
     #[serde(rename = "max_quantity")]
-    pub max_quantity: i32,
+    pub max_quantity: u32,
 }
 
 impl DropRateSchema {
-    pub fn new(code: String, rate: i32, min_quantity: i32, max_quantity: i32) -> DropRateSchema {
+    pub fn new(code: String, rate: u32, min_quantity: u32, max_quantity: u32) -> DropRateSchema {
         DropRateSchema {
             code,
             rate,

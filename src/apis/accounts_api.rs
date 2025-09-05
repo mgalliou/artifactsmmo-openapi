@@ -178,7 +178,7 @@ pub fn get_account_accounts_account_get(configuration: &configuration::Configura
 }
 
 /// Retrieve the achievements of a account.
-pub fn get_account_achievements_accounts_account_achievements_get(configuration: &configuration::Configuration, account: &str, r#type: Option<&str>, completed: Option<bool>, page: Option<i32>, size: Option<i32>) -> Result<models::DataPageAccountAchievementSchema, Error<GetAccountAchievementsAccountsAccountAchievementsGetError>> {
+pub fn get_account_achievements_accounts_account_achievements_get(configuration: &configuration::Configuration, account: &str, r#type: Option<&str>, completed: Option<bool>, page: Option<u32>, size: Option<u32>) -> Result<models::DataPageAccountAchievementSchema, Error<GetAccountAchievementsAccountsAccountAchievementsGetError>> {
     // add a prefix to parameters to efficiently prevent name collisions
     let p_account = account;
     let p_type = r#type;

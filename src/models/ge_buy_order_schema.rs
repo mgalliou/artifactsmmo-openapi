@@ -18,11 +18,11 @@ pub struct GeBuyOrderSchema {
     pub id: String,
     /// Item quantity.
     #[serde(rename = "quantity")]
-    pub quantity: i32,
+    pub quantity: u32,
 }
 
 impl GeBuyOrderSchema {
-    pub fn new(id: String, quantity: i32) -> GeBuyOrderSchema {
+    pub fn new(id: String, quantity: u32) -> GeBuyOrderSchema {
         GeBuyOrderSchema {
             id,
             quantity,

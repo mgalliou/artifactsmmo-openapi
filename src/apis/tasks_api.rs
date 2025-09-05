@@ -47,7 +47,7 @@ pub enum GetTasksRewardTasksRewardsCodeGetError {
 
 
 /// Fetch the list of all tasks rewards. To obtain these rewards, you must exchange 6 task coins with a tasks master.
-pub fn get_all_tasks_rewards_tasks_rewards_get(configuration: &configuration::Configuration, page: Option<i32>, size: Option<i32>) -> Result<models::DataPageDropRateSchema, Error<GetAllTasksRewardsTasksRewardsGetError>> {
+pub fn get_all_tasks_rewards_tasks_rewards_get(configuration: &configuration::Configuration, page: Option<u32>, size: Option<u32>) -> Result<models::DataPageDropRateSchema, Error<GetAllTasksRewardsTasksRewardsGetError>> {
     // add a prefix to parameters to efficiently prevent name collisions
     let p_page = page;
     let p_size = size;
@@ -91,7 +91,7 @@ pub fn get_all_tasks_rewards_tasks_rewards_get(configuration: &configuration::Co
 }
 
 /// Fetch the list of all tasks.
-pub fn get_all_tasks_tasks_list_get(configuration: &configuration::Configuration, min_level: Option<i32>, max_level: Option<i32>, skill: Option<models::Skill>, r#type: Option<models::TaskType>, page: Option<i32>, size: Option<i32>) -> Result<models::DataPageTaskFullSchema, Error<GetAllTasksTasksListGetError>> {
+pub fn get_all_tasks_tasks_list_get(configuration: &configuration::Configuration, min_level: Option<u32>, max_level: Option<u32>, skill: Option<models::Skill>, r#type: Option<models::TaskType>, page: Option<u32>, size: Option<u32>) -> Result<models::DataPageTaskFullSchema, Error<GetAllTasksTasksListGetError>> {
     // add a prefix to parameters to efficiently prevent name collisions
     let p_min_level = min_level;
     let p_max_level = max_level;

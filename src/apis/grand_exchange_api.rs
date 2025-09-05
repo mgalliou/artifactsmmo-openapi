@@ -40,7 +40,7 @@ pub enum GetGeSellOrdersGrandexchangeOrdersGetError {
 
 
 /// Fetch the sales history of the item for the last 7 days.
-pub fn get_ge_sell_history_grandexchange_history_code_get(configuration: &configuration::Configuration, code: &str, seller: Option<&str>, buyer: Option<&str>, page: Option<i32>, size: Option<i32>) -> Result<models::DataPageGeOrderHistorySchema, Error<GetGeSellHistoryGrandexchangeHistoryCodeGetError>> {
+pub fn get_ge_sell_history_grandexchange_history_code_get(configuration: &configuration::Configuration, code: &str, seller: Option<&str>, buyer: Option<&str>, page: Option<u32>, size: Option<u32>) -> Result<models::DataPageGeOrderHistorySchema, Error<GetGeSellHistoryGrandexchangeHistoryCodeGetError>> {
     // add a prefix to parameters to efficiently prevent name collisions
     let p_code = code;
     let p_seller = seller;
@@ -130,7 +130,7 @@ pub fn get_ge_sell_order_grandexchange_orders_id_get(configuration: &configurati
 }
 
 /// Fetch all sell orders.
-pub fn get_ge_sell_orders_grandexchange_orders_get(configuration: &configuration::Configuration, code: Option<&str>, seller: Option<&str>, page: Option<i32>, size: Option<i32>) -> Result<models::DataPageGeOrderSchema, Error<GetGeSellOrdersGrandexchangeOrdersGetError>> {
+pub fn get_ge_sell_orders_grandexchange_orders_get(configuration: &configuration::Configuration, code: Option<&str>, seller: Option<&str>, page: Option<u32>, size: Option<u32>) -> Result<models::DataPageGeOrderSchema, Error<GetGeSellOrdersGrandexchangeOrdersGetError>> {
     // add a prefix to parameters to efficiently prevent name collisions
     let p_code = code;
     let p_seller = seller;

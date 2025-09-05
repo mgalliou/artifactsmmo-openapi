@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **name** | **String** | Item name. | 
 **code** | **String** | Item code. This is the item's unique identifier (ID). | 
-**level** | **i32** | Item level. | 
+**level** | **u32** | Item level. | 
 **r#type** | **String** | Item type. | 
 **subtype** | **String** | Item subtype. | 
 **description** | **String** | Item description. | 

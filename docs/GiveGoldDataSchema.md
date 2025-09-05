@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **cooldown** | [**models::CooldownSchema**](CooldownSchema.md) | Cooldown details. | 
-**quantity** | **i32** | Quantity of gold given. | 
+**quantity** | **u32** | Quantity of gold given. | 
 **receiver_character** | [**models::CharacterSchema**](CharacterSchema.md) | Character details of the receiving character. | 
 **character** | [**models::CharacterSchema**](CharacterSchema.md) | Character details. | 
 

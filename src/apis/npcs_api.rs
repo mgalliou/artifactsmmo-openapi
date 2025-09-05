@@ -47,7 +47,7 @@ pub enum GetNpcNpcsDetailsCodeGetError {
 
 
 /// Retrieve the list of all NPC items.
-pub fn get_all_npcs_items_npcs_items_get(configuration: &configuration::Configuration, code: Option<&str>, npc: Option<&str>, currency: Option<&str>, page: Option<i32>, size: Option<i32>) -> Result<models::DataPageNpcItem, Error<GetAllNpcsItemsNpcsItemsGetError>> {
+pub fn get_all_npcs_items_npcs_items_get(configuration: &configuration::Configuration, code: Option<&str>, npc: Option<&str>, currency: Option<&str>, page: Option<u32>, size: Option<u32>) -> Result<models::DataPageNpcItem, Error<GetAllNpcsItemsNpcsItemsGetError>> {
     // add a prefix to parameters to efficiently prevent name collisions
     let p_code = code;
     let p_npc = npc;
@@ -103,7 +103,7 @@ pub fn get_all_npcs_items_npcs_items_get(configuration: &configuration::Configur
 }
 
 /// Fetch NPCs details.
-pub fn get_all_npcs_npcs_details_get(configuration: &configuration::Configuration, name: Option<&str>, r#type: Option<models::NpcType>, page: Option<i32>, size: Option<i32>) -> Result<models::DataPageNpcSchema, Error<GetAllNpcsNpcsDetailsGetError>> {
+pub fn get_all_npcs_npcs_details_get(configuration: &configuration::Configuration, name: Option<&str>, r#type: Option<models::NpcType>, page: Option<u32>, size: Option<u32>) -> Result<models::DataPageNpcSchema, Error<GetAllNpcsNpcsDetailsGetError>> {
     // add a prefix to parameters to efficiently prevent name collisions
     let p_name = name;
     let p_type = r#type;
@@ -155,7 +155,7 @@ pub fn get_all_npcs_npcs_details_get(configuration: &configuration::Configuratio
 }
 
 /// Retrieve the items list of a NPC. If the NPC has items to buy, sell or trade, they will be displayed.
-pub fn get_npc_items_npcs_items_code_get(configuration: &configuration::Configuration, code: &str, page: Option<i32>, size: Option<i32>) -> Result<models::DataPageNpcItem, Error<GetNpcItemsNpcsItemsCodeGetError>> {
+pub fn get_npc_items_npcs_items_code_get(configuration: &configuration::Configuration, code: &str, page: Option<u32>, size: Option<u32>) -> Result<models::DataPageNpcItem, Error<GetNpcItemsNpcsItemsCodeGetError>> {
     // add a prefix to parameters to efficiently prevent name collisions
     let p_code = code;
     let p_page = page;

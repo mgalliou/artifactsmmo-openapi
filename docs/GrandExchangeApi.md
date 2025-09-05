@@ -25,8 +25,8 @@ Name | Type | Description  | Required | Notes
 **code** | **String** | The code of the item. | [required] |
 **seller** | Option<**String**> | The seller (account name) of the item. |  |
 **buyer** | Option<**String**> | The buyer (account name) of the item. |  |
-**page** | Option<**i32**> | Page number |  |[default to 1]
-**size** | Option<**i32**> | Page size |  |[default to 50]
+**page** | Option<**u32**> | Page number |  |[default to 1]
+**size** | Option<**u32**> | Page size |  |[default to 50]
 
 ### Return type
 
@@ -88,8 +88,8 @@ Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
 **code** | Option<**String**> | The code of the item. |  |
 **seller** | Option<**String**> | The seller (account name) of the item. |  |
-**page** | Option<**i32**> | Page number |  |[default to 1]
-**size** | Option<**i32**> | Page size |  |[default to 50]
+**page** | Option<**u32**> | Page number |  |[default to 1]
+**size** | Option<**u32**> | Page size |  |[default to 50]
 
 ### Return type
 

@@ -21,7 +21,7 @@ pub struct ItemSchema {
     pub code: String,
     /// Item level.
     #[serde(rename = "level")]
-    pub level: i32,
+    pub level: u32,
     /// Item type.
     #[serde(rename = "type")]
     pub r#type: String,
@@ -45,7 +45,7 @@ pub struct ItemSchema {
 }
 
 impl ItemSchema {
-    pub fn new(name: String, code: String, level: i32, r#type: String, subtype: String, description: String, tradeable: bool) -> ItemSchema {
+    pub fn new(name: String, code: String, level: u32, r#type: String, subtype: String, description: String, tradeable: bool) -> ItemSchema {
         ItemSchema {
             name,
             code,

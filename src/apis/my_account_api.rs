@@ -178,7 +178,7 @@ pub fn get_bank_details_my_bank_get(configuration: &configuration::Configuration
 }
 
 /// Fetch all items in your bank.
-pub fn get_bank_items_my_bank_items_get(configuration: &configuration::Configuration, item_code: Option<&str>, page: Option<i32>, size: Option<i32>) -> Result<models::DataPageSimpleItemSchema, Error<GetBankItemsMyBankItemsGetError>> {
+pub fn get_bank_items_my_bank_items_get(configuration: &configuration::Configuration, item_code: Option<&str>, page: Option<u32>, size: Option<u32>) -> Result<models::DataPageSimpleItemSchema, Error<GetBankItemsMyBankItemsGetError>> {
     // add a prefix to parameters to efficiently prevent name collisions
     let p_item_code = item_code;
     let p_page = page;
@@ -229,7 +229,7 @@ pub fn get_bank_items_my_bank_items_get(configuration: &configuration::Configura
 }
 
 /// Fetch your sales history of the last 7 days.
-pub fn get_ge_sell_history_my_grandexchange_history_get(configuration: &configuration::Configuration, id: Option<&str>, code: Option<&str>, page: Option<i32>, size: Option<i32>) -> Result<models::DataPageGeOrderHistorySchema, Error<GetGeSellHistoryMyGrandexchangeHistoryGetError>> {
+pub fn get_ge_sell_history_my_grandexchange_history_get(configuration: &configuration::Configuration, id: Option<&str>, code: Option<&str>, page: Option<u32>, size: Option<u32>) -> Result<models::DataPageGeOrderHistorySchema, Error<GetGeSellHistoryMyGrandexchangeHistoryGetError>> {
     // add a prefix to parameters to efficiently prevent name collisions
     let p_id = id;
     let p_code = code;
@@ -284,7 +284,7 @@ pub fn get_ge_sell_history_my_grandexchange_history_get(configuration: &configur
 }
 
 /// Fetch your sell orders details.
-pub fn get_ge_sell_orders_my_grandexchange_orders_get(configuration: &configuration::Configuration, code: Option<&str>, page: Option<i32>, size: Option<i32>) -> Result<models::DataPageGeOrderSchema, Error<GetGeSellOrdersMyGrandexchangeOrdersGetError>> {
+pub fn get_ge_sell_orders_my_grandexchange_orders_get(configuration: &configuration::Configuration, code: Option<&str>, page: Option<u32>, size: Option<u32>) -> Result<models::DataPageGeOrderSchema, Error<GetGeSellOrdersMyGrandexchangeOrdersGetError>> {
     // add a prefix to parameters to efficiently prevent name collisions
     let p_code = code;
     let p_page = page;

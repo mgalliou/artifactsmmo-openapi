@@ -15,11 +15,11 @@ use serde::{Deserialize, Serialize};
 pub struct DepositWithdrawGoldSchema {
     /// Quantity of gold.
     #[serde(rename = "quantity")]
-    pub quantity: i32,
+    pub quantity: u32,
 }
 
 impl DepositWithdrawGoldSchema {
-    pub fn new(quantity: i32) -> DepositWithdrawGoldSchema {
+    pub fn new(quantity: u32) -> DepositWithdrawGoldSchema {
         DepositWithdrawGoldSchema {
             quantity,
         }

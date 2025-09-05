@@ -32,7 +32,7 @@ pub enum GetMapMapsXyGetError {
 
 
 /// Fetch maps details.
-pub fn get_all_maps_maps_get(configuration: &configuration::Configuration, content_type: Option<models::MapContentType>, content_code: Option<&str>, page: Option<i32>, size: Option<i32>) -> Result<models::DataPageMapSchema, Error<GetAllMapsMapsGetError>> {
+pub fn get_all_maps_maps_get(configuration: &configuration::Configuration, content_type: Option<models::MapContentType>, content_code: Option<&str>, page: Option<u32>, size: Option<u32>) -> Result<models::DataPageMapSchema, Error<GetAllMapsMapsGetError>> {
     // add a prefix to parameters to efficiently prevent name collisions
     let p_content_type = content_type;
     let p_content_code = content_code;

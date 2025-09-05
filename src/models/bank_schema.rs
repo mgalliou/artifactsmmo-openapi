@@ -15,20 +15,20 @@ use serde::{Deserialize, Serialize};
 pub struct BankSchema {
     /// Maximum slots in your bank.
     #[serde(rename = "slots")]
-    pub slots: i32,
+    pub slots: u32,
     /// Bank expansions.
     #[serde(rename = "expansions")]
-    pub expansions: i32,
+    pub expansions: u32,
     /// Next expansion cost.
     #[serde(rename = "next_expansion_cost")]
-    pub next_expansion_cost: i32,
+    pub next_expansion_cost: u32,
     /// Quantity of gold in your bank.
     #[serde(rename = "gold")]
-    pub gold: i32,
+    pub gold: u32,
 }
 
 impl BankSchema {
-    pub fn new(slots: i32, expansions: i32, next_expansion_cost: i32, gold: i32) -> BankSchema {
+    pub fn new(slots: u32, expansions: u32, next_expansion_cost: u32, gold: u32) -> BankSchema {
         BankSchema {
             slots,
             expansions,

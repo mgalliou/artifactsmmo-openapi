@@ -1583,7 +1583,7 @@ pub fn action_withdraw_bank_item_my_name_action_bank_withdraw_item_post(configur
 }
 
 /// History of the last 250 actions of all your characters.
-pub fn get_all_characters_logs_my_logs_get(configuration: &configuration::Configuration, page: Option<i32>, size: Option<i32>) -> Result<models::DataPageLogSchema, Error<GetAllCharactersLogsMyLogsGetError>> {
+pub fn get_all_characters_logs_my_logs_get(configuration: &configuration::Configuration, page: Option<u32>, size: Option<u32>) -> Result<models::DataPageLogSchema, Error<GetAllCharactersLogsMyLogsGetError>> {
     // add a prefix to parameters to efficiently prevent name collisions
     let p_page = page;
     let p_size = size;
@@ -1630,7 +1630,7 @@ pub fn get_all_characters_logs_my_logs_get(configuration: &configuration::Config
 }
 
 /// History of the last actions of your character.
-pub fn get_character_logs_my_logs_name_get(configuration: &configuration::Configuration, name: &str, page: Option<i32>, size: Option<i32>) -> Result<models::DataPageLogSchema, Error<GetCharacterLogsMyLogsNameGetError>> {
+pub fn get_character_logs_my_logs_name_get(configuration: &configuration::Configuration, name: &str, page: Option<u32>, size: Option<u32>) -> Result<models::DataPageLogSchema, Error<GetCharacterLogsMyLogsNameGetError>> {
     // add a prefix to parameters to efficiently prevent name collisions
     let p_name = name;
     let p_page = page;
