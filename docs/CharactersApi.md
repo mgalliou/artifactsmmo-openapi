@@ -6,6 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**create_character_characters_create_post**](CharactersApi.md#create_character_characters_create_post) | **POST** /characters/create | Create Character
 [**delete_character_characters_delete_post**](CharactersApi.md#delete_character_characters_delete_post) | **POST** /characters/delete | Delete Character
+[**get_active_characters_characters_active_get**](CharactersApi.md#get_active_characters_characters_active_get) | **GET** /characters/active | Get Active Characters
 [**get_character_characters_name_get**](CharactersApi.md#get_character_characters_name_get) | **GET** /characters/{name} | Get Character
 
 
@@ -70,6 +71,37 @@ Name | Type | Description  | Required | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
+## get_active_characters_characters_active_get
+
+> models::DataPageActiveCharacterSchema get_active_characters_characters_active_get(page, size)
+Get Active Characters
+
+Fetch active characters details.
+
+### Parameters
+
+
+Name | Type | Description  | Required | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+**page** | Option<**u32**> | Page number |  |[default to 1]
+**size** | Option<**u32**> | Page size |  |[default to 50]
+
+### Return type
+
+[**models::DataPageActiveCharacterSchema**](DataPage_ActiveCharacterSchema_.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
 ## get_character_characters_name_get
 
 > models::CharacterResponseSchema get_character_characters_name_get(name)
@@ -82,7 +114,7 @@ Retrieve the details of a character.
 
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-**name** | **String** | The character name. | [required] |
+**name** | **String** | The name of the character. | [required] |
 
 ### Return type
 

@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **description** | **String** | Description of the achievement. | 
 **points** | **i32** | Points of the achievement. Used for the leaderboard. | 
 **r#type** | [**models::AchievementType**](AchievementType.md) | Type of achievement. | 
-**target** | Option<**String**> |  | 
+**target** | Option<**String**> | Target of the achievement. | [optional]
 **total** | **i32** | Total to do. | 
 **rewards** | [**models::AchievementRewardsSchema**](AchievementRewardsSchema.md) | Rewards. | 
 

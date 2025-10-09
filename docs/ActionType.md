@@ -6,6 +6,7 @@
 |---- | -----|
 | Movement | movement |
 | Fight | fight |
+| MultiFight | multi_fight |
 | Crafting | crafting |
 | Gathering | gathering |
 | BuyGe | buy_ge |
@@ -21,7 +22,6 @@
 | Equip | equip |
 | Unequip | unequip |
 | Task | task |
-| ChristmasExchange | christmas_exchange |
 | Recycling | recycling |
 | Rest | rest |
 | Use | use |
@@ -30,6 +30,7 @@
 | GiveGold | give_gold |
 | ChangeSkin | change_skin |
 | Rename | rename |
+| Transition | transition |
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

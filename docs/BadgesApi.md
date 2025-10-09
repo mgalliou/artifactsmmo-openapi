@@ -52,7 +52,7 @@ Retrieve the details of a badge.
 
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-**code** | **String** | The code of the achievement. | [required] |
+**code** | **String** | The code of the badge. | [required] |
 
 ### Return type
 

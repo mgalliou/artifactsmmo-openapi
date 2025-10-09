@@ -45,14 +45,14 @@ No authorization required
 > models::EffectResponseSchema get_effect_effects_code_get(code)
 Get Effect
 
-Retrieve the details of a badge.
+Retrieve the details of an effect.
 
 ### Parameters
 
 
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-**code** | **String** | The code of the achievement. | [required] |
+**code** | **String** | The code of the effect. | [required] |
 
 ### Return type
 

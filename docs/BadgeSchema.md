@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **code** | **String** | Code of the badge. This is the badge's unique identifier (ID). | 
-**season** | Option<**i32**> |  | [optional]
+**season** | Option<**i32**> | Season of the badge. | [optional]
 **description** | **String** | Description of the badge. | 
 **conditions** | [**Vec<models::BadgeConditionSchema>**](BadgeConditionSchema.md) | Conditions to get the badge. | 
 

@@ -10,7 +10,6 @@ Name | Type | Description | Notes
 **max_skill_level** | **i32** | Maximum skill level. | 
 **characters_online** | **i32** | Characters online. | 
 **season** | Option<[**models::SeasonSchema**](SeasonSchema.md)> | Current season details. | [optional]
-**announcements** | [**Vec<models::AnnouncementSchema>**](AnnouncementSchema.md) | Server announcements. | 
 **rate_limits** | [**Vec<models::RateLimitSchema>**](RateLimitSchema.md) | Rate limits. | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

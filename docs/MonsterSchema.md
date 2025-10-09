@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **name** | **String** | Name of the monster. | 
 **code** | **String** | The code of the monster. This is the monster's unique identifier (ID). | 
 **level** | **i32** | Monster level. | 
+**r#type** | [**models::MonsterType**](MonsterType.md) | Monster type. | 
 **hp** | **i32** | Monster hit points. | 
 **attack_fire** | **i32** | Monster fire attack. | 
 **attack_earth** | **i32** | Monster earth attack. | 
@@ -17,6 +18,7 @@ Name | Type | Description | Notes
 **res_water** | **i32** | Monster % water resistance. | 
 **res_air** | **i32** | Monster % air resistance. | 
 **critical_strike** | **i32** | Monster % critical strike. | 
+**initiative** | **i32** | Monster initiative for turn order. | 
 **effects** | Option<[**Vec<models::SimpleEffectSchema>**](SimpleEffectSchema.md)> | List of effects. | [optional]
 **min_gold** | **i32** | Monster minimum gold drop.  | 
 **max_gold** | **i32** | Monster maximum gold drop.  | 

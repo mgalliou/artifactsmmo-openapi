@@ -76,14 +76,14 @@ No authorization required
 > models::AccountDetailsSchema get_account_accounts_account_get(account)
 Get Account
 
-Retrieve the details of a character.
+Retrieve the details of an account.
 
 ### Parameters
 
 
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-**account** | **String** | The account name. | [required] |
+**account** | **String** | The name of the account. | [required] |
 
 ### Return type
 
@@ -113,7 +113,7 @@ Retrieve the achievements of a account.
 
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-**account** | **String** | The character name. | [required] |
+**account** | **String** | The name of the account. | [required] |
 **r#type** | Option<**String**> | Type of achievements. |  |
 **completed** | Option<**bool**> | Filter by completed achievements. |  |
 **page** | Option<**u32**> | Page number |  |[default to 1]
@@ -147,7 +147,7 @@ Account character lists.
 
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-**account** | **String** | The character name. | [required] |
+**account** | **String** | The name of the account. | [required] |
 
 ### Return type
 

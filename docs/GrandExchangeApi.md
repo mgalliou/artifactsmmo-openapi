@@ -46,7 +46,7 @@ No authorization required
 
 ## get_ge_sell_order_grandexchange_orders_id_get
 
-> models::GeOrderReponseSchema get_ge_sell_order_grandexchange_orders_id_get(id)
+> models::GeOrderResponseSchema get_ge_sell_order_grandexchange_orders_id_get(id)
 Get Ge Sell Order
 
 Retrieve the sell order of a item.
@@ -60,7 +60,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**models::GeOrderReponseSchema**](GEOrderReponseSchema.md)
+[**models::GeOrderResponseSchema**](GEOrderResponseSchema.md)
 
 ### Authorization
 

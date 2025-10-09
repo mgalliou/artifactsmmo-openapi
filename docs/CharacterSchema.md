@@ -42,6 +42,8 @@ Name | Type | Description | Notes
 **critical_strike** | **i32** | % Critical strike. Critical strikes adds 50% extra damage to an attack (1.5x). | 
 **wisdom** | **i32** | Wisdom increases the amount of XP gained from fights and skills (1% extra per 10 wisdom). | 
 **prospecting** | **i32** | Prospecting increases the chances of getting drops from fights and skills (1% extra per 10 PP). | 
+**initiative** | **i32** | Initiative determines turn order in combat. Higher initiative goes first. | 
+**threat** | **i32** | Threat level affects monster targeting in multi-character combat. | 
 **attack_fire** | **i32** | Fire attack. | 
 **attack_earth** | **i32** | Earth attack. | 
 **attack_water** | **i32** | Water attack. | 
@@ -55,8 +57,11 @@ Name | Type | Description | Notes
 **res_earth** | **i32** | % Earth resistance. Reduces earth attack. | 
 **res_water** | **i32** | % Water resistance. Reduces water attack. | 
 **res_air** | **i32** | % Air resistance. Reduces air attack. | 
+**effects** | Option<[**Vec<models::StorageEffectSchema>**](StorageEffectSchema.md)> | List of active effects on the character. | [optional]
 **x** | **i32** | Character x coordinate. | 
 **y** | **i32** | Character y coordinate. | 
+**layer** | [**models::MapLayer**](MapLayer.md) | Character current layer. | 
+**map_id** | **i32** | Character current map ID. | 
 **cooldown** | **i32** | Cooldown in seconds. | 
 **cooldown_expiration** | Option<**String**> | Datetime Cooldown expiration. | [optional]
 **weapon_slot** | **String** | Weapon slot. | 

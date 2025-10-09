@@ -14,7 +14,7 @@ Method | HTTP request | Description
 > models::AchievementResponseSchema get_achievement_achievements_code_get(code)
 Get Achievement
 
-Retrieve the details of a achievement.
+Retrieve the details of an achievement.
 
 ### Parameters
 

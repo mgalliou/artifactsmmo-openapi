@@ -127,6 +127,7 @@ pub mod my_characters_api;
 pub mod npcs_api;
 pub mod resources_api;
 pub mod server_details_api;
+pub mod simulation_api;
 pub mod tasks_api;
 pub mod token_api;
 

@@ -21,9 +21,9 @@ Fetch resources details.
 
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-**min_level** | Option<**u32**> | Skill minimum level. |  |
-**max_level** | Option<**u32**> | Skill maximum level. |  |
-**skill** | Option<[**models::GatheringSkill**](.md)> | The code of the skill. |  |
+**min_level** | Option<**u32**> | Minimum level. |  |
+**max_level** | Option<**u32**> | Maximum level. |  |
+**skill** | Option<[**models::GatheringSkill**](.md)> | Skill of resources. |  |
 **drop** | Option<**String**> | Item code of the drop. |  |
 **page** | Option<**u32**> | Page number |  |[default to 1]
 **size** | Option<**u32**> | Page size |  |[default to 50]

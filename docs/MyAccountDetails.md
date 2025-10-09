@@ -7,11 +7,12 @@ Name | Type | Description | Notes
 **username** | **String** | Username. | 
 **email** | **String** | Email. | 
 **member** | **bool** | Member status. | 
-**member_expiration** | Option<**String**> |  | [optional]
+**member_expiration** | Option<**String**> | Member expiration date. | [optional]
 **status** | [**models::AccountStatus**](AccountStatus.md) | Account status. | 
-**badges** | Option<[**Vec<serde_json::Value>**](serde_json::Value.md)> | Account badges. | [optional]
-**skins** | [**Vec<serde_json::Value>**](serde_json::Value.md) | Skins owned. | 
+**badges** | Option<**Vec<String>**> | Account badges. | [optional]
+**skins** | **Vec<String>** | Skins owned. | 
 **gems** | **i32** | Gems. | 
+**event_token** | **i32** | Event tokens for spawning events. | 
 **achievements_points** | **i32** | Achievement points. | 
 **banned** | **bool** | Banned. | 
 **ban_reason** | Option<**String**> | Ban reason. | [optional]

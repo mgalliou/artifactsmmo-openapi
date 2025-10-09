@@ -21,8 +21,8 @@ Fetch leaderboard details.
 
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-**sort** | Option<[**models::AccountLeaderboardType**](.md)> | Default sort by achievements points. |  |
-**name** | Option<**String**> | Find a account by name. |  |
+**sort** | Option<[**models::AccountLeaderboardType**](.md)> | Sort of account leaderboards. |  |
+**name** | Option<**String**> | Account name. |  |
 **page** | Option<**u32**> | Page number |  |[default to 1]
 **size** | Option<**u32**> | Page size |  |[default to 50]
 
@@ -54,8 +54,8 @@ Fetch leaderboard details.
 
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-**sort** | Option<[**models::CharacterLeaderboardType**](.md)> | Default sort by combat total XP. |  |
-**name** | Option<**String**> | Find a character by name. |  |
+**sort** | Option<[**models::CharacterLeaderboardType**](.md)> | Sort of character leaderboards. |  |
+**name** | Option<**String**> | Character name. |  |
 **page** | Option<**u32**> | Page number |  |[default to 1]
 **size** | Option<**u32**> | Page size |  |[default to 50]
 

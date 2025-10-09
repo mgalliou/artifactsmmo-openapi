@@ -22,8 +22,8 @@ Fetch monsters details.
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
 **name** | Option<**String**> | Name of the monster. |  |
-**min_level** | Option<**u32**> | Monster minimum level. |  |
-**max_level** | Option<**u32**> | Monster maximum level. |  |
+**min_level** | Option<**u32**> | Minimum level. |  |
+**max_level** | Option<**u32**> | Maximum level. |  |
 **drop** | Option<**String**> | Item code of the drop. |  |
 **page** | Option<**u32**> | Page number |  |[default to 1]
 **size** | Option<**u32**> | Page size |  |[default to 50]

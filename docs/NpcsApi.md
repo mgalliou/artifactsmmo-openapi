@@ -23,9 +23,9 @@ Retrieve the list of all NPC items.
 
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-**code** | Option<**String**> | The code of the item. |  |
-**npc** | Option<**String**> | The code of the npc. |  |
-**currency** | Option<**String**> | The code of the currency. |  |
+**code** | Option<**String**> | Item code. |  |
+**npc** | Option<**String**> | NPC code. |  |
+**currency** | Option<**String**> | Currency code. |  |
 **page** | Option<**u32**> | Page number |  |[default to 1]
 **size** | Option<**u32**> | Page size |  |[default to 50]
 
@@ -57,8 +57,8 @@ Fetch NPCs details.
 
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
-**name** | Option<**String**> | Name of the npc. |  |
-**r#type** | Option<[**models::NpcType**](.md)> | The type of the NPC. |  |
+**name** | Option<**String**> | NPC name. |  |
+**r#type** | Option<[**models::NpcType**](.md)> | Type of NPCs. |  |
 **page** | Option<**u32**> | Page number |  |[default to 1]
 **size** | Option<**u32**> | Page size |  |[default to 50]
 

@@ -28,6 +28,7 @@ Method | HTTP request | Description
 [**action_task_cancel_my_name_action_task_cancel_post**](MyCharactersApi.md#action_task_cancel_my_name_action_task_cancel_post) | **POST** /my/{name}/action/task/cancel | Action Task Cancel
 [**action_task_exchange_my_name_action_task_exchange_post**](MyCharactersApi.md#action_task_exchange_my_name_action_task_exchange_post) | **POST** /my/{name}/action/task/exchange | Action Task Exchange
 [**action_task_trade_my_name_action_task_trade_post**](MyCharactersApi.md#action_task_trade_my_name_action_task_trade_post) | **POST** /my/{name}/action/task/trade | Action Task Trade
+[**action_transition_my_name_action_transition_post**](MyCharactersApi.md#action_transition_my_name_action_transition_post) | **POST** /my/{name}/action/transition | Action Transition
 [**action_unequip_item_my_name_action_unequip_post**](MyCharactersApi.md#action_unequip_item_my_name_action_unequip_post) | **POST** /my/{name}/action/unequip | Action Unequip Item
 [**action_use_item_my_name_action_use_post**](MyCharactersApi.md#action_use_item_my_name_action_use_post) | **POST** /my/{name}/action/use | Action Use Item
 [**action_withdraw_bank_gold_my_name_action_bank_withdraw_gold_post**](MyCharactersApi.md#action_withdraw_bank_gold_my_name_action_bank_withdraw_gold_post) | **POST** /my/{name}/action/bank/withdraw/gold | Action Withdraw Bank Gold
@@ -73,7 +74,7 @@ Name | Type | Description  | Required | Notes
 > models::BankExtensionTransactionResponseSchema action_buy_bank_expansion_my_name_action_bank_buy_expansion_post(name)
 Action Buy Bank Expansion
 
-Buy a 25 slots bank expansion.
+Buy a 20 slots bank expansion.
 
 ### Parameters
 
@@ -164,7 +165,7 @@ Name | Type | Description  | Required | Notes
 > models::SkillResponseSchema action_crafting_my_name_action_crafting_post(name, crafting_schema)
 Action Crafting
 
-Crafting an item. The character must be on a map with a workshop.
+Craft an item. The character must be on a map with a workshop.
 
 ### Parameters
 
@@ -257,7 +258,7 @@ Name | Type | Description  | Required | Notes
 > models::BankItemTransactionResponseSchema action_deposit_bank_item_my_name_action_bank_deposit_item_post(name, simple_item_schema)
 Action Deposit Bank Item
 
-Deposit multiple items in a bank on the character's map. The cooldown will be 3 seconds multiplied by the number of different items withdrawn.
+Deposit multiple items in a bank on the character's map. The cooldown will be 3 seconds multiplied by the number of different items deposited.
 
 ### Parameters
 
@@ -316,10 +317,10 @@ Name | Type | Description  | Required | Notes
 
 ## action_fight_my_name_action_fight_post
 
-> models::CharacterFightResponseSchema action_fight_my_name_action_fight_post(name)
+> models::CharacterFightResponseSchema action_fight_my_name_action_fight_post(name, fight_request_schema)
 Action Fight
 
-Start a fight against a monster on the character's map.
+Start a fight against a monster on the character's map. Add participants for multi-character fights (up to 3 characters, only for boss).
 
 ### Parameters
 
@@ -327,6 +328,7 @@ Start a fight against a monster on the character's map.
 Name | Type | Description  | Required | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
 **name** | **String** | Name of your character. | [required] |
+**fight_request_schema** | Option<[**FightRequestSchema**](FightRequestSchema.md)> |  |  |
 
 ### Return type
 
@@ -338,7 +340,7 @@ Name | Type | Description  | Required | Notes
 
 ### HTTP request headers
 
-- **Content-Type**: Not defined
+- **Content-Type**: application/json
 - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -441,7 +443,7 @@ Name | Type | Description  | Required | Notes
 > models::GeCreateOrderTransactionResponseSchema action_ge_create_sell_order_my_name_action_grandexchange_sell_post(name, ge_order_creationr_schema)
 Action Ge Create Sell Order
 
-Create a sell order at the Grand Exchange on the character's map. Please note there is a 3% listing tax, charged at the time of posting, on the total price.
+Create a sell order at the Grand Exchange on the character's map.  Please note there is a 3% listing tax, charged at the time of posting, on the total price.
 
 ### Parameters
 
@@ -469,7 +471,7 @@ Name | Type | Description  | Required | Notes
 
 ## action_give_gold_my_name_action_give_gold_post
 
-> models::GiveGoldReponseSchema action_give_gold_my_name_action_give_gold_post(name, give_gold_schema)
+> models::GiveGoldResponseSchema action_give_gold_my_name_action_give_gold_post(name, give_gold_schema)
 Action Give Gold
 
 Give gold to another character in your account on the same map.
@@ -484,7 +486,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**models::GiveGoldReponseSchema**](GiveGoldReponseSchema.md)
+[**models::GiveGoldResponseSchema**](GiveGoldResponseSchema.md)
 
 ### Authorization
 
@@ -500,7 +502,7 @@ Name | Type | Description  | Required | Notes
 
 ## action_give_items_my_name_action_give_item_post
 
-> models::GiveItemReponseSchema action_give_items_my_name_action_give_item_post(name, give_items_schema)
+> models::GiveItemResponseSchema action_give_items_my_name_action_give_item_post(name, give_items_schema)
 Action Give Items
 
 Give items to another character in your account on the same map. The cooldown will be 3 seconds multiplied by the number of different items given.
@@ -515,7 +517,7 @@ Name | Type | Description  | Required | Notes
 
 ### Return type
 
-[**models::GiveItemReponseSchema**](GiveItemReponseSchema.md)
+[**models::GiveItemResponseSchema**](GiveItemResponseSchema.md)
 
 ### Authorization
 
@@ -534,7 +536,7 @@ Name | Type | Description  | Required | Notes
 > models::CharacterMovementResponseSchema action_move_my_name_action_move_post(name, destination_schema)
 Action Move
 
-Moves a character on the map using the map's X and Y position.
+Moves a character on the map using either the map's ID or X and Y position. Provide either 'map_id' or both 'x' and 'y' coordinates in the request body.
 
 ### Parameters
 
@@ -774,6 +776,36 @@ Name | Type | Description  | Required | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 
+## action_transition_my_name_action_transition_post
+
+> models::CharacterTransitionResponseSchema action_transition_my_name_action_transition_post(name)
+Action Transition
+
+Execute a transition from the current map to another layer. The character must be on a map that has a transition available.
+
+### Parameters
+
+
+Name | Type | Description  | Required | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+**name** | **String** | Name of your character. | [required] |
+
+### Return type
+
+[**models::CharacterTransitionResponseSchema**](CharacterTransitionResponseSchema.md)
+
+### Authorization
+
+[JWTBearer](../README.md#JWTBearer)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+
 ## action_unequip_item_my_name_action_unequip_post
 
 > models::EquipmentResponseSchema action_unequip_item_my_name_action_unequip_post(name, unequip_schema)
@@ -903,7 +935,7 @@ Name | Type | Description  | Required | Notes
 > models::DataPageLogSchema get_all_characters_logs_my_logs_get(page, size)
 Get All Characters Logs
 
-History of the last 250 actions of all your characters.
+History of the last 5000 actions of all your characters.
 
 ### Parameters
 
